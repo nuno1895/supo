@@ -51,27 +51,21 @@ var authRoute = require('./routes/auth.js')(app, passport);
  
 require('./config/passport/passport.js')(passport, db.user);
 
-//Sync Database
+
+
+//Port config ---------------------------------------------------/
+var PORT = process.env.PORT || 3000;
+
+//Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync().then(function() {
- 
-    console.log('Nice! Database looks fine')
- 
-}).catch(function(err) {
- 
-    console.log(err, "Something went wrong with the Database Update!")
- 
+  app.listen(PORT, function(err) {
+    if (err) {
+      console.error(err);
+    } else {
+      console.info("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+    }
+  });
 });
-
- 
- // we make app listen on port 3000. You can choose any free port number on your computer.
-app.listen(3000, function(err) {
- 
-    if (!err)
-        console.log("Site is live");
-    else console.log(err)
- 
-});
-
 
 
 
