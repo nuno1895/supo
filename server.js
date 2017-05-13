@@ -8,16 +8,18 @@ var app = express();
 var passport = require('passport');
 var session = require('express-session');
 var bodyParser = require('body-parser');
-
+var methodOverride = require("method-override");
 // import the dot-env module to handle environment variables, npm install --save dotenv
 var env = require('dotenv').load();
 
 //handlebars
+app.use(methodOverride("_method"));
 var exphbs = require('express-handlebars')
 
 //For BodyParser, To let our app use the body parser, we add these lines some spaces below the import lines:
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
+app.use(express.static(process.cwd() + "/public"));
 
 // we initialize passport and the express session and passport session and add them both as middleware. We do this by adding these lines some spaces after the bodyParser import line.
 
@@ -28,27 +30,29 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 //For Handlebars
-app.set('views', './app/views')
-app.engine('hbs', exphbs({extname: '.hbs'}));
-app.set('view engine', '.hbs');
+app.engine('handlebars', exphbs({
+  defaultLayout: 'main'
+}));
+app.set('view engine', 'handlebars');
 
-// we call the app.get() express routing function to respond with "Welcome to Passport with Sequelize" when a GET request is made to "/".
-app.get('/', function(req, res) {
-    res.send('Welcome to Passport with Sequelize');
-});
+
 
 //Models
-var models = require("./app/models");
+var db = require('./models');
 
 //Routes
-var authRoute = require('./app/routes/auth.js')(app, passport);
+require('./routes/htmlRoutes')(app);
+require('./routes/apiRoutes')(app);
+var authRoute = require('./routes/auth.js')(app, passport);
+
+
 
 //load passport strategies
  
-require('./app/config/passport/passport.js')(passport, models.user);
+require('./config/passport/passport.js')(passport, db.user);
 
 //Sync Database
-models.sequelize.sync().then(function() {
+db.sequelize.sync().then(function() {
  
     console.log('Nice! Database looks fine')
  
