@@ -43,6 +43,7 @@ var db = require('./models');
 //Routes
 require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
+
 var authRoute = require('./routes/auth.js')(app, passport);
 
 
