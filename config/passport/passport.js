@@ -98,7 +98,6 @@
   function(req, email, password, done) {
 
     var User = user;
-
     var isValidPassword = function(userpass,password){
       return bCrypt.compareSync(password, userpass);
     }
@@ -116,8 +115,8 @@
       }
 
       var userinfo = user.get();
-
-      return done(null,userinfo);
+      console.log("USERINFO: ", userinfo);
+      return done(null, userinfo);
 
     }).catch(function(err){
 
