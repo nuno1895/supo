@@ -19,7 +19,7 @@ var exphbs = require('express-handlebars')
 //For BodyParser, To let our app use the body parser, we add these lines some spaces below the import lines:
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
-app.use(express.static(process.cwd() + "/public"));
+app.use(express.static("public"));
 
 // we initialize passport and the express session and passport session and add them both as middleware. We do this by adding these lines some spaces after the bodyParser import line.
 
