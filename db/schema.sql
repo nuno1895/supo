@@ -15,7 +15,3 @@ CREATE TABLE budgets
   eatingout INTEGER
 );
 
--- CREATE DATABASE saveup_db;
-CREATE DATABASE saveup_db;
-
--- USE saveup_db;
