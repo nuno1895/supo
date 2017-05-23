@@ -1,0 +1,24 @@
+<div id="home-wrapper">
+  {{> nav/navbar}}
+  <h1>BUDGET FORM</h1>
+  <div class="container">
+  	<div class="form-group">
+  	  <label for="car">car:</label>
+  	  <input type="text" class="form-control" id="car">
+  	</div>
+  	<div class="form-group">
+  	  <label for="house">house:</label>
+  	  <input type="text" class="form-control" id="house">
+  	</div>
+    <ul class="list-group" id="budgetAdd">
+      <li class="list-group-item">
+        <input type="text" class="form-control" id="name">
+        <input type="number" class="form-control" id="amount">
+        <button id="additem" type="button" class="btn btn-default">+</button>
+      </li>
+    </ul>
+    <button id="budgetBtn2" type="button" class="btn btn-default">Submit</button>
+  </div>
+</div>
+<script type="text/javascript" src="/javascript/site1.js"></script>
+
