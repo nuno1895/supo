@@ -1,5 +1,5 @@
 CREATE DATABASE saveup_development_db;
-USE saveup_development_db;
+-- USE saveup_development_db;
 
 CREATE TABLE budgets
 (
@@ -16,4 +16,6 @@ CREATE TABLE budgets
 );
 
 -- CREATE DATABASE saveup_db;
+CREATE DATABASE saveup_db;
+
 -- USE saveup_db;
