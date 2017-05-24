@@ -24,7 +24,6 @@ app.use(express.static("public"));
 // we initialize passport and the express session and passport session and add them both as middleware. We do this by adding these lines some spaces after the bodyParser import line.
 
 // For Passport
- 
 app.use(session({ secret: 'supo1234',resave: true, saveUninitialized:true})); // session secret, move this to a outside file to not have secret revealed
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
@@ -35,8 +34,6 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-
-
 //Models
 var db = require('./models');
 
@@ -46,13 +43,9 @@ require('./routes/apiRoutes')(app);
 
 var authRoute = require('./routes/auth.js')(app, passport);
 
-
-
 //load passport strategies
  
 require('./config/passport/passport.js')(passport, db.user);
-
-
 
 //Port config ---------------------------------------------------/
 var PORT = process.env.PORT || 3000;
@@ -68,5 +61,4 @@ db.sequelize.sync().then(function() {
   });
 });
 
-
-
+module.exports = app;
