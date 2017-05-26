@@ -2,23 +2,20 @@
   {{> nav/navbar}}
   <h1>BUDGET FORM</h1>
   <div class="container">
+  <h1> Your Pay </h1>
   	<div class="form-group">
-  	  <label for="month">month:</label>
+  	  <label for="month">Month:</label>
   	  <input type="text" class="form-control" id="month">
   	</div>
   	<div class="form-group">
-  	  <label for="takehome">Takehome:</label>
-  	  <input type="text" class="form-control" id="takehome">
+  	  <label for="takehome">Weekly Take Home:</label>
+  	  <input type="number" class="form-control" id="takehome">
   	</div>
     <div class="form-group">
-      <label for="food">food:</label>
-      <input type="text" class="form-control" id="food">
+      <label for="frequency">How Often do you get payed every Month:</label>
+      <input type="number" class="form-control" id="frequency">
     </div>
-    <div class="form-group">
-      <label for="eatingout">eatingout:</label>
-      <input type="text" class="form-control" id="eatingout">
-    </div>
-    <button id="budgetBtn" type="button" class="btn btn-default">Submit</button>
+    <button id="budgetBtn" type="button" class="btn btn-default">Next</button>
   </div>
 </div>
-<script type="text/javascript" src="/javascript/site.js"></script>
+<script type="text/javascript" src="/javascript/form.js"></script>

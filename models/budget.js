@@ -22,7 +22,15 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER,
         },
  
-        totaltakehome: {
+        frequency: {
+            type: Sequelize.INTEGER
+        },
+
+        groceries: {
+            type: Sequelize.INTEGER
+        },
+
+        eatingout: {
             type: Sequelize.INTEGER
         },
     });

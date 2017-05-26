@@ -27,6 +27,8 @@ $("#budgetBtn2").on("click", function() {
 
 });
 
+
+//at the end use this to post to database
 var dataToPost={
 	budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
 	budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
