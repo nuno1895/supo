@@ -5,7 +5,7 @@ module.exports = function(sequelize, Sequelize) {
 
 // In our models folder, we create a file and name it budget.js. The full path for this file should be app/models/budget.js.
  
-    var Budget = sequelize.define('budget', {
+    var Budget = sequelize.define('Budget', {
  
         id: {
             autoIncrement: true,

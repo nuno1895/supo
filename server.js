@@ -5,7 +5,7 @@ var app = express();
 
 // In the first two lines, we import the passport module and the express-session, both of which we need to handle authentication.
 // Then, we import the body-parser module. This extracts the entire body part of an incoming request and exposes it in a format that is easier to work with. In this case, we will use the JSON format.
-var passport = require('passport');
+var passport = require('./config/passport/passport');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var methodOverride = require("method-override");
@@ -50,7 +50,7 @@ var authRoute = require('./routes/auth.js')(app, passport);
 
 //load passport strategies
  
-require('./config/passport/passport.js')(passport, db.user);
+// require('./config/passport/passport.js')(passport, db.user);
 
 
 
