@@ -5,11 +5,13 @@ module.exports = {
 	},
 	signin: function(req, res) {
 		res.render('signin', {
-			username: req.user
-		});
+			userData: req.user
+		}); console.log(req.user);
 	},
 	dashboard: function(req, res) {
-		res.render('dash');
+		res.render('dash', {
+			userData: req.user
+		}); 
 	},
 	logout: function(req, res) {
 		req.session.destory(function(err) {
