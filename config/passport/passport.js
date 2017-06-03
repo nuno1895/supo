@@ -26,7 +26,6 @@
          username: user.username,
          about: user.about,
          email: user.email
-         
        }
        done(null, data);
      }

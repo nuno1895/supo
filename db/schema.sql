@@ -1,5 +1,5 @@
 CREATE DATABASE saveup_development_db;
--- USE saveup_development_db;
+USE saveup_development_db;
 
 CREATE TABLE budgets
 (
@@ -11,4 +11,3 @@ CREATE TABLE budgets
 	groceries INTEGER,
 	eatingout INTEGER
 );
-

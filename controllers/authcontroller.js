@@ -8,10 +8,10 @@ module.exports = {
 			userData: req.user
 		}); console.log(req.user);
 	},
-	dashboard: function(req, res) {
-		res.render('dash', {
+	index: function(req, res) {
+		res.render('index', {
 			userData: req.user
-		}); 
+		});
 	},
 	logout: function(req, res) {
 		req.session.destory(function(err) {
