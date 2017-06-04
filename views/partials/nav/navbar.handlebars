@@ -1,14 +1,53 @@
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Navbar Partial</a>
-      <a class="navbar-brand" href="/budgetForm">Make a Budget</a>
+      <a class="navbar-brand logo-img" href="/"><img class="logo-small" src="/assets/images/logoSmall.png"></a>
+      <span class="nav-right"><a class="navbar-brand" href="/budgetForm">Make a Budget</a>
       <a class="navbar-brand" href="/signup">Sign Up</a>
       <a class="navbar-brand" href="/signin">Login</a>
       <a class="navbar-brand" href="/logout">Logout</a>
+      </span>
     </div>
     <div>
     	<h2>USER_ID: {{req.session.username}}</h2>
     </div>
   </div>
+</nav> -->
+<div class="navbar-div">
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand logo-img" href="/"><img class="logo-small" src="/assets/images/logoSmall.png"></a>
+    </div> <!--end navbar-->
+    <ul class="nav navbar-nav navbar-right">
+      <a class="navbar-brand href="/index">HOME
+        <a class="navbar-brand" href="/signup">SIGN UP</a>
+        <a class="navbar-brand" href="/signin">LOGIN</a>
+      <li class="dropdown">
+        <a class="dropdown-toggle navbar-brand nav-title nav-tools" data-toggle="dropdown" href="#">TOOLS
+        <ul class="dropdown-menu">
+          <li><a href="#">SUBMENU 1</a></li>
+          <li><a href="#">SUBMENU 2</a></li>
+          <li class="dropdown-submenu">
+            <a class="test" tabindex="-1" href="#">SUBMENU 3</a>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">SUBMENU 1</a></li>
+              <li><a tabindex="-1" href="#">SUBMENU 2</a></li>
+              <li><a tabindex="-1" href="#">SUBMENU 3</a></li>  
+            </ul>
+          </li>
+        </ul>
+      </li>       
+    </ul>
+  </div>
 </nav>
+</div><!--end navbar-div-->
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
