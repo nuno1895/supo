@@ -1,0 +1,39 @@
+.logo-small{
+    height: 3em;
+}
+.logo-img{
+    padding-top: 0 !important;
+}
+.container-fluid{
+    padding: 1em;
+    background-color: #292b2c;
+}
+
+.navbar {
+    margin: -1px;
+}
+.navbar-right{
+    padding-right: 1em;
+}
+.nav-tools{
+    background: none !important;
+}
+/*.navbar-brand{
+    padding: 0 !important;
+}*/
+
+
+.dropdown-menu {
+    padding: 0 !important;
+}
+ul a{
+    font-size: 20px !important;
+    text-shadow: none !important;
+}
+.dropdown-menu a, .dropdown-menu li{
+    height: auto !important;
+    padding: 2px !important;
+}
+.dropdown-menu {
+    min-width: 0 !important;
+}
