@@ -1,9 +1,9 @@
 module.exports = {
   renderForm: function(req, res) {
-    res.render('budgetForm');
+    res.render('budgetForm/budgetForm');
   },
   renderForm2: function(req, res) {
-    res.render('budgetForm2');
+    res.render('budgetForm/budgetForm2');
   }
 }
 

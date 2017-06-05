@@ -5,7 +5,9 @@ var budgetArray = [];
 $("#additem").on("click", function() {
 	var formAdd = {
 		name : $("#name").val(),
-		amount : $("#amount").val()
+		amount : $("#amount").val(),
+        groceries: $("#groceries").val(),
+        eatingout: $("#eatingout").val()
 	}
 	budgetArray.push(formAdd)
 	localStorage.setItem("budgetForm2", JSON.stringify(budgetArray));
@@ -18,8 +20,8 @@ $("#additem").on("click", function() {
 
 $("#budgetBtn2").on("click", function() {
     var budgetObject = {
-        car: $("#car").val(),
-        house: $("#house").val()
+        groceries: $("#groceries").val(),
+        eatingout: $("#eatingout").val()
     };
     localStorage.setItem("budgetForm2", JSON.stringify(budgetObject))
     console.log(localStorage.getItem("budgetForm2"));
