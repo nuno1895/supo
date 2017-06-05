@@ -37,3 +37,6 @@ ul a{
 .dropdown-menu {
     min-width: 0 !important;
 }
+.tool-dropdown a{
+    font-size: 14px !important;
+}

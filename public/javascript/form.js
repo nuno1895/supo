@@ -30,8 +30,8 @@ $("#budgetBtn").on("click", function() {
     var budgetObject = {
         month: $("#month").val(),
         takehome: $("#takehome").val(),
-        food: $("#food").val(),
-        eatingout: $("#eatingout").val(),
+        // food: $("#food").val(),
+        // eatingout: $("#eatingout").val()
     };
     localStorage.setItem("budgetForm", JSON.stringify(budgetObject))
     console.log(localStorage.getItem("budgetForm"));
