@@ -19,13 +19,14 @@ $("#additem").on("click", function() {
 })
 
 $("#budgetBtn2").on("click", function() {
+
     var budgetObject = {
         groceries: $("#groceries").val(),
         eatingout: $("#eatingout").val()
     };
     localStorage.setItem("budgetForm2", JSON.stringify(budgetObject))
     console.log(localStorage.getItem("budgetForm2"));
-    window.location.href = "budgetForm/2";
+    window.location.href = "/dash";
 
 });
 
