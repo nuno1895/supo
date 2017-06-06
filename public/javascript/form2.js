@@ -1,23 +1,6 @@
 var budgetArray = [];
 
 
-
-$("#additem").on("click", function() {
-	var formAdd = {
-		name : $("#name").val(),
-		amount : $("#amount").val(),
-        groceries: $("#groceries").val(),
-        eatingout: $("#eatingout").val()
-	}
-	budgetArray.push(formAdd)
-	localStorage.setItem("budgetForm2", JSON.stringify(budgetArray));
-	console.log(localStorage);
-	console.log("Foradd" , formAdd);
-	var newItem = $("<li>").text(formAdd.name + " - " + formAdd.amount).addClass("list-group-item");
-	$("#budgetAdd").append(newItem);
-
-})
-
 $("#budgetBtn2").on("click", function() {
 
     var budgetObject = {
@@ -37,8 +20,23 @@ var dataToPost={
 	budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
 };
 
+$("#finalSubmit").on("click", function() {
+    var formAdd = {
+        name : $("#name").val(),
+        amount : $("#amount").val(),
+        groceries: $("#groceries").val(),
+        eatingout: $("#eatingout").val()
+    }
+    budgetArray.push(formAdd)
+    localStorage.setItem("budgetForm2", JSON.stringify(budgetArray));
+    console.log(localStorage);
+    console.log("Foradd" , formAdd);
+    var newItem = $("<li>").text(formAdd.name + " - " + formAdd.amount).addClass("list-group-item");
+    $("#budgetAdd").append(newItem);
 
-$.post("/budgetdata", dataToPost).then(function(response){console.log(response)});
+    $.post("/budgetdata", dataToPost).then(function(response){console.log(response)});
+
+})
 
 
 // if (localStorage.getItem("tacos")) {
