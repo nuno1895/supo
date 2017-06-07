@@ -1,6 +1,6 @@
 var testApiController = require('../controllers/testApi');
 var budgetController = require('../controllers/budgetController');
-var models = require("../models")
+var models = require("../models");
 
 module.exports = function(app) {
 
@@ -10,27 +10,32 @@ module.exports = function(app) {
 
 
 
-//this and form2 are sending to the db...but HOW? or...WHY? 
+    //this and form2 are sending to the db...but HOW? or...WHY? 
     app.post("/budgetdata", function(req, res) {
-        console.log(res);
-        debugger;
+        console.log(req.body.budgetForm.month);
         models.Budget.create({
-
-        })
+            month: req.body.budgetForm.month,
+            takehome: req.body.budgetForm.takehome,
+            groceries: req.body.budgetForm2.groceries,
+            eatingout: req.body.budgetForm2.eatingout
+        }).then(function(budget) {
+            console.log(month);
+            res.json(month)
+        });
     });
 
 
- //    router.post("/budgetdata", function(req, res) {
- //     models.Budget.create({
- //     month: dataToPost.budgetForm.month,
- //     takehome: dataToPost.budgetForm.takehome,
- //     groceries: dataToPost.budgetForm2.groceries,
- //     eatingout: dataToPost.budgetForm2.eatingout
- //   }).then(function(budget) {
- //     console.log(month);
- //     res.json(month)
- //   });
- // });
+    // router.post("/budgetdata", function(req, res) {
+    //     models.Budget.create({
+    //         month: dataToPost.budgetForm.month,
+    //         takehome: dataToPost.budgetForm.takehome,
+    //         groceries: dataToPost.budgetForm2.groceries,
+    //         eatingout: dataToPost.budgetForm2.eatingout
+    //     }).then(function(budget) {
+    //         console.log(month);
+    //         res.json(month)
+    //     });
+    // });
 
     app.get("/budget/all", function(req, res) {
         models.User.findAll({}).then(function(results) {

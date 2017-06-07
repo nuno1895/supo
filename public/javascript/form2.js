@@ -15,9 +15,9 @@ $("#budgetBtn2").on("click", function() {
 
 
 //at the end use this to post to database
-var dataToPost={
-	budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
-	budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
+var dataToPost = {
+    budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
+    budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
 };
 
 
@@ -25,28 +25,34 @@ var dataToPost={
 //this is sending to the database along with apiRoutes.js
 $("#finalSubmit").on("click", function(res, req) {
     var formAdd = {
-        name : $("#name").val(),
-        amount : $("#amount").val(),
+        name: $("#name").val(),
+        amount: $("#amount").val(),
         groceries: $("#groceries").val(),
         eatingout: $("#eatingout").val()
     }
     budgetArray.push(formAdd)
     localStorage.setItem("budgetForm2", JSON.stringify(budgetArray));
     console.log(localStorage);
-    console.log("Foradd" , formAdd);
+    console.log("Foradd", formAdd);
     var newItem = $("<li>").text(formAdd.name + " - " + formAdd.amount).addClass("list-group-item");
     $("#budgetAdd").append(newItem);
 
-    $.post("/budgetdata", dataToPost).then(function(response){debugger;console.log(response)});
+    $.post("/budgetdata", dataToPost).then(function(response) {
+        debugger;
+        console.log(response)
+    });
 
 })
 
-
 // if (localStorage.getItem("tacos")) {
-//   values = localStorage.getItem("tacos"); 
-// } 
-// else { 
-//   values = {}  
+//   values = localStorage.getItem("tacos");
+ 
+// }
+ 
+// else {
+ 
+//   values = {} 
+ 
 // }
 
 // var values = localStorage.getItem("budgetForm2") || {$("#car").val(values.car);
