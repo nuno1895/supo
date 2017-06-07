@@ -19,8 +19,8 @@ module.exports = function(app) {
             groceries: req.body.budgetForm2.groceries,
             eatingout: req.body.budgetForm2.eatingout
         }).then(function(budget) {
-            console.log(month);
-            res.json(month)
+            res.redirect("/dash");
+
         });
     });
 
