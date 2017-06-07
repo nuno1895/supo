@@ -20,7 +20,10 @@ var dataToPost={
 	budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
 };
 
-$("#finalSubmit").on("click", function() {
+
+
+//this is sending to the database along with apiRoutes.js
+$("#finalSubmit").on("click", function(res, req) {
     var formAdd = {
         name : $("#name").val(),
         amount : $("#amount").val(),
@@ -34,7 +37,7 @@ $("#finalSubmit").on("click", function() {
     var newItem = $("<li>").text(formAdd.name + " - " + formAdd.amount).addClass("list-group-item");
     $("#budgetAdd").append(newItem);
 
-    $.post("/budgetdata", dataToPost).then(function(response){console.log(response)});
+    $.post("/budgetdata", dataToPost).then(function(response){debugger;console.log(response)});
 
 })
 
