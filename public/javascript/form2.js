@@ -1,44 +1,61 @@
-var budgetArray = [];
 
 
-$("#budgetBtn2").on("click", function() {
-
+$("#finalSubmit").on("click", function(res, req) {
+    //sets current form dara into local storage
     var budgetObject = {
         groceries: $("#groceries").val(),
         eatingout: $("#eatingout").val(),
-        frequency: $("#frequency").val()
     };
     console.log("HERE: ", budgetObject)
     localStorage.setItem("budgetForm2", JSON.stringify(budgetObject))
-    console.log(localStorage.getItem("budgetForm2"));
-    window.location.href = "/dash";
-
-});
-
-
-//at the end use this to post to database
-var dataToPost = {
+    
+    //combines all local storage
+    var dataToPost = {
     budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
     budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
 };
 
-$("#finalSubmit").on("click", function(res, req) {
-    var formAdd = {
-        groceries: $("#groceries").val(),
-        eatingout: $("#eatingout").val()
-    }
-    localStorage.setItem("budgetForm2", JSON.stringify(formAdd));
-    console.log(localStorage);
-    console.log("Foradd", formAdd);
+    //sets local storage to a json object
+    localStorage.setItem("budgetForm2", JSON.stringify(dataToPost));
+    console.log("dataToPost;", dataToPost);
 
-    setTimeout(function() {
+    //posts data in local storage
         $.post("/budgetdata", dataToPost).then(function(response) {
-            console.log(response)
-        }, 2000);
-
-
-    })
+            console.log("this posted");
+      });
 });
+
+
+
+
+
+// var budgetArray = [];
+
+
+// $("#budgetBtn2").on("click", function() {
+
+//     var budgetObject = {
+//         groceries: $("#groceries").val(),
+//         eatingout: $("#eatingout").val(),
+//         frequency: $("#frequency").val()
+//     };
+//     console.log("HERE: ", budgetObject)
+//     localStorage.setItem("budgetForm2", JSON.stringify(budgetObject))
+//     console.log(localStorage.getItem("budgetForm2"));
+//     window.location.href = "/dash";
+
+// });
+
+
+//at the end use this to post to database
+// var dataToPost = {
+//     budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
+//     budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
+// };
+
+
+
+
 //this is sending to the database along with apiRoutes.js
 // $("#finalSubmit").on("click", function(res, req) {
 //     var formAdd = {

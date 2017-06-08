@@ -5,7 +5,9 @@ module.exports = {
         });
   },
   renderForm2: function(req, res) {
-    res.render('budgetForm/budgetForm2');
+    res.render('budgetForm/budgetForm2', {
+        userData: req.user
+        });
   }
 }
 

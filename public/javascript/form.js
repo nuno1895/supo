@@ -30,11 +30,11 @@ $("#budgetBtn").on("click", function() {
     var budgetObject = {
         month: $("#month").val(),
         takehome: $("#takehome").val(),
+        frequency: $("#frequency").val()
         // food: $("#food").val(),
         // eatingout: $("#eatingout").val()
     };
     localStorage.setItem("budgetForm", JSON.stringify(budgetObject))
-    console.log(localStorage.getItem("budgetForm"));
     window.location.href = "/budgetForm/2";		
 
 });

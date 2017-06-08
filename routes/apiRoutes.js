@@ -16,6 +16,7 @@ module.exports = function(app) {
         models.Budget.create({
             month: req.body.budgetForm.month,
             takehome: req.body.budgetForm.takehome,
+            frequency: req.body.budgetForm.frequency,
             groceries: req.body.budgetForm2.groceries,
             eatingout: req.body.budgetForm2.eatingout
         }).then(function(budget) {
