@@ -29,6 +29,16 @@ module.exports = function(app) {
         });
     });
 
+    app.get("/dash", function(req, res) {
+        console.log(req.session)
+        models.Budget.findAll({
+            where: {
+                UserId: req.session.passport.user
+            }
+        }).then(function(results) {
+            res.json(results);
+        });
+    });
 
     // router.post("/budgetdata", function(req, res) {
     //     models.Budget.create({
