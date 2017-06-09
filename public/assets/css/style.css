@@ -1,3 +1,5 @@
+
+/*NAV BAR*/
 .logo-small{
     height: 3em;
 }
@@ -5,8 +7,9 @@
     padding-top: 0 !important;
 }
 .container-fluid{
+    z-index: 5;
     padding: 1em;
-    background-color: #292b2c;
+    background-color: rgba(41, 43, 44, .1);
 }
 
 .navbar {
@@ -39,4 +42,45 @@ ul a{
 }
 .tool-dropdown a{
     font-size: 14px !important;
+}
+.navbar-container{
+    transition: 0.8s;
+    -webkit-transition:  0.8s;
+}
+
+
+
+
+
+
+/*home page IMAGE JUMBOTRON*/
+.headerImg{
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.jumbotron{
+    color: white;
+    text-align: center;
+    background: none;
+    margin: 20em 15em;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+}
+
+.jumbotron h1{
+        font-family: Montserrat, sans-serif;
+        font-size: 4.7em;
+        font-weight: bold;
+}
+.getStartedBtn-HomePage{
+    border: none;
+    background: #5cb85c;
+    margin-top: 2em;
+    padding: .65em 5em !important;
 }
