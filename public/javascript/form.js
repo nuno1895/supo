@@ -36,6 +36,4 @@ $("#budgetBtn").on("click", function() {
     };
     localStorage.setItem("budgetForm", JSON.stringify(budgetObject))
     window.location.href = "/budgetForm/2";		
-
 });
-

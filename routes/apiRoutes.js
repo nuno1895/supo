@@ -13,7 +13,9 @@ module.exports = function(app) {
     //this and form2 are sending to the db...but HOW? or...WHY? 
     app.post("/budgetdata", function(req, res) {
         console.log(req.body);
+        console.log('session passport user',req.session.passport.user);
         models.Budget.create({
+            user_id: req.session.passport.user,
             month: req.body.budgetForm.month,
             takehome: req.body.budgetForm.takehome,
             frequency: req.body.budgetForm.frequency,
@@ -21,7 +23,6 @@ module.exports = function(app) {
             eatingout: req.body.budgetForm2.eatingout
         }).then(function(budget) {
             res.redirect("/dash");
-
         });
     });
 
