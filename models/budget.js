@@ -32,9 +32,20 @@ module.exports = function(sequelize, Sequelize) {
 
         eatingout: {
             type: Sequelize.INTEGER
-        },
-    });
+        }
+    }, {
 
+        classMethods: {
+            associate: function(models) {
+                Budget.belongsTo(models.User, {
+                    foreignKey: {
+                        allowNull: false
+                    }
+                });
+            }
+        }
+    });
     return Budget;
 
-}
+
+};

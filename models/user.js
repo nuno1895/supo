@@ -1,55 +1,62 @@
 module.exports = function(sequelize, Sequelize) {
- 
-// The next thing we are going to do is create the user model, which is basically the user table. This will contain basic user information.
 
-// In our models folder, we create a file and name it user.js. The full path for this file should be app/models/user.js.
-  var User = sequelize.define('User', {
+    // The next thing we are going to do is create the user model, which is basically the user table. This will contain basic user information.
 
-    id: {
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-    },
+    // In our models folder, we create a file and name it user.js. The full path for this file should be app/models/user.js.
+    var User = sequelize.define('User', {
 
-    firstname: {
-        type: Sequelize.STRING,
-        notEmpty: true
-    },
+        id: {
+            autoIncrement: true,
+            primaryKey: true,
+            type: Sequelize.INTEGER
+        },
 
-    lastname: {
-        type: Sequelize.STRING,
-        notEmpty: true
-    },
+        firstname: {
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
 
-    username: {
-        type: Sequelize.TEXT
-    },
+        lastname: {
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
 
-    about: {
-        type: Sequelize.TEXT
-    },
+        username: {
+            type: Sequelize.TEXT
+        },
 
-    email: {
-        type: Sequelize.STRING,
-        validate: {
-            isEmail: true
+        about: {
+            type: Sequelize.TEXT
+        },
+
+        email: {
+            type: Sequelize.STRING,
+            validate: {
+                isEmail: true
+            }
+        },
+
+        password: {
+            type: Sequelize.STRING,
+            allowNull: false
+        },
+
+        last_login: {
+            type: Sequelize.DATE
+        },
+
+        status: {
+            type: Sequelize.ENUM('active', 'inactive'),
+            defaultValue: 'active'
         }
-    },
+    }, {
 
-    password: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
+        classMethods: {
+            associate: function(models) {
+                User.hasMany(models.Budget)
+            }
 
-    last_login: {
-        type: Sequelize.DATE
-    },
-
-    status: {
-        type: Sequelize.ENUM('active', 'inactive'),
-        defaultValue: 'active'
-    }
-  });
-
-  return User;  
-}
+        }
+    });
+    return User;
+};
