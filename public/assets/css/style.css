@@ -1,8 +1,9 @@
 body{
+    overflow: auto;
     font-family: 'Lato', sans-serif !important;
 }
-.home-wrapper{
-    background-color: 
+#home-wrapper{
+    overflow: auto;
 }
 /*NAV BAR*/
 .logo-small{
@@ -154,6 +155,7 @@ ul a{
 
 /*realsolutions*/
 .realSolutionsDiv{
+    overflow: auto;
     background-color: rgba(127, 125, 152, .02);
     padding-top: 1em;
     padding-bottom: 5em;
@@ -210,5 +212,20 @@ ul a{
 .solutionsProcessDiv{
     margin: 0 10em;
     background-color: rgba(127, 125, 152, .02);
+}
 
+
+
+
+/*signup page*/
+#signup{
+    margin-top: 14em;
+}
+
+
+
+
+/*signin page*/
+#signin{
+    margin-top: 14em;
 }
