@@ -34,6 +34,7 @@ $("#budgetBtn").on("click", function() {
         // food: $("#food").val(),
         // eatingout: $("#eatingout").val()
     };
+    console.log("budgetObject form 1:", budgetObject);
     localStorage.setItem("budgetForm", JSON.stringify(budgetObject))
     window.location.href = "/budgetForm/2";		
 

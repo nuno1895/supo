@@ -8,6 +8,55 @@ module.exports = {
     res.render('budgetForm/budgetForm2', {
         userData: req.user
         });
-  }
+  },
+  renderForm3: function(req, res) {
+    res.render('budgetForm/budgetForm3', {
+      userData: req.user
+    });
+  },
+  renderForm4: function(req, res) {
+    res.render('budgetForm/budgetForm4', {
+      userData: req.user
+    });
+  },
+  renderForm5: function(req, res) {
+    res.render('budgetForm/budgetForm5', {
+      userData: req.user
+    });
+  },
+  renderForm6: function(req, res) {
+    res.render('budgetForm/budgetForm6', {
+      userData: req.user
+    });
+  },
+  renderForm7: function(req, res) {
+    res.render('budgetForm/budgetForm7', {
+      userData: req.user
+    });
+  },
+  renderForm8: function(req, res) {
+    res.render('budgetForm/budgetForm8', {
+      userData: req.user
+    });
+  },
+  renderForm9: function(req, res) {
+    res.render('budgetForm/budgetForm9', {
+      userData: req.user
+    });
+  },
+  renderForm10: function(req, res) {
+    res.render('budgetForm/budgetForm10', {
+      userData: req.user
+    });
+  },
+  renderForm11: function(req, res) {
+    res.render('budgetForm/budgetForm11', {
+      userData: req.user
+    });
+  },
+  renderForm12: function(req, res) {
+    res.render('budgetForm/budgetForm12', {
+      userData: req.user
+    });
+  },
 }
-

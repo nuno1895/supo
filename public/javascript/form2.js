@@ -1,4 +1,4 @@
-$("#finalSubmit").on("click", function(res, req) {
+$("#finalSubmit").on("click", function() {
     //sets current form dara into local storage
     var budgetObject = {
         groceries: $("#groceries").val(),
@@ -14,8 +14,8 @@ $("#finalSubmit").on("click", function(res, req) {
     };
 
     //sets local storage to a json object
-    localStorage.setItem("budgetForm2", JSON.stringify(dataToPost));
-    console.log("dataToPost;", dataToPost);
+    // localStorage.setItem("budgetForm2", JSON.stringify(dataToPost));
+    // console.log("dataToPost;", dataToPost);
 
     //posts data in local storage
     $.post("/budgetdata", dataToPost).then(function(response) {
@@ -24,7 +24,16 @@ $("#finalSubmit").on("click", function(res, req) {
 });
 
 
+$("#budgetBtn2").on("click", function() {
+    var budgetObject = {
+        groceries: $("#groceries").val(),
+        eatingout: $("#eatingout").val()
+    };
+    console.log("budgetObject Form 2:", budgetObject);
+    localStorage.setItem("budgetForm2", JSON.stringify(budgetObject));
 
+    window.location.href = "/budgetForm/3";
+});
 
 
 // var budgetArray = [];
@@ -35,7 +44,7 @@ $("#finalSubmit").on("click", function(res, req) {
 //     var budgetObject = {
 //         groceries: $("#groceries").val(),
 //         eatingout: $("#eatingout").val(),
-//         frequency: $("#frequency").val()
+//     uency: $("#frequency").val()
 //     };
 //     console.log("HERE: ", budgetObject)
 //     localStorage.setItem("budgetForm2", JSON.stringify(budgetObject))
