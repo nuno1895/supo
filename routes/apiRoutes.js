@@ -29,7 +29,7 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/dash", function(req, res) {
+    app.get("/fuckyoununo", function(req, res) {
         console.log(req.session)
         models.Budget.findAll({
             where: {
