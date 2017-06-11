@@ -9,3 +9,7 @@ $("#budgetBtn3").on("click", function() {
 
     window.location.href = "/budgetForm/4";
 });
+
+$("#budgetBtn3Back").on("click", function() {
+    window.location.href = "/budgetForm/2";     
+});

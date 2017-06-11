@@ -35,7 +35,9 @@ $("#budgetBtn2").on("click", function() {
     window.location.href = "/budgetForm/3";
 });
 
-
+$("#budgetBtn2Back").on("click", function() {
+    window.location.href = "/budgetForm";     
+});
 // var budgetArray = [];
 
 
