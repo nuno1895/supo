@@ -268,8 +268,23 @@ ul a{
 
 
 
+/*BUDGET FORMs*/
+label{
+    display: block;
+}
 
 
+.bgtBtn{
+    color: white;
+    border: none;
+    background: #20c254;
+    margin-top: 2em;
+    padding: 1em 7em !important;
+    box-shadow: 1px 1px rgb(89,87,87);
+}
+.bgtBtn:hover{
+    background-color: #23ab4f;
+}
 
 
 
