@@ -27,8 +27,23 @@ $(document).ready(function(){
         });
     }
 
+// var monthDropDown = {
+//     'january': 'January',
+//     'february': 'February',
+//     'march': 'March'
+// };
+
+// var s = $("<select id='month' class='form-control' />")
+
+// for (var val in monthDropDown){
+//     $("<option/>", {value: val, text: monthDropDown[val]}).appendTo(s);
+// }
+
+// s.appendTo('.form-groupMonth');
+
 
 });
+
 
 window.onscroll = function() {
     $('.container-fluid').css('padding', '0 !important');
