@@ -2,9 +2,7 @@ body{
     overflow: auto;
     font-family: 'Lato', sans-serif !important;
 }
-#budget-wrapper{
-    margin-top: 6em;
-}
+
 #home-wrapper{
     overflow: auto;
 }
@@ -269,8 +267,16 @@ ul a{
 
 
 /*BUDGET FORMs*/
+#budget-wrapper{
+    margin-bottom: 6em;
+    margin-top: 6em;
+}
 label{
     display: block;
+}
+.medInpAdd{
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 

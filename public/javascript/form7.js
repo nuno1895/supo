@@ -13,6 +13,32 @@ $("#budgetBtn7").on("click", function() {
     window.location.href = "/budgetForm/8";
 });
 
+$("#addMedBill").on("click", function(){
+    var medBill = {
+        'otherMedical1': 'Other Medical 1',
+        'otherMedical2': 'Other Medical 2',
+        'otherMedical3': 'Other Medical 3'
+    };
+    var s = $("<select class='form-control' id='medAddOn' />")
+        $("<option/>", {text:'Choose an Medical Add On Option'}).appendTo(s);
+
+        for (var val in medBill){
+            $("<option/>", {value: val, id: val, class: 'medBillAddOpt', text: medBill[val]}).appendTo(s);
+        }
+    s.appendTo('.addMedBillDiv');
+
+});
+
+$(document).on('change', "#medAddOn", function() {
+    if(this.value == 'otherMedical1' || this.value == 'otherMedical2' || this.value == 'otherMedical3'){
+        console.log('YES!');
+        $('.addMedBillDiv').append("<input id='" + this.value + "'" + " " + "class='form-control medInpAdd'/>");
+    } else{
+        console.log('whoopsiedoodle')
+    }
+})
+
+
 $("#budgetBtn7Back").on("click", function() {
     window.location.href = "/budgetForm/6";     
 });
