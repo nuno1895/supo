@@ -1,10 +1,3 @@
-var medBill = {
-    'otherMedical1': 'Other Medical 1',
-    'otherMedical2': 'Other Medical 2',
-    'otherMedical3': 'Other Medical 3'
-};
-
-
 $("#budgetBtn7").on("click", function() {
     var budgetObject = {
     	medications: $("#medications").val(),
@@ -20,36 +13,22 @@ $("#budgetBtn7").on("click", function() {
     window.location.href = "/budgetForm/8";
 });
 
+var count = 1;
+
 $("#addMedBill").on("click", function(){
 
-    var s = $("<select class='form-control' id='medAddOn' />")
-        $("<option/>", {text:'Choose an Medical Add On Option'}).appendTo(s);
+    var medBillDiv = $("<div class='form-group'>");
+    var medBillLabel = $("<label for='otherMedical" + count + "'>Other Medical " + count + ":</label>");
+    var medBillInput = $("<input type='text' class='form-control' id='otherMedical" + count + "'>");
 
-        for (var val in medBill){
-            $("<option/>", {value: val, id: val, class: 'medBillAddOpt', text: medBill[val]}).attr('data', medBill[val],).appendTo(s);
-        }
-    s.appendTo('.addMedBillDiv');
+    medBillDiv.append(medBillLabel).append(medBillInput);
 
+    $('#additionalMedBillDiv').append(medBillDiv);
+
+    if(count === 3) {
+        document.getElementById("addMedBill").disabled = true;
+    } else count++;
 });
-
-$(document).on('change', "#medAddOn", function() {
-    debugger;
-    console.log(this.data);
-    if(this.value == 'otherMedical1' || this.value == 'otherMedical2' || this.value == 'otherMedical3'){
-        $('.addMedBillDiv').append("<label for='" + this.value +"'>" + $(this).find(':selected').attr('data') + "</label>");
-        $('.addMedBillDiv').append("<input id='" + this.value + "'" + " " + "class='form-control medInpAdd'/>");
-    } else{
-        console.log('whoopsiedoodle')
-    }
-});
-// $(document).on('change', "#medAddOn", function() {
-//     if(this.value == 'otherMedical1' || this.value == 'otherMedical2' || this.value == 'otherMedical3'){
-//         $('.addMedBillDiv').append("<input id='" + this.value + "'" + " " + "class='form-control medInpAdd'/>");
-//     } {
-//         console.log('whoopsiedoodle')
-//     }
-// });
-
 
 $("#budgetBtn7Back").on("click", function() {
     window.location.href = "/budgetForm/6";     
