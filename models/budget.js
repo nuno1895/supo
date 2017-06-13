@@ -86,7 +86,7 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
-        reparisMaint: {
+        repairsMaint: {
             type: Sequelize.INTEGER
         },
 
