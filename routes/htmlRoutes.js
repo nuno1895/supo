@@ -16,6 +16,7 @@ module.exports = function(app) {
   app.get('/budgetForm/10', navController.renderForm10);
   app.get('/budgetForm/11', navController.renderForm11);
   app.get('/budgetForm/12', navController.renderForm12);
+  app.get('/graderResults', navController.results);
   app.get('/signin', authController.signin);
   app.get('/signup', authController.signup);
   app.get('/logout', authController.logout);

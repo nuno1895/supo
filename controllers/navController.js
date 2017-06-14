@@ -59,4 +59,9 @@ module.exports = {
       userData: req.user
     });
   },
+  results: function(req, res) {
+    res.render('results/graderResults', {
+      userData: req.user
+    });
+  },
 }

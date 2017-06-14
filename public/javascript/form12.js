@@ -39,6 +39,8 @@ $("#budgetBtn12").on("click", function() {
 
 	$.post("/budgetdata", dataToPost).then(function(response) {
 		console.log("POSTED");
+
+	window.location.href = "/graderResults";
 	});
 });
 
