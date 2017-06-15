@@ -91,18 +91,26 @@ module.exports = function(app) {
             debt3: req.body.budgetForm12.debt3,
             debt4: req.body.budgetForm12.debt4
         }).then(function(budget) {
+
             res.redirect("results/graderResults");
+
+            res.redirect("/graderResults");
+
         });
     });
 
-    app.get("/dash", function(req, res) {
+    app.get("/budgetresults", function(req, res) {
         console.log(req.session)
         models.Budget.findAll({
             where: {
-                UserId: req.session.passport.user
+                UserId: req.session.passport.user,
+                id: 1
             }
-        }).then(function(results) {
-            res.json(results);
+        }).then(function(budgetResults) {
+            // res.send(budgetResults);
+            res.render("results/graderResults", {
+                budgetResults: budgetResults[0]
+            });
         });
     });
 
