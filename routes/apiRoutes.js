@@ -91,7 +91,11 @@ module.exports = function(app) {
             debt3: req.body.budgetForm12.debt3,
             debt4: req.body.budgetForm12.debt4
         }).then(function(budget) {
+
+            res.redirect("results/graderResults");
+
             res.redirect("/graderResults");
+
         });
     });
 

@@ -64,4 +64,9 @@ module.exports = {
       userData: req.user
     });
   },
+  expenses: function(req, res) {
+    res.render('expenses/dailyTracker', {
+      userData: req.user
+    });
+  },
 }
