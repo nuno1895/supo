@@ -1,42 +1,12 @@
-// $(function(){
-//     $('#phone-navigation #phone-menu').change(function(){
-//         var url = $(this).val();
-//         if(url) {
-//             window.location = url;
-//         }
-//     });
-// });
-
-console.log("hi");
-
-// var fancyFilter = function(filterListSelector, gallerySelector) {
-//     //Filter Button Code
-//     $(filterListSelector + ' a').click(function() {
-//         $(filterListSelector + ' li').removeClass('active');
-//         var $this = $(this);
-//         var filterType = $this.data('filter');
-//         if(!filterType) return true;
-
-//         $this.closest('li').addClass('active');
-//         $(gallerySelector).isotope({ 
-//             filter: filterType,
-//         });
-
-//         return false;
-//     });
-// };
-
 $("#budgetBtn").on("click", function() {
+    var totalPay = $("#takehome").val() * $("#frequency").val();
     var budgetObject = {
         month: $("#month").val(),
         takehome: $("#takehome").val(),
-        frequency: $("#frequency").val()
-        // food: $("#food").val(),
-        // eatingout: $("#eatingout").val()
+        frequency: $("#frequency").val(),
+        totalPay: totalPay
     };
     console.log("budgetObject form 1:", budgetObject);
     localStorage.setItem("budgetForm", JSON.stringify(budgetObject))
-    window.location.href = "/budgetForm/2";		
-
+    window.location.href = "/budgetForm/2";
 });
-

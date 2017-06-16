@@ -9,6 +9,11 @@ module.exports = {
         userData: req.user
         });
   },
+  renderFoodGrader: function(req, res) {
+    res.render('sectionGraders/foodGrader', {
+      userData: req.user
+    });
+  },
   renderForm3: function(req, res) {
     res.render('budgetForm/budgetForm3', {
       userData: req.user

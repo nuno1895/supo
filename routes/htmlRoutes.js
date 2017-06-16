@@ -6,6 +6,7 @@ module.exports = function(app) {
   app.get('/', homeController.renderHome);
   app.get('/budgetForm', navController.renderForm);
   app.get('/budgetForm/2', navController.renderForm2);
+  app.get('/grader/food', navController.renderFoodGrader);
   app.get('/budgetForm/3', navController.renderForm3);
   app.get('/budgetForm/4', navController.renderForm4);
   app.get('/budgetForm/5', navController.renderForm5);
