@@ -92,9 +92,9 @@ module.exports = function(app) {
             debt4: req.body.budgetForm12.debt4
         }).then(function(budget) {
 
-            res.redirect("results/graderResults");
-
             res.redirect("/graderResults");
+
+
 
         });
     });
