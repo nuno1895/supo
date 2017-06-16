@@ -263,8 +263,11 @@ ul a{
 
 
 
-
-
+/*EXPENSES*/
+#expense-wrapper{
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
 
 /*BUDGET FORMs*/
 #budget-wrapper{
@@ -308,10 +311,18 @@ label{
 
 
 
+#foodPanel{
+    background: #24ca24;
+}
+#clothinBudg{
+    background: red;
+}
 
 
-
-
+.budgetSpentPartial{
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
 
 
 
