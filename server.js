@@ -68,5 +68,5 @@ db.sequelize.sync().then(function() {
   });
 });
 
-
-
+//--Not sure if needed 6/16 - Jeff
+module.exports = app;
