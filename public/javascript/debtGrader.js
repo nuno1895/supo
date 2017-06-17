@@ -23,6 +23,49 @@ $(document).ready(function() {
 	$("#budgetTotal").append(totalDebtBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	// $("#budgetGrade").append(medicalGrade);
+
+	var pullForTotals = {
+        budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
+        budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
+        budgetForm3: JSON.parse(localStorage.getItem("budgetForm3")),
+        budgetForm4: JSON.parse(localStorage.getItem("budgetForm4")),
+        budgetForm5: JSON.parse(localStorage.getItem("budgetForm5")),
+        budgetForm6: JSON.parse(localStorage.getItem("budgetForm6")),
+        budgetForm7: JSON.parse(localStorage.getItem("budgetForm7")),
+        budgetForm8: JSON.parse(localStorage.getItem("budgetForm8")),
+        budgetForm9: JSON.parse(localStorage.getItem("budgetForm9")),
+        budgetForm10: JSON.parse(localStorage.getItem("budgetForm10")),
+        budgetForm11: JSON.parse(localStorage.getItem("budgetForm11")),
+        budgetForm12: JSON.parse(localStorage.getItem("budgetForm12")),
+    };
+
+
+    var budgetTotals = {
+        totalPay : pullForTotals.budgetForm.takehome,
+        foodTotal : pullForTotals.budgetForm2.foodTotal,
+        clothingTotal : pullForTotals.budgetForm3.clothingAdult,
+        utilitiesTotal : pullForTotals.budgetForm4.utilitiesTotal,
+        housingTotal : pullForTotals.budgetForm5.housingTotal,
+        savingsTotal : pullForTotals.budgetForm6.savingsTotal,
+        medicalTotal : pullForTotals.budgetForm7.medicalTotal,
+        insuranceTotal : pullForTotals.budgetForm8.insuranceTotal,
+        transportationTotal : pullForTotals.budgetForm9.transportationTotal,
+        personalTotal : pullForTotals.budgetForm10.personalTotal,
+        entertainmentTotal : pullForTotals.budgetForm11.entertainmentTotal,
+        debtTotal : pullForTotals.budgetForm12.debtTotal
+    };
+
+    console.log(pullForTotals);
+    console.log(budgetTotals);
+
+   	var totalsForDisplay = (parseInt(budgetTotals.totalPay) - (parseInt(budgetTotals.foodTotal) + parseInt(budgetTotals.clothingTotal) + parseInt(budgetTotals.utilitiesTotal) + parseInt(budgetTotals.housingTotal) + parseInt(budgetTotals.savingsTotal) + parseInt(budgetTotals.medicalTotal) + parseInt(budgetTotals.insuranceTotal) + parseInt(budgetTotals.transportationTotal) + parseInt(budgetTotals.personalTotal) + parseInt(budgetTotals.entertainmentTotal) + parseInt(budgetTotals.debtTotal)));	
+
+    var totalPay = $("<h2>Your Total Pay is: " + budgetTotals.totalPay + "</h2>");
+    var displayBudgetTotals = $("<h2>We added all your budgets and you have: " + totalsForDisplay + "Left, please go back and put this somehwere</h2>")
+    $("#totalPay").append(totalPay);
+    $("#budgetLeft").append(displayBudgetTotals);
+
+
 });
 
 $("#debtGraderBack").on("click", function() {

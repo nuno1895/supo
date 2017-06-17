@@ -1,4 +1,6 @@
 $("#budgetBtn12").on("click", function() {
+    var debtTotal = parseInt($("#carPayment1").val()) + parseInt($("#carPayment2").val()) + parseInt($("#creditCard1").val()) + parseInt($("#creditCard2").val()) + parseInt($("#creditCard3").val()) + parseInt($("#creditCard4").val()) + parseInt($("#creditCard5").val()) + parseInt($("#creditCard6").val()) + parseInt($("#studentLoan1").val()) + parseInt($("#studentLoan2").val()) + parseInt($("#studentLoan3").val()) + parseInt($("#studentLoan4").val()) + parseInt($("#debt1").val()) + parseInt($("#debt2").val()) + parseInt($("#debt3").val()) + parseInt($("#debt4").val());
+  
     var budgetObject = {
         carPayment1: $("#carPayment1").val(),
         carPayment2: $("#carPayment2").val(),
@@ -15,10 +17,15 @@ $("#budgetBtn12").on("click", function() {
         debt1: $("#debt1").val(),
         debt2: $("#debt2").val(),
         debt3: $("#debt3").val(),
-        debt4: $("#debt4").val()
+        debt4: $("#debt4").val(),
+        debtTotal: debtTotal
     };
+
+  
+
     console.log("budgetObject form 12", budgetObject);
     localStorage.setItem("budgetForm12", JSON.stringify(budgetObject));
+
 
     var dataToPost = {
         budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
