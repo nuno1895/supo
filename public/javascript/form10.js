@@ -17,7 +17,7 @@ $("#budgetBtn10").on("click", function() {
     console.log("budgetObject form 10", budgetObject);
     localStorage.setItem("budgetForm10", JSON.stringify(budgetObject));
 
-    window.location.href = "/budgetForm/11";
+    window.location.href = "/grader/personal"
 });
 
 $("#budgetBtn10Back").on("click", function() {

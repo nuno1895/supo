@@ -8,7 +8,7 @@ $(document).ready(function() {
 	var budgetForm3 = JSON.parse(localStorage.getItem("budgetForm3"));
 	console.log("budgetForm3", budgetForm3);
 
-	var clothingBudget = parseInt(budgetForm3.clothingAdult) + parseInt(budgetForm3.clothingKids + parseInt(budgetForm3.dryCleaning));
+	var clothingBudget = parseInt(budgetForm3.clothingAdult) + parseInt(budgetForm3.clothingKids) + parseInt(budgetForm3.dryCleaning);
 	console.log("clothingBudget", clothingBudget);
 
 	var totalclothingBudget = $("<h2>Your total clothing budget is: " + clothingBudget + "</h2>");
