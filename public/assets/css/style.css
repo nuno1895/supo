@@ -269,6 +269,14 @@ ul a{
     margin-bottom: 6em;
 }
 
+/*GRADER*/
+
+.grader-Wrapper{
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+
+
 /*BUDGET FORMs*/
 #budget-wrapper{
     margin-bottom: 6em;
