@@ -1,4 +1,5 @@
 $("#budgetBtn4").on("click", function() {
+    var utilitiesTotal = parseInt($("#electricity").val()) + parseInt($("#mobilePhone").val()) + parseInt($("#gas").val()) + parseInt($("#trash").val()) + parseInt($("#water").val()) + parseInt($("#internet").val()) + parseInt($("#cable").val());
     var budgetObject = {
         electricity: $("#electricity").val(),
         mobilePhone: $("#mobilePhone").val(),
@@ -6,7 +7,8 @@ $("#budgetBtn4").on("click", function() {
         trash: $("#trash").val(),
         water: $("#water").val(),
         internet: $("#internet").val(),
-        cable: $("#cable").val()
+        cable: $("#cable").val(),
+        utilitiesTotal: utilitiesTotal
     };
     console.log("budgetObject form 4", budgetObject);
     localStorage.setItem("budgetForm4", JSON.stringify(budgetObject));

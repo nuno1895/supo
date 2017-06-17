@@ -1,11 +1,13 @@
 $("#budgetBtn7").on("click", function() {
+    var medicalTotal = parseInt($("#medications").val()) + parseInt($("#doctorBills").val()) + parseInt($("#hospitalBills").val()) + parseInt($("#otherMedical1").val()) + parseInt($("#otherMedical2").val()) + parseInt($("#otherMedical3").val());
     var budgetObject = {
     	medications: $("#medications").val(),
     	doctorBills: $("#doctorBills").val(),
     	hospitalBills: $("#hospitalBills").val(),
     	otherMedical1: $("#otherMedical1").val(),
     	otherMedical2: $("#otherMedical2").val(),
-    	otherMedical3: $("#otherMedical3").val()
+    	otherMedical3: $("#otherMedical3").val(),
+        medicalTotal: medicalTotal
     };
     console.log("budgetObject form 7", budgetObject);
     localStorage.setItem("budgetForm7", JSON.stringify(budgetObject));
