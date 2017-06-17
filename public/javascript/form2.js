@@ -1,7 +1,9 @@
 $("#budgetBtn2").on("click", function() {
+	var foodTotal = $("#groceries").val() + $("#eatingout").val();
     var budgetObject = {
         groceries: $("#groceries").val(),
-        eatingout: $("#eatingout").val()
+        eatingout: $("#eatingout").val(), 
+        foodTotal: foodTotal
     };
     console.log("budgetObject Form 2:", budgetObject);
     localStorage.setItem("budgetForm2", JSON.stringify(budgetObject));
