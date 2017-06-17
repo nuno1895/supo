@@ -1,24 +1,38 @@
+var month;
+
 $(document).ready(function(){
 
-        var month = new Array();
-        month[0] = "January";
-        month[1] = "February";
-        month[2] = "March";
-        month[3] = "April";
-        month[4] = "May";
-        month[5] = "June";
-        month[6] = "July";
-        month[7] = "August";
-        month[8] = "September";
-        month[9] = "October";
-        month[10] = "November";
-        month[11] = "December";
+  var monthArray = new Array();
+  monthArray[0] = "January";
+  monthArray[1] = "February";
+  monthArray[2] = "March";
+  monthArray[3] = "April";
+  monthArray[4] = "May";
+  monthArray[5] = "June";
+  monthArray[6] = "July";
+  monthArray[7] = "August";
+  monthArray[8] = "September";
+  monthArray[9] = "October";
+  monthArray[10] = "November";
+  monthArray[11] = "December";
 
-        var d = new Date();
-        var n = month[d.getMonth()];
+  var date = new Date();
+  month = monthArray[date.getMonth()];
 
+  $('#monthToday').html(month);
+});
 
+$("#expenseSubmit").on("click", function() {
+  var expenseData = {
+    month: month,
+    category: $("#category").val(),
+    expenseName: $("#expenseName").val(),
+    expenseAmount: $("#expenseAmount").val()
+  };
 
-    $('.monthToday').html(n);
+  console.log("expenseData", expenseData);
 
-})
+  $.post("/expenseData", expenseData).then(function(response) {
+    console.log("POSTED");
+  });
+});

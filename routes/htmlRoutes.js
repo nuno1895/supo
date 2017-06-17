@@ -33,5 +33,3 @@ module.exports = function(app) {
   app.get('/signup', authController.signup);
   app.get('/logout', authController.logout);
 };
-
-//adding graders
