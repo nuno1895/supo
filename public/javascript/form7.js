@@ -31,5 +31,5 @@ $("#addMedBill").on("click", function(){
 });
 
 $("#budgetBtn7Back").on("click", function() {
-    window.location.href = "/grader/savings";    
+    window.location.href = "/grader/savings";
 });

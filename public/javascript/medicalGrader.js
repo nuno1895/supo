@@ -8,7 +8,24 @@ $(document).ready(function() {
 	var budgetForm7 = JSON.parse(localStorage.getItem("budgetForm7"));
 	console.log("budgetForm7", budgetForm7);
 
-	var medicalBudget = parseInt(budgetForm7.medications) + parseInt(budgetForm7.doctorBills) + parseInt(budgetForm7.hospitalBills) + parseInt(budgetForm7.otherMedical1) + parseInt(budgetForm7.otherMedical2) + parseInt(budgetForm7.otherMedical3);
+	var otherMedical1;
+	var otherMedical2;
+	var otherMedical3;
+
+	if(budgetForm7.otherMedical1 === undefined) {
+		otherMedical1 = 0;
+	} else otherMedical1 = parseInt(budgetForm7.otherMedical1);
+
+	if(budgetForm7.otherMedical2 === undefined) {
+		otherMedical2 = 0;
+	} else otherMedical2 = parseInt(budgetForm7.otherMedical2);
+
+	if(budgetForm7.otherMedical3 === undefined) {
+		otherMedical3 = 0;
+	} else otherMedical3 = parseInt(budgetForm7.otherMedical3);
+
+	var medicalBudget = parseInt(budgetForm7.medications) + parseInt(budgetForm7.doctorBills) + parseInt(budgetForm7.hospitalBills) + otherMedical1 + otherMedical2 + otherMedical3;
+
 	console.log("medicalBudget", medicalBudget);
 
 	var medicalBudgetPercent = (medicalBudget*100)/totalPay;
