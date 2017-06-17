@@ -1,5 +1,5 @@
 $("#budgetBtn2").on("click", function() {
-	var foodTotal = $("#groceries").val() + $("#eatingout").val();
+	var foodTotal = parseInt($("#groceries").val()) + parseInt($("#eatingout").val());
     var budgetObject = {
         groceries: $("#groceries").val(),
         eatingout: $("#eatingout").val(), 
