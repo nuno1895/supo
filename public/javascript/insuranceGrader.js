@@ -11,18 +11,23 @@ $(document).ready(function() {
 	var insuranceBudget = parseInt(budgetForm8.lifeInsurance) + parseInt(budgetForm8.healthInsurance) + parseInt(budgetForm8.autoInsurance) + parseInt(budgetForm8.homeRentalInsurance) + parseInt(budgetForm8.disabilityInsurance) + parseInt(budgetForm8.longTermInsurance);
 	console.log("insuranceBudget", insuranceBudget);
 
+	var insuranceBudgetPercent = (insuranceBudget*100)/totalPay;
+
 	var totalInsuranceBudget = $("<h2>Your total insurance budget is: " + insuranceBudget + "</h2>");
-	var percentOfBudget = $("<h2>Your insurance budget is " + (insuranceBudget * 100)/totalPay + "% of your total budget.</h2>");
-	var suggestedBudgetPercent = 15;
-	var percentDiff = percentOfBudget - suggestedBudgetPercent;
-	//-------------------------------------------------------------
-	// var grade = grader.getGrade(percentDiff);
-	// console.log(grade);
-	// var insuranceGrade = $("<h5>Your grade is: " + grade + "</h5>");
-	//--------------------------------------------------------------
+	var percentOfBudget = $("<h2>Your insurance budget is " + insuranceBudgetPercent + "% of your total budget.</h2>");
+
+	var suggestedBudgetPercent = 25;
+
+	var percentDiff = insuranceBudgetPercent - suggestedBudgetPercent;
+	console.log(percentDiff);
+
+	var grade = getGrade(percentDiff);
+	console.log(grade);
+	var insuranceGrade = $("<h5>Your grade is: " + grade + "</h5>");
+
 	$("#budgetTotal").append(totalInsuranceBudget);
 	$("#budgetPercent").append(percentOfBudget);
-	// $("#budgetGrade").append(medicalGrade);
+	$("#budgetGrade").append(insuranceGrade);
 });
 
 $("#insuranceGraderBack").on("click", function() {

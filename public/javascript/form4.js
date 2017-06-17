@@ -17,5 +17,5 @@ $("#budgetBtn4").on("click", function() {
 });
 
 $("#budgetBtn4Back").on("click", function() {
-    window.location.href = "/budgetForm/3";     
+    window.location.href = "/grader/clothing";   
 });

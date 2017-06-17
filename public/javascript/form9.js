@@ -16,5 +16,5 @@ $("#budgetBtn9").on("click", function() {
 });
 
 $("#budgetBtn9Back").on("click", function() {
-    window.location.href = "/budgetForm/8";     
+    window.location.href = "/grader/insurance";     
 });

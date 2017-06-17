@@ -11,18 +11,23 @@ $(document).ready(function() {
 	var transportationBudget = parseInt(budgetForm9.carFuel) + parseInt(budgetForm9.carRepairs) + parseInt(budgetForm9.bus) + parseInt(budgetForm9.train) + parseInt(budgetForm9.newCarFund) + parseInt(budgetForm9.otherTransportation);
 	console.log("transportationBudget", transportationBudget);
 
+	var transportationBudgetPercent = (transportationBudget*100)/totalPay;
+
 	var totalTransportationBudget = $("<h2>Your total transportation budget is: " + transportationBudget + "</h2>");
-	var percentOfBudget = $("<h2>Your transportation budget is " + (transportationBudget * 100)/totalPay + "% of your total budget.</h2>");
+	var percentOfBudget = $("<h2>Your transportation budget is " + transportationBudgetPercent + "% of your total budget.</h2>");
+
 	var suggestedBudgetPercent = 15;
-	var percentDiff = percentOfBudget - suggestedBudgetPercent;
-	//-------------------------------------------------------------
-	// var grade = grader.getGrade(percentDiff);
-	// console.log(grade);
-	// var transportationGrade = $("<h5>Your grade is: " + grade + "</h5>");
-	//--------------------------------------------------------------
+
+	var percentDiff = transportationBudgetPercent - suggestedBudgetPercent;
+	console.log(percentDiff);
+
+	var grade = getGrade(percentDiff);
+	console.log(grade);
+	var transportationGrade = $("<h5>Your grade is: " + grade + "</h5>");
+
 	$("#budgetTotal").append(totalTransportationBudget);
 	$("#budgetPercent").append(percentOfBudget);
-	// $("#budgetGrade").append(medicalGrade);
+	$("#budgetGrade").append(transportationGrade);
 });
 
 $("#transportationGraderBack").on("click", function() {

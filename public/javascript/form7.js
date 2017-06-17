@@ -12,7 +12,7 @@ $("#budgetBtn7").on("click", function() {
     console.log("budgetObject form 7", budgetObject);
     localStorage.setItem("budgetForm7", JSON.stringify(budgetObject));
 
-     window.location.href = "/grader/medical";
+    window.location.href = "/grader/medical";
 });
 
 var count = 1;
@@ -33,5 +33,5 @@ $("#addMedBill").on("click", function(){
 });
 
 $("#budgetBtn7Back").on("click", function() {
-    window.location.href = "/budgetForm/6";     
+    window.location.href = "/grader/savings";
 });

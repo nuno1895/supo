@@ -13,5 +13,5 @@ $("#budgetBtn6").on("click", function() {
 });
 
 $("#budgetBtn6Back").on("click", function() {
-    window.location.href = "/budgetForm/5";     
+    window.location.href = "/grader/housing";    
 });

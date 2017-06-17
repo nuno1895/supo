@@ -8,21 +8,43 @@ $(document).ready(function() {
 	var budgetForm7 = JSON.parse(localStorage.getItem("budgetForm7"));
 	console.log("budgetForm7", budgetForm7);
 
-	var medicalBudget = parseInt(budgetForm7.medications) + parseInt(budgetForm7.doctorBills) + parseInt(budgetForm7.hospitalBills) + parseInt(budgetForm7.otherMedical1) + parseInt(budgetForm7.otherMedical2) + parseInt(budgetForm7.otherMedical3);
+	var otherMedical1;
+	var otherMedical2;
+	var otherMedical3;
+
+	if(budgetForm7.otherMedical1 === undefined) {
+		otherMedical1 = 0;
+	} else otherMedical1 = parseInt(budgetForm7.otherMedical1);
+
+	if(budgetForm7.otherMedical2 === undefined) {
+		otherMedical2 = 0;
+	} else otherMedical2 = parseInt(budgetForm7.otherMedical2);
+
+	if(budgetForm7.otherMedical3 === undefined) {
+		otherMedical3 = 0;
+	} else otherMedical3 = parseInt(budgetForm7.otherMedical3);
+
+	var medicalBudget = parseInt(budgetForm7.medications) + parseInt(budgetForm7.doctorBills) + parseInt(budgetForm7.hospitalBills) + otherMedical1 + otherMedical2 + otherMedical3;
+
 	console.log("medicalBudget", medicalBudget);
 
+	var medicalBudgetPercent = (medicalBudget*100)/totalPay;
+
 	var totalMedicalBudget = $("<h2>Your total medical budget is: " + medicalBudget + "</h2>");
-	var percentOfBudget = $("<h2>Your medical budget is " + (medicalBudget * 100)/totalPay + "% of your total budget.</h2>");
-	var suggestedBudgetPercent = 15;
-	var percentDiff = percentOfBudget - suggestedBudgetPercent;
-	//-------------------------------------------------------------
-	// var grade = grader.getGrade(percentDiff);
-	// console.log(grade);
-	// var medicalGrade = $("<h5>Your grade is: " + grade + "</h5>");
-	//--------------------------------------------------------------
+	var percentOfBudget = $("<h2>Your medical budget is " + medicalBudgetPercent + "% of your total budget.</h2>");
+
+	var suggestedBudgetPercent = 10;
+
+	var percentDiff = medicalBudgetPercent - suggestedBudgetPercent;
+	console.log(percentDiff);
+
+	var grade = getGrade(percentDiff);
+	console.log(grade);
+	var medicalGrade = $("<h5>Your grade is: " + grade + "</h5>");
+
 	$("#budgetTotal").append(totalMedicalBudget);
 	$("#budgetPercent").append(percentOfBudget);
-	// $("#budgetGrade").append(medicalGrade);
+	$("#budgetGrade").append(medicalGrade);
 });
 
 $("#medicalGraderBack").on("click", function() {
