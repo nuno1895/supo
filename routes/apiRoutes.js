@@ -8,8 +8,6 @@ module.exports = function(app) {
 
     app.get('/budget', budgetController.index);
 
-
-
     //this and form2 are sending to the db...but HOW? or...WHY? 
     app.post("/budgetdata", function(req, res) {
         console.log(req.session);
@@ -94,8 +92,18 @@ module.exports = function(app) {
 
             res.redirect("/graderResults");
 
+        });
+    });
 
-
+    app.post("/expenseData", function(req, res) {
+        console.log(req.body);
+        models.Expense.create({
+            month: req.body.expenseData.month,
+            category: req.body.expenseData.category,
+            expenseName: req.body.expenseData.expenseName,
+            expenseAmount: req.body.expenseData.expenseAmount
+        }).then(function() {
+            res.redirect("/dailyTracker");
         });
     });
 
@@ -114,18 +122,6 @@ module.exports = function(app) {
         });
     });
 
-    // router.post("/budgetdata", function(req, res) {
-    //     models.Budget.create({
-    //         month: dataToPost.budgetForm.month,
-    //         takehome: dataToPost.budgetForm.takehome,
-    //         groceries: dataToPost.budgetForm2.groceries,
-    //         eatingout: dataToPost.budgetForm2.eatingout
-    //     }).then(function(budget) {
-    //         console.log(month);
-    //         res.json(month)
-    //     });
-    // });
-
     app.get("/budget/all", function(req, res) {
         models.User.findAll({}).then(function(results) {
             res.json(results);
@@ -142,6 +138,5 @@ module.exports = function(app) {
                 res.json(results);
             })
         }
-    })
-
+    });
 };

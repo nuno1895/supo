@@ -18,15 +18,3 @@ module.exports = {
 
 
 };
-
-// router.post('/create', function (req, res) {
-//   models.Budget.create({
-//     month: dataToPost.budgetForm.month,
-//     takehome: dataToPost.budgetForm.takehome,
-//     groceries: dataToPost.budgetForm2.groceries,
-//     eatingout: dataToPost.budgetForm2.eatingout
-//   }).then(function(budget) {
-//     console.log(month);
-//     res.redirect('/')
-//   });
-// });

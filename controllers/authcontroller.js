@@ -18,10 +18,5 @@ module.exports = {
         req.session.destory(function(err) {
             res.redirect('/');
         });
-    },
-    fuckyoununo: function(req, res) {
-        res.render('fuckyoununo', {
-            userData: req.user
-        });
     }
 }

@@ -4,13 +4,13 @@
   <h1 class="budgetHead">Daily Expense Tracker </h1>
   <div class="container">
 <!--   <h1> Expenses </h1>
- -->    <div><h2>Your Daily Budget for <b><span class="monthToday"></span></b></h2> </div>
+ -->    <div><h2>Your Daily Budget for <b><span id="monthToday"></span></b></h2> </div>
     <div class="monthNow"></div>
 
 
     <div class="form-group form-groupCatergory">
-      <label for="catergory">Caterogory:</label>
-      <select id='catergory' class='form-control'>
+      <label for="category">Caterogory:</label>
+      <select id='category' class='form-control'>
         <option value="food">Food</option>
         <option value="clothing">Clothing</option>
         <option value="utilities">Utilities</option>
@@ -25,13 +25,13 @@
     </div>
   	<div class="form-group">
   	  <label for="expense">Expense Name:</label>
-  	  <input type="text" class="form-control" id="expense">
+  	  <input type="text" class="form-control" id="expenseName">
   	</div>
     <div class="form-group">
       <label for="expenseAmount">Amount Spent</label>
       <input type="number" class="form-control" id="expenseAmount">
     </div>
-    <button id="budgetBtn" type="button" class="btn btn-default bgtBtn">Submit</button>
+    <button id="expenseSubmit" type="button" class="btn btn-default bgtBtn">Submit</button>
   </div>
 <script type="text/javascript" src="/javascript/dailyTracker.js"></script>
   {{> budgetSpent/budgetSpent}}
