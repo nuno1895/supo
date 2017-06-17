@@ -11,18 +11,23 @@ $(document).ready(function() {
 	var entertainmentBudget = parseInt(budgetForm11.entertainment) + parseInt(budgetForm11.vacation);
 	console.log("entertainmentBudget", entertainmentBudget);
 
+	var entertainmentBudgetPercent = (entertainmentBudget*100)/totalPay;
+
 	var totalEntertainmentBudget = $("<h2>Your total entertainment budget is: " + entertainmentBudget + "</h2>");
-	var percentOfBudget = $("<h2>Your entertainment budget is " + (entertainmentBudget * 110)/totalPay + "% of your total budget.</h2>");
-	var suggestedBudgetPercent = 15;
-	var percentDiff = percentOfBudget - suggestedBudgetPercent;
-	//-------------------------------------------------------------
-	// var grade = grader.getGrade(percentDiff);
-	// console.log(grade);
-	// var entertainmentGrade = $("<h5>Your grade is: " + grade + "</h5>");
-	//--------------------------------------------------------------
+	var percentOfBudget = $("<h2>Your entertainment budget is " + entertainmentBudgetPercent + "% of your total budget.</h2>");
+
+	var suggestedBudgetPercent = 3;
+
+	var percentDiff = entertainmentBudgetPercent - suggestedBudgetPercent;
+	console.log(percentDiff);
+
+	var grade = getGrade(percentDiff);
+	console.log(grade);
+	var entertainmentGrade = $("<h5>Your grade is: " + grade + "</h5>");
+
 	$("#budgetTotal").append(totalEntertainmentBudget);
 	$("#budgetPercent").append(percentOfBudget);
-	// $("#budgetGrade").append(medicalGrade);
+	$("#budgetGrade").append(entertainmentGrade);
 });
 
 $("#entertainmentGraderBack").on("click", function() {

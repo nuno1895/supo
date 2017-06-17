@@ -79,5 +79,3 @@ function getGrade(percent, formSection) {
 		}
 	}
 };
-
-// module.exports = getGrade();
