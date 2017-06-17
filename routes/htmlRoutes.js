@@ -8,6 +8,7 @@ module.exports = function(app) {
   app.get('/budgetForm/2', navController.renderForm2);
   app.get('/grader/food', navController.renderFoodGrader);
   app.get('/budgetForm/3', navController.renderForm3);
+  app.get('/grader/clothing', navController.renderClothingGrader);
   app.get('/budgetForm/4', navController.renderForm4);
   app.get('/budgetForm/5', navController.renderForm5);
   app.get('/budgetForm/6', navController.renderForm6);
@@ -23,3 +24,5 @@ module.exports = function(app) {
   app.get('/signup', authController.signup);
   app.get('/logout', authController.logout);
 };
+
+//adding graders

@@ -19,6 +19,11 @@ module.exports = {
       userData: req.user
     });
   },
+  renderClothingGrader: function(req, res) {
+    res.render('sectionGraders/clothingGrader', {
+      userData: req.user
+    });
+  },
   renderForm4: function(req, res) {
     res.render('budgetForm/budgetForm4', {
       userData: req.user
