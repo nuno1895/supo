@@ -10,5 +10,5 @@ $("#budgetBtn11").on("click", function() {
 });
 
 $("#budgetBtn11Back").on("click", function() {
-    window.location.href = "/budgetForm/10";     
+    window.location.href = "/grader/personal";    
 });

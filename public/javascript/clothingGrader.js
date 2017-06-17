@@ -11,18 +11,23 @@ $(document).ready(function() {
 	var clothingBudget = parseInt(budgetForm3.clothingAdult) + parseInt(budgetForm3.clothingKids) + parseInt(budgetForm3.dryCleaning);
 	console.log("clothingBudget", clothingBudget);
 
+	var clothingBudgetPercent = (clothingBudget*100)/totalPay;
+
 	var totalclothingBudget = $("<h2>Your total clothing budget is: " + clothingBudget + "</h2>");
-	var percentOfBudget = $("<h2>Your clothing budget is " + (clothingBudget * 100)/totalPay + "% of your total budget.</h2>");
-	var suggestedBudgetPercent = 15;
-	var percentDiff = percentOfBudget - suggestedBudgetPercent;
-	//-------------------------------------------------------------
-	// var grade = grader.getGrade(percentDiff);
-	// console.log(grade);
-	// var clothingGrade = $("<h4>Your grade is: " + grade + "</h4>");
-	//--------------------------------------------------------------
+	var percentOfBudget = $("<h2>Your clothing budget is " + clothingBudgetPercent + "% of your total budget.</h2>");
+	
+	var suggestedBudgetPercent = 7;
+
+	var percentDiff = clothingBudgetPercent - suggestedBudgetPercent;
+	console.log(percentDiff);
+
+	var grade = getGrade(percentDiff);
+	console.log(grade);
+	var clothingGrade = $("<h4>Your grade is: " + grade + "</h4>");
+
 	$("#budgetTotal").append(totalclothingBudget);
 	$("#budgetPercent").append(percentOfBudget);
-	// $("#budgetGrade").append(clothingGrade);
+	$("#budgetGrade").append(clothingGrade);
 });
 
 $("#clothingGraderBack").on("click", function() {

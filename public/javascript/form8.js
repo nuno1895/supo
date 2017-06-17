@@ -14,5 +14,5 @@ $("#budgetBtn8").on("click", function() {
 });
 
 $("#budgetBtn8Back").on("click", function() {
-    window.location.href = "/budgetForm/7";     
+    window.location.href = "/grader/medical";     
 });

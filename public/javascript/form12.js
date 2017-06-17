@@ -19,6 +19,7 @@ $("#budgetBtn12").on("click", function() {
     };
     console.log("budgetObject form 12", budgetObject);
     localStorage.setItem("budgetForm12", JSON.stringify(budgetObject));
+    console.log(localStorage.getItem("budgetForm7"));
 
     var dataToPost = {
         budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
@@ -48,5 +49,5 @@ $("#budgetBtn12").on("click", function() {
 
 
 $("#budgetBtn12Back").on("click", function() {
-    window.location.href = "/budgetForm/11";
+    window.location.href = "/grader/entertainment";
 });
