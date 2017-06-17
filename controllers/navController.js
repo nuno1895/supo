@@ -29,8 +29,18 @@ module.exports = {
       userData: req.user
     });
   },
+  renderUtilitiesGrader: function(req, res) {
+    res.render('sectionGraders/utilitiesGrader', {
+      userData: req.user
+    });
+  },
   renderForm5: function(req, res) {
     res.render('budgetForm/budgetForm5', {
+      userData: req.user
+    });
+  },
+   renderHousingGrader: function(req, res) {
+    res.render('sectionGraders/housingGrader', {
       userData: req.user
     });
   },
@@ -39,8 +49,18 @@ module.exports = {
       userData: req.user
     });
   },
+  renderSavingsGrader: function(req, res) {
+    res.render('sectionGraders/savingsGrader', {
+      userData: req.user
+    });
+  },
   renderForm7: function(req, res) {
     res.render('budgetForm/budgetForm7', {
+      userData: req.user
+    });
+  },
+  renderMedicalGrader: function(req, res) {
+    res.render('sectionGraders/medicalGrader', {
       userData: req.user
     });
   },
@@ -49,8 +69,18 @@ module.exports = {
       userData: req.user
     });
   },
+  renderInsuranceGrader: function(req, res) {
+    res.render('sectionGraders/insuranceGrader', {
+      userData: req.user
+    });
+  },
   renderForm9: function(req, res) {
     res.render('budgetForm/budgetForm9', {
+      userData: req.user
+    });
+  },
+  renderTransportationGrader: function(req, res) {
+    res.render('sectionGraders/transportationGrader', {
       userData: req.user
     });
   },
@@ -59,13 +89,28 @@ module.exports = {
       userData: req.user
     });
   },
+   renderPersonalGrader: function(req, res) {
+    res.render('sectionGraders/personalGrader', {
+      userData: req.user
+    });
+  },
   renderForm11: function(req, res) {
     res.render('budgetForm/budgetForm11', {
       userData: req.user
     });
   },
+  renderEntertainmentGrader: function(req, res) {
+    res.render('sectionGraders/entertainmentGrader', {
+      userData: req.user
+    });
+  },
   renderForm12: function(req, res) {
     res.render('budgetForm/budgetForm12', {
+      userData: req.user
+    });
+  },
+  renderDebtGrader: function(req, res) {
+    res.render('sectionGraders/debtGrader', {
       userData: req.user
     });
   },

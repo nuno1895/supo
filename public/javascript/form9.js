@@ -10,7 +10,7 @@ $("#budgetBtn9").on("click", function() {
     console.log("budgetObject form 9", budgetObject);
     localStorage.setItem("budgetForm9", JSON.stringify(budgetObject));
 
-    window.location.href = "/budgetForm/10";
+    window.location.href = "/grader/transportation";
 });
 
 $("#budgetBtn9Back").on("click", function() {

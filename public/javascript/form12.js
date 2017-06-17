@@ -40,7 +40,8 @@ $("#budgetBtn12").on("click", function() {
     $.post("/budgetdata", dataToPost).then(function(response) {
         console.log("POSTED");
 
-        window.location.href = "/budgetresults";
+        window.location.href = "/grader/debt"
+        // window.location.href = "/budgetresults";
     });
 });
 
