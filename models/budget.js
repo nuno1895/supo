@@ -34,6 +34,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        foodTotal: {
+            type: Sequelize.INTEGER
+        },
+
         clothingAdult: {
             type: Sequelize.INTEGER
         },
@@ -43,6 +47,10 @@ module.exports = function(sequelize, Sequelize) {
         },
 
         dryCleaning: {
+            type: Sequelize.INTEGER
+        },
+
+        clothingTotal: {
             type: Sequelize.INTEGER
         },
 
@@ -74,6 +82,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        utilitiesTotal: {
+            type: Sequelize.INTEGER
+        },
+
         mortgageRent: {
             type: Sequelize.INTEGER
         },
@@ -94,6 +106,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        housingTotal: {
+            type: Sequelize.INTEGER
+        },
+
         emergencyFund: {
             type: Sequelize.INTEGER
         },
@@ -103,6 +119,10 @@ module.exports = function(sequelize, Sequelize) {
         },
 
         collegeFund: {
+            type: Sequelize.INTEGER
+        },
+
+        savingsTotal: {
             type: Sequelize.INTEGER
         },
 
@@ -130,6 +150,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        medicalTotal: {
+            type: Sequelize.INTEGER
+        },
+
         lifeInsurance: {
             type: Sequelize.INTEGER
         },
@@ -154,6 +178,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        InsuranceTotal: {
+            type: Sequelize.INTEGER
+        },
+
         carFuel: {
             type: Sequelize.INTEGER
         },
@@ -175,6 +203,10 @@ module.exports = function(sequelize, Sequelize) {
         },
 
         otherTransportation: {
+            type: Sequelize.INTEGER
+        },
+
+        transportationTotal: {
             type: Sequelize.INTEGER
         },
 
@@ -230,11 +262,19 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        personalTotal: {
+            type: Sequelize.INTEGER
+        },
+
         entertainment: {
             type: Sequelize.INTEGER
         },
 
         vacation: {
+            type: Sequelize.INTEGER
+        },
+
+        entertainmentTotal: {
             type: Sequelize.INTEGER
         },
 
@@ -296,6 +336,14 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
         debt4: {
+            type: Sequelize.INTEGER
+        },
+
+        debtTotal: {
+            type: Sequelize.INTEGER
+        },
+
+        totalBudget: {
             type: Sequelize.INTEGER
         }
     }, {
