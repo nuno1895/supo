@@ -109,6 +109,7 @@ module.exports = function(app) {
     app.post("/expenseData", function(req, res) {
         console.log(req.body);
         models.Expense.create({
+            UserId: req.session.passport.user,
             month: req.body.month,
             category: req.body.category,
             expenseName: req.body.expenseName,
