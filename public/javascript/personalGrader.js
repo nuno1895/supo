@@ -25,9 +25,39 @@ $(document).ready(function() {
 	console.log(grade);
 	var personalGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+	let personalAdvice;
+
+    if (grade === "A+") {
+        personalAdvice = advice.personal[1];
+    } else if (grade === "A-") {
+        personalAdvice = advice.personal[2].slice(0, 0);
+    }
+    else if (grade === "B+") {
+        personalAdvice = advice.personal[2].slice(0, 1);
+    }
+    else if (grade === "B-") {
+        personalAdvice = advice.personal[2].slice(0, 2);
+    }
+    else if (grade === "C+") {
+        personalAdvice = advice.personal[2].slice(0, 3);       
+    }
+    else if (grade === "C-") {
+        personalAdvice = advice.personal[2].slice(0, 3);       
+    }
+     else if (grade === "D") {
+        personalAdvice = advice.personal[2].slice(0, 4);       
+    }
+     else if (grade === "D-") {
+        personalAdvice = advice.personal[2].slice(0, 4);       
+    }
+      else {
+        personalAdvice = advice.personal[2];
+    }
+
 	$("#budgetTotal").append(totalPersonalBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(personalGrade);
+	$("#advice").append(personalAdvice);
 });
 
 $("#personalGraderBack").on("click", function() {

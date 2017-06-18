@@ -25,9 +25,40 @@ $(document).ready(function() {
 	console.log(grade);
 	var entertainmentGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+	let entertainmentAdvice;
+
+		if (grade === "A+") {
+		 entertainmentAdvice = advice.entertainment[1];
+		} else if (grade === "A-") {
+		 entertainmentAdvice = advice.entertainment[2].slice(0, 0);
+		}
+		else if (grade === "B+") {
+		 entertainmentAdvice = advice.entertainment[2].slice(0, 1);
+		}
+		else if (grade === "B-") {
+		 entertainmentAdvice = advice.entertainment[2].slice(0, 2);
+		}
+		else if (grade === "C+") {
+		 entertainmentAdvice = advice.entertainment[2].slice(0, 3);       
+		}
+		else if (grade === "C-") {
+		 entertainmentAdvice = advice.entertainment[2].slice(0, 4);       
+		}
+		else if (grade === "D") {
+		 entertainmentAdvice = advice.entertainment[2].slice(0, 5);       
+		}
+		else if (grade === "D-") {
+		 entertainmentAdvice = advice.entertainment[2].slice(0, 6);       
+		}
+		else {
+		 entertainmentAdvice = advice.entertainment[2];
+		}
+
+
 	$("#budgetTotal").append(totalEntertainmentBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(entertainmentGrade);
+	$("#advice").append(entertainmentAdvice);
 });
 
 $("#entertainmentGraderBack").on("click", function() {

@@ -25,9 +25,41 @@ $(document).ready(function() {
 	console.log(grade);
 	var insuranceGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+	let insuranceAdvice;
+
+     if (grade === "A+") {
+         insuranceAdvice = advice.insurance[1];
+     } else if (grade === "A-") {
+         insuranceAdvice = advice.insurance[2].slice(0, 1);
+     }
+     else if (grade === "B+") {
+         insuranceAdvice = advice.insurance[2].slice(0, 2);
+     }
+     else if (grade === "B-") {
+         insuranceAdvice = advice.insurance[2].slice(0, 3);
+     }
+     else if (grade === "C+") {
+         insuranceAdvice = advice.insurance[2].slice(0, 5);       
+     }
+     else if (grade === "C-") {
+         insuranceAdvice = advice.insurance[2].slice(0, 7);       
+     }
+      else if (grade === "D") {
+         insuranceAdvice = advice.insurance[2].slice(0, 8);       
+     }
+      else if (grade === "D-") {
+         insuranceAdvice = advice.insurance[2].slice(0, 10);       
+     }
+       else {
+         insuranceAdvice = advice.insurance[2];
+     }
+
+
 	$("#budgetTotal").append(totalInsuranceBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(insuranceGrade);
+	$("#advice").append(insuranceAdvice);
+
 });
 
 $("#insuranceGraderBack").on("click", function() {

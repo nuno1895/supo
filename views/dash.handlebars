@@ -1,4 +1,15 @@
 {{> nav/navbar}}
 
-    <h2>Supo Dashboard</h2>
-    <h5>Hurray! you are logged in. Your id is: {{userData.firstname}}</h5>
+  <div class="dashboard-Wrapper">
+        <div class="container">
+
+		    <h1>Supo Dashboard</h1>
+		    <h2>Hurray! you are logged in. Your id is: {{userData.firstname}}</h2>
+			    <div class="btn-group">
+			        <a href="/budgetForm" class="btn btn-default">Create a Budget</a>
+			        <a href="/dailyTracker" class="btn btn-default">Track Your Expenses</a>
+			    </div>
+		</div>
+	</div>	
+ 
+{{> nav/budgetFooter}}

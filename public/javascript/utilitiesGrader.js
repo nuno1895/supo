@@ -25,9 +25,40 @@ $(document).ready(function() {
 	console.log(grade);
 	var utilitiesGrade = $("<h4>Your grade is: " + grade + "</h4>");
 
+	 let utilitiesAdvice;
+
+	if (grade === "A+") {
+	          utilitiesAdvice = advice.utilities[1];
+	      } else if (grade === "A-") {
+	          utilitiesAdvice = advice.utilities[2].slice(0, 2);
+	      }
+	      else if (grade === "B+") {
+	          utilitiesAdvice = advice.utilities[2].slice(0, 4);
+	      }
+	      else if (grade === "B-") {
+	          utilitiesAdvice = advice.utilities[2].slice(0, 6);
+	      }
+	      else if (grade === "C+") {
+	          utilitiesAdvice = advice.utilities[2].slice(0, 8);       
+	      }
+	      else if (grade === "C-") {
+	          utilitiesAdvice = advice.utilities[2].slice(0, 12);       
+	      }
+	       else if (grade === "D") {
+	          utilitiesAdvice = advice.utilities[2].slice(0, 14);       
+	      }
+	       else if (grade === "D-") {
+	          utilitiesAdvice = advice.utilities[2].slice(0, 16);       
+	      }
+	        else {
+	          utilitiesAdvice = advice.utilities[2];
+	      }
+
+
 	$("#budgetTotal").append(totalUtilitiesBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(utilitiesGrade);
+	$("#advice").append(utilitiesAdvice);
 });
 
 $("#utilitiesGraderBack").on("click", function() {

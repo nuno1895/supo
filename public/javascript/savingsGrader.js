@@ -22,9 +22,39 @@ $(document).ready(function() {
 	console.log(grade);
 	var savingsGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+	let savingsAdvice;
+
+     if (grade === "A+") {
+               savingsAdvice = advice.savings[1];
+           } else if (grade === "A-") {
+               savingsAdvice = advice.savings[2].slice(0, 1);
+           }
+           else if (grade === "B+") {
+               savingsAdvice = advice.savings[2].slice(0, 2);
+           }
+           else if (grade === "B-") {
+               savingsAdvice = advice.savings[2].slice(0, 3);
+           }
+           else if (grade === "C+") {
+               savingsAdvice = advice.savings[2].slice(0, 4);       
+           }
+           else if (grade === "C-") {
+               savingsAdvice = advice.savings[2].slice(0, 5);       
+           }
+            else if (grade === "D") {
+               savingsAdvice = advice.savings[2].slice(0, 6);       
+           }
+            else if (grade === "D-") {
+               savingsAdvice = advice.savings[2].slice(0, 7);       
+           }
+             else {
+               savingsAdvice = advice.savings[2];
+           }
+
 	$("#budgetTotal").append(totalSavingsBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(savingsGrade);
+	$("#advice").append(savingsAdvice);
 });
 
 $("#savingsGraderBack").on("click", function() {

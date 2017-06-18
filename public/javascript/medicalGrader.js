@@ -42,9 +42,40 @@ $(document).ready(function() {
 	console.log(grade);
 	var medicalGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+	let medicalAdvice;
+
+
+	if (grade === "A+") {
+	    medicalAdvice = advice.medical[1];
+	} else if (grade === "A-") {
+	    medicalAdvice = advice.medical[2].slice(0, 2);
+	}
+	else if (grade === "B+") {
+	    medicalAdvice = advice.medical[2].slice(0, 4);
+	}
+	else if (grade === "B-") {
+	    medicalAdvice = advice.medical[2].slice(0, 6);
+	}
+	else if (grade === "C+") {
+	    medicalAdvice = advice.medical[2].slice(0, 8);       
+	}
+	else if (grade === "C-") {
+	    medicalAdvice = advice.medical[2].slice(0, 10);       
+	}
+	 else if (grade === "D") {
+	    medicalAdvice = advice.medical[2].slice(0, 12);       
+	}
+	 else if (grade === "D-") {
+	    medicalAdvice = advice.medical[2].slice(0, 14);       
+	}
+	  else {
+	    medicalAdvice = advice.medical[2];
+	}
+
 	$("#budgetTotal").append(totalMedicalBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(medicalGrade);
+	$("#advice").append(medicalAdvice);
 });
 
 $("#medicalGraderBack").on("click", function() {

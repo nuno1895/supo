@@ -25,9 +25,39 @@ $(document).ready(function() {
 	console.log(grade);
 	var housingGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+	let housingAdvice;
+
+     if (grade === "A+") {
+               housingAdvice = advice.housing[1];
+           } else if (grade === "A-") {
+               housingAdvice = advice.housing[2].slice(0, 0);
+           }
+           else if (grade === "B+") {
+               housingAdvice = advice.housing[2].slice(0, 1);
+           }
+           else if (grade === "B-") {
+               housingAdvice = advice.housing[2].slice(0, 2);
+           }
+           else if (grade === "C+") {
+               housingAdvice = advice.housing[2].slice(0, 3);       
+           }
+           else if (grade === "C-") {
+               housingAdvice = advice.housing[2].slice(0, 4);       
+           }
+            else if (grade === "D") {
+               housingAdvice = advice.housing[2].slice(0, 5);       
+           }
+            else if (grade === "D-") {
+               housingAdvice = advice.housing[2].slice(0, 5);       
+           }
+             else {
+               housingAdvice = advice.housing[2];
+           }
+
 	$("#budgetTotal").append(totalHousingBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(housingGrade);
+	$("#advice").append(housingAdvice);
 });
 
 $("#housingGraderBack").on("click", function() {

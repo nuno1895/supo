@@ -24,9 +24,39 @@ $(document).ready(function() {
 	console.log(grade);
 	var foodGrade = $("<h4>Your grade is: " + grade + "</h4>");
 
+	let foodAdvice;
+
+    if (grade === "A+") {
+            foodAdvice = advice.food[1];
+        } else if (grade === "A-") {
+            foodAdvice = advice.food[2].slice(0, 3);
+        }
+        else if (grade === "B+") {
+            foodAdvice = advice.food[2].slice(0, 6);
+        }
+        else if (grade === "B-") {
+            foodAdvice = advice.food[2].slice(0, 9);
+        }
+        else if (grade === "C+") {
+            foodAdvice = advice.food[2].slice(0, 12);       
+        }
+        else if (grade === "C-") {
+            foodAdvice = advice.food[2].slice(0, 15);       
+        }
+         else if (grade === "D") {
+            foodAdvice = advice.food[2].slice(0, 18);       
+        }
+         else if (grade === "D-") {
+            foodAdvice = advice.food[2].slice(0, 21);       
+        }
+          else {
+            foodAdvice = advice.food[2];
+        }
+
 	$("#budgetTotal").append(totalFoodBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(foodGrade);
+	$("#advice").append(foodAdvice);
 });
 
 $("#foodGraderBack").on("click", function() {

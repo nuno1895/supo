@@ -247,21 +247,24 @@ ul a{
 }
 
 
-
 /*signup page*/
-#signup{
-    margin-top: 14em;
+.signin-Wrapper{
+    margin-top: 6em;
+    margin-bottom: 6em;
 }
-
-
 
 
 /*signin page*/
-#signin{
-    margin-top: 14em;
+.signup-Wrapper{
+    margin-top: 6em;
+    margin-bottom: 6em;
 }
 
-
+/*dashboard page*/
+.dashboard-Wrapper{
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
 
 /*EXPENSES*/
 #expense-wrapper{

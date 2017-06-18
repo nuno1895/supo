@@ -25,6 +25,35 @@ $(document).ready(function() {
 	console.log(grade);
 	var debtGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+       let debtAdvice;
+
+        if (grade === "A+") {
+              debtAdvice = advice.debt[1];
+          } else if (grade === "A-") {
+              debtAdvice = advice.debt[2].slice(0, 3);
+          }
+          else if (grade === "B+") {
+              debtAdvice = advice.debt[2].slice(0, 6);
+          }
+          else if (grade === "B-") {
+              debtAdvice = advice.debt[2].slice(0, 9);
+          }
+          else if (grade === "C+") {
+              debtAdvice = advice.debt[2].slice(0, 12);       
+          }
+          else if (grade === "C-") {
+              debtAdvice = advice.debt[2].slice(0, 15);       
+          }
+           else if (grade === "D") {
+              debtAdvice = advice.debt[2].slice(0, 18);       
+          }
+           else if (grade === "D-") {
+              debtAdvice = advice.debt[2].slice(0, 21);       
+          }
+            else {
+              debtAdvice = advice.debt[2];
+          }
+
 	$("#budgetTotal").append(totalDebtBudget);
 	$("#budgetPercent").append(percentOfBudget);
 
@@ -70,8 +99,8 @@ $(document).ready(function() {
     var displayBudgetTotals = $("<h2>We added all your budgets and you have: " + totalsForDisplay + "Left, please go back and put this somehwere</h2>")
     $("#totalPay").append(totalPay);
     $("#budgetLeft").append(displayBudgetTotals);
-
 	$("#budgetGrade").append(debtGrade);
+    $("#advice").append(debtAdvice);
 });
 
 $("#debtGraderBack").on("click", function() {

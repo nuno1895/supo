@@ -25,9 +25,39 @@ $(document).ready(function() {
 	console.log(grade);
 	var transportationGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+	let transportationAdvice;
+
+     if (grade === "A+") {
+         transportationAdvice = advice.transportation[1];
+     } else if (grade === "A-") {
+         transportationAdvice = advice.transportation[2].slice(0, 1);
+     }
+     else if (grade === "B+") {
+         transportationAdvice = advice.transportation[2].slice(0, 2);
+     }
+     else if (grade === "B-") {
+         transportationAdvice = advice.transportation[2].slice(0, 3);
+     }
+     else if (grade === "C+") {
+         transportationAdvice = advice.transportation[2].slice(0, 4);       
+     }
+     else if (grade === "C-") {
+         transportationAdvice = advice.transportation[2].slice(0, 6);       
+     }
+      else if (grade === "D") {
+         transportationAdvice = advice.transportation[2].slice(0, 7);       
+     }
+      else if (grade === "D-") {
+         transportationAdvice = advice.transportation[2].slice(0, 8);       
+     }
+       else {
+         transportationAdvice = advice.transportation[2];
+     }
+
 	$("#budgetTotal").append(totalTransportationBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(transportationGrade);
+	$("#advice").append(transportationAdvice);
 });
 
 $("#transportationGraderBack").on("click", function() {

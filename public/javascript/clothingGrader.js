@@ -25,9 +25,39 @@ $(document).ready(function() {
 	console.log(grade);
 	var clothingGrade = $("<h4>Your grade is: " + grade + "</h4>");
 
+	let clothingAdvice;
+
+     if (grade === "A+") {
+               clothingAdvice = advice.clothing[1];
+           } else if (grade === "A-") {
+               clothingAdvice = advice.clothing[2].slice(0, 2);
+           }
+           else if (grade === "B+") {
+               clothingAdvice = advice.clothing[2].slice(0, 4);
+           }
+           else if (grade === "B-") {
+               clothingAdvice = advice.clothing[2].slice(0, 6);
+           }
+           else if (grade === "C+") {
+               clothingAdvice = advice.clothing[2].slice(0, 8);       
+           }
+           else if (grade === "C-") {
+               clothingAdvice = advice.clothing[2].slice(0, 12);       
+           }
+            else if (grade === "D") {
+               clothingAdvice = advice.clothing[2].slice(0, 14);       
+           }
+            else if (grade === "D-") {
+               clothingAdvice = advice.clothing[2].slice(0, 16);       
+           }
+             else {
+               clothingAdvice = advice.clothing[2];
+           }
+
 	$("#budgetTotal").append(totalclothingBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(clothingGrade);
+	$("#advice").append(clothingAdvice);
 });
 
 $("#clothingGraderBack").on("click", function() {
