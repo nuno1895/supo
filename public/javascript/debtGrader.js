@@ -78,7 +78,7 @@ $(document).ready(function() {
     var budgetTotals = {
         totalPay : pullForTotals.budgetForm.takehome,
         foodTotal : pullForTotals.budgetForm2.foodTotal,
-        clothingTotal : pullForTotals.budgetForm3.clothingAdult,
+        clothingTotal : pullForTotals.budgetForm3.clothingTotal,
         utilitiesTotal : pullForTotals.budgetForm4.utilitiesTotal,
         housingTotal : pullForTotals.budgetForm5.housingTotal,
         savingsTotal : pullForTotals.budgetForm6.savingsTotal,

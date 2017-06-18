@@ -25,7 +25,7 @@ $("#budgetBtn12").on("click", function() {
 
     console.log("budgetObject form 12", budgetObject);
     localStorage.setItem("budgetForm12", JSON.stringify(budgetObject));
-    console.log(localStorage.getItem("budgetForm7"));
+    
 
 
     var dataToPost = {
