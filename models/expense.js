@@ -30,19 +30,15 @@ module.exports = function(sequelize, Sequelize) {
         tableName: 'expenses',
         classMethods: {
             associate: function(models) {
-                Expense.belongsTo(models.Budget, {
-                    foreignKey: {
-                        allowNull: false
-                    }
-                });
-            }
-        }
-    }, {
-        classMethods: {
-            associate: function(models) {
                 Expense.belongsTo(models.User, {
                     foreignKey: {
                         allowNull: false
+
+                    }
+                });
+                Expense.belongsTo(models.Budget, {
+                    foreignKey: {
+                        allowNull: true
                     }
                 });
             }
