@@ -33,17 +33,17 @@ module.exports = function(app) {
             water: req.body.budgetForm4.water,
             internet: req.body.budgetForm4.internet,
             cable: req.body.budgetForm4.cable,
-            utilitiesTotal : req.body.budgetForm4.utilitiesTotal,
+            utilitiesTotal: req.body.budgetForm4.utilitiesTotal,
             mortgageRent: req.body.budgetForm5.mortgageRent,
             secondMortgage: req.body.budgetForm5.secondMortgage,
             taxes: req.body.budgetForm5.taxes,
             repairsMaint: req.body.budgetForm5.repairsMaint,
             dues: req.body.budgetForm5.dues,
-            housingTotal : req.body.budgetForm5.housingTotal,
+            housingTotal: req.body.budgetForm5.housingTotal,
             emergencyFund: req.body.budgetForm6.emergencyFund,
             retirementFund: req.body.budgetForm6.retirementFund,
             collegeFund: req.body.budgetForm6.collegeFund,
-            savingsTotal : req.body.budgetForm6.savingsTotal,
+            savingsTotal: req.body.budgetForm6.savingsTotal,
             medications: req.body.budgetForm7.medications,
             doctorBills: req.body.budgetForm7.doctorBills,
             hospitalBills: req.body.budgetForm7.hospitalBills,
@@ -57,14 +57,14 @@ module.exports = function(app) {
             homeRentalInsurance: req.body.budgetForm8.homeRentalInsurance,
             disabilityInsurance: req.body.budgetForm8.disabilityInsurance,
             longTermInsurance: req.body.budgetForm8.longTermInsurance,
-            InsuranceTotal : req.body.budgetForm8.insuranceTotal,
+            InsuranceTotal: req.body.budgetForm8.insuranceTotal,
             carFuel: req.body.budgetForm9.carFuel,
             carRepairs: req.body.budgetForm9.carRepairs,
             bus: req.body.budgetForm9.bus,
             train: req.body.budgetForm9.train,
             newCarFund: req.body.budgetForm9.newCarFund,
             otherTransportation: req.body.budgetForm9.otherTransportation,
-            transportationTotal : req.body.budgetForm9.transportationTotal,
+            transportationTotal: req.body.budgetForm9.transportationTotal,
             educationTuition: req.body.budgetForm10.educationTuition,
             childCare: req.body.budgetForm10.childCare,
             hairCareCosmetics: req.body.budgetForm10.hairCareCosmetics,
@@ -78,10 +78,10 @@ module.exports = function(app) {
             otherPersonal1: req.body.budgetForm10.otherPersonal1,
             otherPersonal2: req.body.budgetForm10.otherPersonal2,
             otherPersonal3: req.body.budgetForm10.otherPersonal3,
-            personalTotal : req.body.budgetForm10.personalTotal,
+            personalTotal: req.body.budgetForm10.personalTotal,
             entertainment: req.body.budgetForm11.entertainment,
             vacation: req.body.budgetForm11.vacation,
-            entertainmentTotal : req.body.budgetForm11.entertainmentTotal,
+            entertainmentTotal: req.body.budgetForm11.entertainmentTotal,
             carPayment1: req.body.budgetForm12.carPayment1,
             carPayment2: req.body.budgetForm12.carPayment2,
             creditCard1: req.body.budgetForm12.creditCard1,
@@ -98,7 +98,7 @@ module.exports = function(app) {
             debt2: req.body.budgetForm12.debt2,
             debt3: req.body.budgetForm12.debt3,
             debt4: req.body.budgetForm12.debt4,
-            debtTotal : req.body.budgetForm12.debtTotal
+            debtTotal: req.body.budgetForm12.debtTotal
         }).then(function(budget) {
 
             res.redirect("/graderResults");
@@ -109,10 +109,10 @@ module.exports = function(app) {
     app.post("/expenseData", function(req, res) {
         console.log(req.body);
         models.Expense.create({
-            month: req.body.expenseData.month,
-            category: req.body.expenseData.category,
-            expenseName: req.body.expenseData.expenseName,
-            expenseAmount: req.body.expenseData.expenseAmount
+            month: req.body.month,
+            category: req.body.category,
+            expenseName: req.body.expenseName,
+            expenseAmount: req.body.expenseAmount
         }).then(function() {
             res.redirect("/dailyTracker");
         });
