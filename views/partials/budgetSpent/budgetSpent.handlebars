@@ -1,84 +1,185 @@
-<div class="container budgetSpentPartial">
-	<div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div id="foodPanel" class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        FOOD BUDGET Spent: $200</a>
-      </h4>
-    </div>
-   	<div id="collapse1" class="panel-collapse collapse">
-      <ul class="list-group">
-        <li class="list-group-item">Wendy's: $5.00</li>
-        <li class="list-group-item">Midnight Cowby Special: $100</li>
-      </ul>
-      <div class="panel-footer">FOOD BUDGET: $150</div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div id="clothinBudg" class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Clothing Budget Spent: $33,000</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <ul class="list-group">
-        <li class="list-group-item">Crown: $12,000</li>
-        <li class="list-group-item">Live Monkey (to wear) $1,000</li>
-      </ul>
-      <div class="panel-footer"> Clothing Budget: $32,000</div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Collapsible Group 3</a>
-      </h4>
-    </div>
-    <div id="foodPanel" class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        FOOD BUDGET Spent: $200</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <ul class="list-group">
-        <li class="list-group-item">Wendy's: $5.00</li>
-        <li class="list-group-item">Midnight Cowby Special: $100</li>
-      </ul>
-      <div class="panel-footer">FOOD BUDGET: $150</div>
-    </div>
-  </div>
-  <div id="foodPanel" class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        FOOD BUDGET Spent: $200</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <ul class="list-group">
-        <li class="list-group-item">Wendy's: $5.00</li>
-        <li class="list-group-item">Midnight Cowby Special: $100</li>
-      </ul>
-      <div class="panel-footer">FOOD BUDGET: $150</div>
-    </div>
-  </div>
-  <div id="foodPanel" class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        FOOD BUDGET Spent: $200</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <ul class="list-group">
-        <li class="list-group-item">Wendy's: $5.00</li>
-        <li class="list-group-item">Midnight Cowby Special: $100</li>
-      </ul>
-      <div class="panel-footer">FOOD BUDGET: $150</div>
-    </div>
-  </div>
-  </div>
-</div>	
-</div>
+<div class="container" id="expense-wrapper"> 
+  <div class="row text-center">
+    <button type="button" class="btn btn-danger">Budget Amount Set [Total Starting Budget]</button>
+    <button type="button" class="btn btn-success">Budget Amount Left [Amount Left]</button>
+  </div> {{!-- closes row  --}} 
+    <h3>Panels below will change color if budget spent is over, below or close to set Budget for month</h3>
+ <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+          Food Budget Left for the month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Food Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+          Clothing Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item"></li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Clothing Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+          Utilities Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Utilities Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+          Housing Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Housing Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+          Savings Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Savings Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+          Medical Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Medical Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+          Insurance Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Insurance Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+          Transportation Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Transportation Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+          Personal Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Personal Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+          Entertainment Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Entertainment Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+          Debt Budget Left for the Month : [expenses listed below minus User set Budget from database]</a>
+        </h4>
+      </div>
+      <div id="collapse11" class="panel-collapse collapse">
+        <ul class="list-group">
+          <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+          <li class="list-group-item">Two</li>
+          <li class="list-group-item">Three</li>
+        </ul>
+        <div class="panel-footer">Debt Budget: [Value pulled from Database]</div>
+      </div>
+    </div> {{!-- closes panel --}}
+  </div> {{!-- closes full group container --}}
+</div> {{!-- closes div container --}}
