@@ -110,6 +110,7 @@ module.exports = function(app) {
         console.log(req.body);
         models.Expense.create({
             UserId: req.session.passport.user,
+            BudgetId: budgetResults.id,
             month: req.body.month,
             category: req.body.category,
             expenseName: req.body.expenseName,
@@ -119,12 +120,25 @@ module.exports = function(app) {
         });
     });
 
+    // app.get("/dailyTracker", function(req, res) {
+    //     console.log("hello")
+    //     models.Budget.findAll({
+    //         where: {
+    //             UserId: req.session.passport.user
+    //         }
+    //     }).then(function(trackerResults) {
+    //         res.render("/dailyTracker", {
+    //             trackerResults: trackerResults
+    //         });
+    //     });
+    //     console.log(trackerResults);
+    // });
+
     app.get("/budgetresults", function(req, res) {
         console.log(req.session)
         models.Budget.findAll({
             where: {
-                UserId: req.session.passport.user,
-                id: 1
+                UserId: req.session.passport.user
             }
         }).then(function(budgetResults) {
             // res.send(budgetResults);
@@ -134,9 +148,17 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/budget/all", function(req, res) {
-        models.User.findAll({}).then(function(results) {
-            res.json(results);
+    app.get("/expenses", function(req, res) {
+        console.log("hello")
+        models.Budget.findAll({
+            where: {
+                UserId: req.session.passport.user
+            }
+        }).then(function(budgetResults) {
+            res.render("expenses/dailyTracker", {
+                budgetResults: budgetResults
+            });
+            console.log(budgetResults);
         });
     });
 
