@@ -245,6 +245,18 @@ ul a{
     padding: 1em 7em !important;
     box-shadow: 1px 1px rgb(89,87,87);
 }
+.supMethImg h2{
+    position: absolute;
+    margin-top: -9em;
+    margin-left: 6em;
+}
+.supMethList ul{
+    padding-top: 6em;
+}
+
+
+
+
 
 
 
