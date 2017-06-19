@@ -245,13 +245,24 @@ ul a{
     padding: 1em 7em !important;
     box-shadow: 1px 1px rgb(89,87,87);
 }
+.supoMethodContainer{
+    margin-bottom: 6em;
+    background: #33526e;
+}
+.supMethImg img{
+    width: 100%;
+}
 .supMethImg h2{
     position: absolute;
     margin-top: -9em;
     margin-left: 6em;
 }
 .supMethList ul{
+    color: white;
     padding-top: 6em;
+}
+.supMethList li a{
+    color: white;
 }
 
 
@@ -413,4 +424,13 @@ label{
       border-top-color: rgba(66, 101, 133, 1);
       font-size: .75em !important;
       padding: 2.5em 16em;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .supMethList ul{
+        padding-top: 3em;
+    }
 }
