@@ -2,22 +2,22 @@
 
 
 $("#budgetBtn7").on("click", function() {
-    var budgetForm7 = JSON.parse(localStorage.getItem("budgetForm7"));
-    var otherMedical1;
-    var otherMedical2;
-    var otherMedical3;
+   
+    var otherMedical1 = 0;
+    var otherMedical2 = 0;
+    var otherMedical3 = 0;
 
-    if(budgetForm7.otherMedical1 === undefined) {
-        otherMedical1 = 0;
-    } else otherMedical1 = parseInt(budgetForm7.otherMedical1);
+    // if(budgetForm7.otherMedical1 === undefined) {
+    //     otherMedical1 = 0;
+    // } else otherMedical1 = parseInt(budgetForm7.otherMedical1);
 
-    if(budgetForm7.otherMedical2 === undefined) {
-        otherMedical2 = 0;
-    } else otherMedical2 = parseInt(budgetForm7.otherMedical2);
+    // if(budgetForm7.otherMedical2 === undefined) {
+    //     otherMedical2 = 0;
+    // } else otherMedical2 = parseInt(budgetForm7.otherMedical2);
 
-    if(budgetForm7.otherMedical3 === undefined) {
-        otherMedical3 = 0;
-    } else otherMedical3 = parseInt(budgetForm7.otherMedical3);
+    // if(budgetForm7.otherMedical3 === undefined) {
+    //     otherMedical3 = 0;
+    // } else otherMedical3 = parseInt(budgetForm7.otherMedical3);
 
     var medicalTotal = parseInt($("#medications").val()) + parseInt($("#doctorBills").val()) + otherMedical1 + otherMedical2 + otherMedical3;
 
