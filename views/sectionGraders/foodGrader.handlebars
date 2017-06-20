@@ -1,18 +1,49 @@
 {{> nav/navbar}}
 
 <div class="grader-Wrapper">
-	<div class="container">
-		<h1>FOOD GRADER</h1>
+    <div class="container">
+        <h1>FOOD GRADER</h1>
 
-		<div id="budgetTotal"></div>
-		<div id="budgetPercent"></div>
-		<div id="budgetGrade"></div>
-		<div id="advice"></div>
-		<div id="advice"></div>
+        <div id="budgetTotal"></div>
+        <div id="budgetPercent"></div>
+        <div id="budgetGrade"></div>
+        <div id="advice"></div>
+        <div id="advice">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdvice">
+                  Here Is Some Advice You Should Probably Take.</a>
+                </h4>
+              </div>
+              <div id="collapseAdvice" aria-expanded="false" class="panel-collapse collapse collapse in">
+                <ul class="list-group">
+                  <li class="list-group-item">Hi there</li>
+                  <li class="list-group-item">hello</li>
+                </ul>
+                <div class="panel-footer">Food Budget: [Value pulled from Database]</div>
+              </div>
 
-		<button id="foodGraderBack" type="button" class="btn btn-default bgtBtn">Back</button>
-		<button id="foodGraderNext" type="button" class="btn btn-default bgtBtn">Next</button>
-	</div>
+            </div> {{!-- closes panel --}}
+          </div>
+        </div>  <!-- {{!closes advice div }} -->
+        <!-- <div class="panel-group" id="accordion">
+           <div class="panel panel-default">
+
+             <div id="collapse1" class="panel-collapse collapse in">
+               <ul class="list-group">
+                 <li class="list-group-item">ex: Wendy's $5.00 5/1/2017</li>
+                 <li class="list-group-item">Two</li>
+                 <li class="list-group-item">Three</li>
+               </ul>
+               <div class="panel-footer">Food Budget: [Value pulled from Database]</div>
+             </div>
+           </div> {{!-- closes panel --}} -->
+
+        <button id="foodGraderBack" type="button" class="btn btn-default bgtBtn">Back</button>
+        <button id="foodGraderNext" type="button" class="btn btn-default bgtBtn">Next</button>
+    </div>
 </div>
 
 <script type="text/javascript" src="/javascript/grader.js"></script>
