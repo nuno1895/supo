@@ -27,7 +27,7 @@ module.exports = function(app) {
     app.get('/grader/entertainment', navController.renderEntertainmentGrader);
     app.get('/budgetForm/12', navController.renderForm12);
     app.get('/grader/debt', navController.renderDebtGrader);
-    app.get('/budgetresults', navController.results);
+    app.get('/graderResults', navController.results);
     app.get('/expenses', navController.expenses);
     app.get('/signin', authController.signin);
     app.get('/signup', authController.signup);

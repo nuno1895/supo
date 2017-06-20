@@ -101,7 +101,7 @@ module.exports = function(app) {
             debtTotal: req.body.budgetForm12.debtTotal
         }).then(function(budget) {
 
-            res.redirect("/graderResults");
+            res.redirect("/budgetresults");
 
         });
     });
@@ -110,13 +110,13 @@ module.exports = function(app) {
         console.log(req.body);
         models.Expense.create({
             UserId: req.session.passport.user,
-            BudgetId: budgetResults.id,
+            BudgetId: req.body.id,
             month: req.body.month,
             category: req.body.category,
             expenseName: req.body.expenseName,
             expenseAmount: req.body.expenseAmount
         }).then(function() {
-            res.redirect("/dailyTracker");
+            res.redirect("/expenses");
         });
     });
 
@@ -142,23 +142,19 @@ module.exports = function(app) {
             }
         }).then(function(budgetResults) {
             // res.send(budgetResults);
-            res.render("results/graderResults", {
-                budgetResults: budgetResults[0]
-            });
+            res.json(budgetResults[0]);
+
         });
     });
 
-    app.get("/expenses", function(req, res) {
+    app.get("/expensedata", function(req, res) {
         console.log("hello")
         models.Budget.findAll({
             where: {
                 UserId: req.session.passport.user
             }
         }).then(function(budgetResults) {
-            res.render("expenses/dailyTracker", {
-                budgetResults: budgetResults
-            });
-            console.log(budgetResults);
+            res.json(budgetResults[0]);
         });
     });
 

@@ -38,7 +38,7 @@ module.exports = function(sequelize, Sequelize) {
                 });
                 Expense.belongsTo(models.Budget, {
                     foreignKey: {
-                        allowNull: false
+                        allowNull: true
                     }
                 });
             }
