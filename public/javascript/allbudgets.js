@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $.get("/expensedata", function(budgetData) {
+    $.get("/allbudgetdata", function(budgetData) {
         console.log(budgetData);
     });
 });

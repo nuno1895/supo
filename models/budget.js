@@ -13,6 +13,11 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        name: {
+            type: Sequelize.STRING,
+            notEmpty: true
+        },
+
         month: {
             type: Sequelize.STRING,
             notEmpty: true

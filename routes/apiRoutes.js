@@ -16,6 +16,7 @@ module.exports = function(app) {
         // res.send("hello");
         models.Budget.create({
             UserId: req.session.passport.user,
+            name: req.body.budgetForm.name,
             month: req.body.budgetForm.month,
             takehome: req.body.budgetForm.takehome,
             frequency: req.body.budgetForm.frequency,
@@ -142,6 +143,20 @@ module.exports = function(app) {
     //     });
     //     console.log(trackerResults);
     // });
+
+    app.get("/allbudgetresults", function(req, res) {
+        console.log(req.session)
+        models.Budget.findAll({
+            where: {
+                UserId: req.session.passport.user
+            }
+        }).then(function(budgetResults) {
+            // res.send(budgetResults);
+            res.json(
+                budgetResults
+            );
+        });
+    });
 
     app.get("/budgetresults", function(req, res) {
         console.log(req.session)
