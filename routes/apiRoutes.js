@@ -101,30 +101,53 @@ module.exports = function(app) {
             debtTotal: req.body.budgetForm12.debtTotal
         }).then(function(budget) {
 
-            res.redirect("/graderResults");
+            res.redirect("/budgetresults");
 
         });
     });
 
     app.post("/expenseData", function(req, res) {
         console.log(req.body);
-        models.Expense.create({
-            UserId: req.session.passport.user,
-            month: req.body.month,
-            category: req.body.category,
-            expenseName: req.body.expenseName,
-            expenseAmount: req.body.expenseAmount
-        }).then(function() {
-            res.redirect("/dailyTracker");
+        models.Budget.findAll({
+            where: {
+                UserId: req.session.passport.user,
+                month: 'june'
+            }
+        }).then(function(budgetResults) {
+            // res.send(budgetResults[0]);
+            models.Expense.create({
+                UserId: req.session.passport.user,
+                BudgetId: budgetResults[0].id,
+                month: req.body.month,
+                category: req.body.category,
+                expenseName: req.body.expenseName,
+                expenseAmount: req.body.expenseAmount
+            }).then(function() {
+                res.redirect("/expenses");
+            });
         });
+
     });
+
+    // app.get("/dailyTracker", function(req, res) {
+    //     console.log("hello")
+    //     models.Budget.findAll({
+    //         where: {
+    //             UserId: req.session.passport.user
+    //         }
+    //     }).then(function(trackerResults) {
+    //         res.render("/dailyTracker", {
+    //             trackerResults: trackerResults
+    //         });
+    //     });
+    //     console.log(trackerResults);
+    // });
 
     app.get("/budgetresults", function(req, res) {
         console.log(req.session)
         models.Budget.findAll({
             where: {
-                UserId: req.session.passport.user,
-                id: 1
+                UserId: req.session.passport.user
             }
         }).then(function(budgetResults) {
             // res.send(budgetResults);
@@ -134,9 +157,14 @@ module.exports = function(app) {
         });
     });
 
-    app.get("/budget/all", function(req, res) {
-        models.User.findAll({}).then(function(results) {
-            res.json(results);
+    app.get("/expensedata", function(req, res) {
+        console.log("hello")
+        models.Budget.findAll({
+            where: {
+                UserId: req.session.passport.user
+            }
+        }).then(function(budgetResults) {
+            res.send(budgetResults[0]);
         });
     });
 
