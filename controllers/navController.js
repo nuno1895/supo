@@ -124,4 +124,4 @@ module.exports = {
             userData: req.user
         });
     },
-}
+};

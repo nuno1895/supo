@@ -101,7 +101,7 @@ module.exports = function(app) {
             debtTotal: req.body.budgetForm12.debtTotal
         }).then(function(budget) {
 
-            res.redirect("/graderresults");
+            res.redirect("/budgetresults");
 
         });
     });
@@ -151,8 +151,9 @@ module.exports = function(app) {
             }
         }).then(function(budgetResults) {
             // res.send(budgetResults);
-            res.send(budgetResults[0]);
-
+            res.render("results/graderResults", {
+                budgetResults: budgetResults[0]
+            });
         });
     });
 
