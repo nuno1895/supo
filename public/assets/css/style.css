@@ -305,16 +305,35 @@ ul a{
 
 /*================================ signup page ==============================*/
 .signin-Wrapper{
-    margin: 6em auto;
+    margin: 8em auto;
 }
-
+.signinContainer{
+    padding: 0 30% 0; 
+}
+.signinContainer h1{
+    padding-bottom: 1em;
+    text-align: center; 
+}
+.signinInput{
+    height: 31px;
+    margin-bottom: 2em;
+    width: 100%;
+    background-color: white ! important;
+}
+.signInBtn{
+    text-align: center;
+    color: white;
+}
 
 /*================================ signin page ==============================*/
 .signup-Wrapper{
-    margin: 6em auto;
+    margin: 8em auto;
 }
 
-/*dashboard page*/
+
+
+
+/*============================== dashboard page ==========================================*/
 .dashboard-Wrapper{
     margin-top: 6em;
     margin-bottom: 6em;
