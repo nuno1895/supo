@@ -1,6 +1,7 @@
 $("#budgetBtn").on("click", function() {
     var totalPay = $("#takehome").val() * $("#frequency").val();
     var budgetObject = {
+        name: $("#name").val(),
         month: $("#month").val(),
         takehome: $("#takehome").val(),
         frequency: $("#frequency").val(),
