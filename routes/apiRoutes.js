@@ -158,6 +158,29 @@ module.exports = function(app) {
         });
     });
 
+
+
+
+
+
+     app.get("/allbudgetresults", function(req, res) {
+        console.log(req.session)
+        models.Budget.findAll({
+            where: {
+                UserId: req.session.passport.user
+            }
+        }).then(function(budgetResults) {
+            // res.send(budgetResults);
+            res.render("expenses/dailyTracker", {
+                budgetResults
+            });
+        });
+    });
+
+
+
+
+
     app.get("/budgetresults", function(req, res) {
         console.log(req.session)
         models.Budget.findAll({
@@ -179,9 +202,12 @@ module.exports = function(app) {
                 UserId: req.session.passport.user
             }
         }).then(function(budgetResults) {
-            res.send(budgetResults[0]);
+            res.send(budgetResults);
         });
     });
+
+
+
 
     app.get("budget/:month", function(req, res) {
         if (req.params.budget) {

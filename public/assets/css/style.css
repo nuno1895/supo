@@ -292,6 +292,16 @@ ul a{
 /*EXPENSES*/
 #expense-wrapper{
     margin-top: 6em;
+    margin-bottom: 3em;
+}
+.currentBudgetSelect{
+    margin: 5em 12em 0;
+}
+.currentBudgetSelect h2{
+    text-align: center;
+    padding-bottom: 2em;
+}
+.expense-wrapper-Container{
     margin-bottom: 6em;
 }
 
