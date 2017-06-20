@@ -25,7 +25,7 @@ $(document).ready(function() {
         console.log(budgetData);
     });
 });
-console.log(budgetData);
+
 $("#expenseSubmit").on("click", function() {
     var expenseData = {
         month: month,
