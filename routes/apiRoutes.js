@@ -107,12 +107,11 @@ module.exports = function(app) {
         });
     });
 
-    app.post("/expenseData", function(req, res) {
+    app.post("/expensedata", function(req, res) {
         console.log(req.body);
         models.Budget.findAll({
             where: {
                 UserId: req.session.passport.user,
-                month: 'june'
             }
         }).then(function(budgetResults) {
             // res.send(budgetResults[0]);
@@ -152,9 +151,17 @@ module.exports = function(app) {
             }
         }).then(function(budgetResults) {
             // res.send(budgetResults);
-            res.json(
-                budgetResults
-            );
+            res.json(budgetResults);
+        });
+    });
+
+    app.get("/allexpenseresults", function(req, res) {
+        models.Expense.findAll({
+            where: {
+                UserId: req.session.passport.user
+            }
+        }).then(function(allExpenses) {
+            res.json(allExpenses);
         });
     });
 
@@ -163,7 +170,7 @@ module.exports = function(app) {
 
 
 
-     app.get("/allbudgetresults", function(req, res) {
+    app.get("/allbudgetresults", function(req, res) {
         console.log(req.session)
         models.Budget.findAll({
             where: {
