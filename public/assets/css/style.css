@@ -10,6 +10,9 @@ body{
 .logo-small{
     height: 3em;
 }
+.logo-small:hover{
+    border-bottom: none !important;
+}
 .logo-img{
     padding: 0 4em !important;
 }
@@ -47,6 +50,11 @@ ul a{
     height: auto !important;
     padding: 2px !important;
 }
+.navmenuDrop:hover{
+    color: #20c254;
+    border-bottom: 1px solid #20c254;
+}
+
 .dropdown-menu {
     min-width: 0 !important;
 }
@@ -246,41 +254,64 @@ ul a{
     box-shadow: 1px 1px rgb(89,87,87);
 }
 .supoMethodContainer{
-    margin-bottom: 6em;
-    background: #33526e;
+    background: #36393A;
+}
+.supMethImg{
+    background-color: black;
 }
 .supMethImg img{
-    width: 100%;
+    opacity: .5;
+    width: 102%;
 }
 .supMethImg h2{
     position: absolute;
     margin-top: -9em;
     margin-left: 6em;
 }
+.supMethList{
+    padding: 3em 7em 0 4.3em;
+}
+.supMethListWords{
+    text-align: left;
+}
 .supMethList ul{
     color: white;
     padding-top: 6em;
 }
-.supMethList li a{
+.supMethList p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
     color: white;
 }
+.supMethList h1{
+    font-size: 51px;
+    font-weight: 600;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+}      
+#learnMore-SupMeth{
+    color: white;
+    font-weight: 100;
+}  
 
 
 
 
 
 
-/*signup page*/
+
+
+
+
+/*================================ signup page ==============================*/
 .signin-Wrapper{
-    margin-top: 6em;
-    margin-bottom: 6em;
+    margin: 6em auto;
 }
 
 
-/*signin page*/
+/*================================ signin page ==============================*/
 .signup-Wrapper{
-    margin-top: 6em;
-    margin-bottom: 6em;
+    margin: 6em auto;
 }
 
 /*dashboard page*/
