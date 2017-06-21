@@ -27,7 +27,9 @@ $(document).ready(function() {
         expenses = JSON.stringify(expenseResults);
     });
 
+
     $.get("/expensedata", function(budgetData) {
+        console.log(budgetData)
         var budgetSelect = $('<select class="form-control budgetCompareSelector">');
         budgetSelect.append("<option>Choose One Of Your Budgets</option");
         for (var i = 0; i < budgetData.length; i++) {
@@ -39,8 +41,10 @@ $(document).ready(function() {
         }
         $("#currentBudgetName").append(budgetSelect);
     });
+
     $(document).on('change', '.budgetCompareSelector', function() {
         //use value below (budget id) - to store all of the data from that budget into currentBudget variable;
+
         console.log($('.budgetCompareSelector').val());
         $.get("/expensedata", function(budgetData) {
             var budgetId = $('.budgetCompareSelector').val();
