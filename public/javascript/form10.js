@@ -54,7 +54,7 @@ $("#addPersonalExpense").on("click", function(){
     $('#otherPersonalDiv').append(personalExpenseDiv);
 
     if(otherPersonalCount === 3) {
-        document.getElementById("addPersonalExpenseBill").disabled = true;
+        document.getElementById("addPersonalExpense").disabled = true;
     } else otherPersonalCount++;
 });
 
