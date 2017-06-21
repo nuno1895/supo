@@ -88,7 +88,7 @@ $(document).ready(function() {
     console.log(pullForTotals);
     console.log(budgetTotals);
 
-   
+
 
     var totalsForDisplay = (parseInt(budgetTotals.totalPay) - (parseInt(budgetTotals.foodTotal) + parseInt(budgetTotals.clothingTotal) + parseInt(budgetTotals.utilitiesTotal) + parseInt(budgetTotals.housingTotal) + parseInt(budgetTotals.savingsTotal) + parseInt(budgetTotals.medicalTotal) + parseInt(budgetTotals.insuranceTotal) + parseInt(budgetTotals.transportationTotal) + parseInt(budgetTotals.personalTotal) + parseInt(budgetTotals.entertainmentTotal) + parseInt(budgetTotals.debtTotal)));
 
@@ -118,7 +118,7 @@ $("#debtGraderNext").on("click", function() {
     //     transportationGrade: JSON.parse(localStorage.getItem("transportationGrade")),
     //     entertainmentGrade: JSON.parse(localStorage.getItem("entertainmentGrade")),
     //     debtGrade: JSON.parse(localStorage.getItem("debtGrade")),
-        
+
     // };
 
     var dataToPost = {
@@ -147,14 +147,13 @@ $("#debtGraderNext").on("click", function() {
         budgetForm12: JSON.parse(localStorage.getItem("budgetForm12")),
     };
 
-
+    debugger;
     console.log("dataToPost", dataToPost);
 
     $.post("/budgetdata", dataToPost).then(function(response) {
         debugger;
         console.log("POSTED");
 
-    window.location.href = "/budgetresults";
- });
-
+        window.location.href = "/budgetresults";
+    });
 });
