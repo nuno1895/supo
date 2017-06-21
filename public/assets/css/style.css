@@ -62,8 +62,8 @@ ul a{
     font-size: 14px !important;
 }
 .navbar-container{
-    transition: 0.8s;
-    -webkit-transition:  0.8s;
+    transition: 1s;
+    -webkit-transition:  1s;
 }
 
 
@@ -303,33 +303,59 @@ ul a{
 
 
 
-/*================================ signup page ==============================*/
+/*================================ signin page ==============================*/
 .signin-Wrapper{
-    margin: 8em auto;
+    padding: 8em;
+    background-color: #20c254;
 }
 .signinContainer{
-    padding: 0 30% 0; 
+    padding: 2em 5em;
+    width: 50%;
+    background-color: white;
 }
 .signinContainer h1{
     padding-bottom: 1em;
     text-align: center; 
 }
 .signinInput{
+    color: black;
+    box-shadow: 0 0 0 1000px white inset;
     height: 31px;
     margin-bottom: 2em;
     width: 100%;
-    background-color: white ! important;
 }
 .signInBtn{
     text-align: center;
     color: white;
 }
-
-/*================================ signin page ==============================*/
-.signup-Wrapper{
-    margin: 8em auto;
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
-
+/*================================ signup page ==============================*/
+.signup-Wrapper{
+    background-color: #20c254;
+    padding: 8em;
+}
+.signupContainer{
+    padding: 2em 5em;
+    width: 50%;
+    background-color: white;
+}
+.signupContainer h1{
+    padding-bottom: 1em;
+    text-align: center; 
+}
+.signupInput{
+    color: black;
+    box-shadow: 0 0 0 1000px white inset;
+    height: 31px;
+    margin-bottom: 2em;
+    width: 100%;
+}
+.signupBtn{
+    text-align: center;
+    color: white;
+}
 
 
 

@@ -6,6 +6,9 @@
 
         "password": "",
 
+        "password": "Avernus#1",
+
+
         "database": "saveup_development_db",
 
         "host": "127.0.0.1",

@@ -24,10 +24,13 @@ $(document).ready(function() {
     $('#monthToday').html(month);
 
     $.get("/allexpenseresults", function(expenseResults) {
-        expenses = JSON.stringify(expenseResults);
+        expenses = expenseResults;
+        console.log("HERE: " + expenses[0]);
     });
 
+
     $.get("/expensedata", function(budgetData) {
+        console.log(budgetData)
         var budgetSelect = $('<select class="form-control budgetCompareSelector">');
         budgetSelect.append("<option>Choose One Of Your Budgets</option");
         for (var i = 0; i < budgetData.length; i++) {
@@ -39,8 +42,10 @@ $(document).ready(function() {
         }
         $("#currentBudgetName").append(budgetSelect);
     });
+
     $(document).on('change', '.budgetCompareSelector', function() {
         //use value below (budget id) - to store all of the data from that budget into currentBudget variable;
+
         console.log($('.budgetCompareSelector').val());
         $.get("/expensedata", function(budgetData) {
             var budgetId = $('.budgetCompareSelector').val();
@@ -51,7 +56,20 @@ $(document).ready(function() {
                     console.log(budgetData[i]);
                     currentBudget = budgetData[i];
                     $("#foodBudget").html(currentBudget.foodTotal);
+                    $("#clothingBudget").html(currentBudget.clothingTotal);
+                    $("#utilitiesBudget").html(currentBudget.utilitiesTotal);
+                    $("#housingBudget").html(currentBudget.housingTotal);
+                    $("#savingsBudget").html(currentBudget.savingsTotal);
+                    $("#medicalBudget").html(currentBudget.medicalTotal);
+                    $("#insuranceBudget").html(currentBudget.InsuranceTotal);
+                    $("#transportationBudget").html(currentBudget.transportationTotal);
+                    $("#personalBudget").html(currentBudget.personalTotal);
+                    $("#entertainmentBudget").html(currentBudget.entertainmentTotal);
+                    $("#debtBudget").html(currentBudget.debtTotal);
                 }
+            }
+            for (var i = 0; i < expenses.length; i++) {
+                console.log("Expense Loop: " + expenses);
             }
         });
     });

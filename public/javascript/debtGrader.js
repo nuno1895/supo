@@ -8,7 +8,7 @@ $(document).ready(function() {
     var budgetForm12 = JSON.parse(localStorage.getItem("budgetForm12"));
     console.log("budgetForm12", budgetForm12);
 
-    var debtBudget = parseInt(budgetForm12.carPayment1) + parseInt(budgetForm12.carPayment2) + parseInt(budgetForm12.creditCard1) + parseInt(budgetForm12.creditCard2) + parseInt(budgetForm12.creditCard3) + parseInt(budgetForm12.creditCard4) + parseInt(budgetForm12.creditCard5) + parseInt(budgetForm12.creditCard6) + parseInt(budgetForm12.studentLoan1) + parseInt(budgetForm12.studentLoan2) + parseInt(budgetForm12.studentLoan3) + parseInt(budgetForm12.studentLoan4) + parseInt(budgetForm12.debt1) + parseInt(budgetForm12.debt2) + parseInt(budgetForm12.debt3) + parseInt(budgetForm12.debt4);
+    var debtBudget = parseInt(budgetForm12.debtTotal);
     console.log("debtBudget", debtBudget);
 
     var debtBudgetPercent = (debtBudget * 100) / totalPay;
@@ -93,7 +93,7 @@ $(document).ready(function() {
     var totalsForDisplay = (parseInt(budgetTotals.totalPay) - (parseInt(budgetTotals.foodTotal) + parseInt(budgetTotals.clothingTotal) + parseInt(budgetTotals.utilitiesTotal) + parseInt(budgetTotals.housingTotal) + parseInt(budgetTotals.savingsTotal) + parseInt(budgetTotals.medicalTotal) + parseInt(budgetTotals.insuranceTotal) + parseInt(budgetTotals.transportationTotal) + parseInt(budgetTotals.personalTotal) + parseInt(budgetTotals.entertainmentTotal) + parseInt(budgetTotals.debtTotal)));
 
     var totalPay = $("<h2>Your Total Pay is: " + budgetTotals.totalPay + "</h2>");
-    var displayBudgetTotals = $("<h2>We added all your budgets and you have: " + totalsForDisplay + "Left, please go back and put this somehwere</h2>")
+    var displayBudgetTotals = $("<h2>We added all your budgets and you have: " + totalsForDisplay + "left over.</h2><h3>You should go back and put this into your debt or maybe even your saving!</h2>")
     $("#totalPay").append(totalPay);
     $("#budgetLeft").append(displayBudgetTotals);
     $("#budgetGrade").append(debtGrade);
