@@ -2,6 +2,7 @@ var month;
 
 $(document).ready(function() {
     var currentBudget = 0;
+    var expenses;
 
     var monthArray = new Array();
     monthArray[0] = "January";
@@ -23,7 +24,7 @@ $(document).ready(function() {
     $('#monthToday').html(month);
 
     $.get("/allexpenseresults", function(expenseResults) {
-        console.log(expenseResults);
+        expenses = JSON.stringify(expenseResults);
     });
 
 
@@ -35,28 +36,29 @@ $(document).ready(function() {
             budgetSelect.append($("<option></option>", {
                 value: budgetData[i].id,
                 text: budgetData[i].name
-            }))
+            }));
+            // $("#foodBudget").html(budgetData[i].foodTotal);
         }
         $("#currentBudgetName").append(budgetSelect);
     });
 
     $(document).on('change', '.budgetCompareSelector', function() {
         //use value below (budget id) - to store all of the data from that budget into currentBudget variable;
-        var budgetId = $('.budgetCompareSelector').val();
 
-
-
-        // $.ajax({
-        //     url: "/expenses/"+budgetId,
-        //     method: "GET"
-        // }).done(function (response) {
-
-        //    console.log(response);
-
-        //     });
-    })
-
-
+        console.log($('.budgetCompareSelector').val());
+        $.get("/expensedata", function(budgetData) {
+            var budgetId = $('.budgetCompareSelector').val();
+            console.log("BUDGETID: ", budgetId);
+            console.log("EXPENSES BITCH: " + expenses);
+            for (var i = 0; i < budgetData.length; i++) {
+                if (budgetData[i].id == budgetId) {
+                    console.log(budgetData[i]);
+                    currentBudget = budgetData[i];
+                    $("#foodBudget").html(currentBudget.foodTotal);
+                }
+            }
+        });
+    });
 });
 
 
@@ -76,4 +78,12 @@ $("#expenseSubmit").on("click", function() {
     $.post("/expenseData", expenseData).then(function(response) {
         console.log("POSTED");
     });
+    window.location.reload(false);
+
+
+    $.get("/allexpenseresults", function(expenseResults) {
+        expenseResults = expenses;
+    });
+
+
 });
