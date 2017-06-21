@@ -1,19 +1,23 @@
 {{> nav/navbar}}
 
     <div class="signup-Wrapper">
-        <div class="container">
+        <div class="container signupContainer">
+            <div class="signupDiv">
             <h1>Please Sign Up</h1>
+            </div>
 
                 <form id="signup" name="signup" method="post" action="/signup">
-                    <label for="email">Email Address</label>
-                    <input class="text" name="email" type="email" />
-                    <label for="firstname">Firstname</label>
-                    <input name="firstname" type="text" />
-                    <label for="lastname">Lastname</label>
-                    <input name="lastname" type="text" />
-                    <label for="password">Password</label>
-                    <input name="password" type="password" />
-                    <input class="btn" type="submit" value="Sign Up" />
+                    
+                    <input class="text signupInput text-center" name="email" type="email" placeholder="Email Address" />
+                    
+                    <input class="signupInput text-center" name="firstname" type="text" placeholder="First Name" />
+                    
+                    <input class="signupInput text-center" name="lastname" type="text" placeholder="Last Name" />
+                    
+                    <input class="signupInput text-center" name="password" type="password" placeholder="Create a Password" />
+                    <div class="signupBtn">
+                    <input class="btn getStart" type="submit" value="Sign Up" />
+                    </div>
                 </form>
  
         </div>
