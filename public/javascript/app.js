@@ -8,10 +8,10 @@ $(document).ready(function(){
     var yourRezultsOffSet = yourRezults.offset();
     var debtGradeDiv = $(".debtGradeDiv");
     var debtGradeDivOffSet = debtGradeDiv.offset();
-    var signinDiv = $(".signinDiv");
-    var signinDivOffset = signinDiv.offset();
-    var signupDiv = $(".signupDiv");
-    var signupDivOffset = signupDiv.offset();
+    var topSignIn = $(".signinDiv");
+    var topSignInOffset = topSignIn.offset();
+    var topSignup = $(".signupDiv");
+    var topSignupOffset = topSignup.offset();
 
     if (jumbotron.length){
         $(document).scroll(function(){
@@ -57,22 +57,21 @@ $(document).ready(function(){
         });
     }
     
-    if (signinDiv.length){
+    if (topSignIn.length){
         $(document).scroll(function(){
             scroll_start = $(this).scrollTop();
-            if(scroll_start > signinDivOffset.top) {
+            if(scroll_start > topSignInOffset.top) {
                 $(".container-fluid").css('background-color', '#292b2c').css('padding', '0');
-                $(".logo-small").src()
             } else {
                 $(".container-fluid").css('background-color', 'rgba(41, 43, 44, .1)').css('padding', '1em');                
             }
         });
     }
     
-    if (signupDiv.length){
+    if (topSignup.length){
     $(document).scroll(function(){
         scroll_start = $(this).scrollTop();
-        if(scroll_start > signupDivOffset.top) {
+        if(scroll_start > topSignupOffset.top) {
             $(".container-fluid").css('background-color', '#292b2c').css('padding', '0');
         } else {
             $(".container-fluid").css('background-color', 'rgba(41, 43, 44, .1)').css('padding', '1em');                
