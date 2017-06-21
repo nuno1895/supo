@@ -304,6 +304,15 @@ ul a{
 
 
 /*================================ signin page ==============================*/
+.signUPIN{  
+    border: none;
+    background: #33526e;
+    margin-top: 2em;
+    padding: 1em 7em !important;
+    box-shadow: 1px 1px rgb(89,87,87);
+}
+
+
 .signin-Wrapper{
     padding: 8em;
     background-color: #20c254;
@@ -313,8 +322,19 @@ ul a{
     width: 50%;
     background-color: white;
 }
-.signinContainer h1{
+.signinContainer h3{
+    color: #33526e;
     padding-bottom: 1em;
+    text-align: center; 
+}
+.topSignIn{
+    text-align: center;
+}
+.topSignIn h1{
+    color: #33526e;
+    font-size: -webkit-xxx-large;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
     text-align: center; 
 }
 .signinInput{
@@ -341,8 +361,19 @@ input:-webkit-autofill {
     width: 50%;
     background-color: white;
 }
-.signupContainer h1{
+.topSignup{
+    text-align: center;
+}
+.signupContainer h3{
+    color: #33526e;
     padding-bottom: 1em;
+    text-align: center; 
+}
+.topSignup h1{
+    color: #33526e;
+    font-size: -webkit-xxx-large;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
     text-align: center; 
 }
 .signupInput{

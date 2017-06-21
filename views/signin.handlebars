@@ -1,16 +1,19 @@
 {{> nav/navbar}}
 	<div class="signin-Wrapper">
+		<div class="topSignIn">
+			<img src="/assets/images/white-s.png">
+		<h1>Welcome Back!</h1>	
+		</div>
 		<div class="container signinContainer">
 			<div class="signinDiv">
-			<h1>Please Sign In</h1>
+			<h3>Please Sign In</h3>
 			</div>
 			    <form id="signin" name="signin" method="post" action="signin">
-			        <label for="email">Email Address</label>
-			        <input class="text signinInput" name="email" type="text" />
-			        <label for="password ">Password</label>
-			        <input class="signinInput" name="password" type="password" />
+			        
+			        <input class="text signinInput text-center" name="email" type="text" placeholder="Your Email Address" />
+			        <input class="signinInput text-center" name="password" type="password" placeholder="Your password" />
 			        <div class="signInBtn">
-			        	<input class="btn getStart" type="submit" value="Sign In" />
+			        	<input class="btn signUPIN" type="submit" value="Sign In" />
 			        </div>
 			    </form>
 		</div>
