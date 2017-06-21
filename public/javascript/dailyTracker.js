@@ -2,6 +2,7 @@ var month;
 
 $(document).ready(function() {
     var currentBudget = 0;
+    var expenses;
 
     var monthArray = new Array();
     monthArray[0] = "January";
@@ -23,7 +24,7 @@ $(document).ready(function() {
     $('#monthToday').html(month);
 
     $.get("/allexpenseresults", function(expenseResults) {
-        console.log(expenseResults);
+        expenses = JSON.stringify(expenseResults);
     });
 
     $.get("/expensedata", function(budgetData) {
@@ -42,12 +43,14 @@ $(document).ready(function() {
         //use value below (budget id) - to store all of the data from that budget into currentBudget variable;
         console.log($('.budgetCompareSelector').val());
         $.get("/expensedata", function(budgetData) {
-            console.log(budgetData);
             var budgetId = $('.budgetCompareSelector').val();
             console.log("BUDGETID: ", budgetId);
+            console.log("EXPENSES BITCH: " + expenses);
             for (var i = 0; i < budgetData.length; i++) {
                 if (budgetData[i].id == budgetId) {
                     console.log(budgetData[i]);
+                    currentBudget = budgetData[i];
+                    $("#foodBudget").html(currentBudget.foodTotal);
                 }
             }
         });
@@ -75,7 +78,7 @@ $("#expenseSubmit").on("click", function() {
 
 
     $.get("/allexpenseresults", function(expenseResults) {
-        console.log(expenseResults);
+        expenseResults = expenses;
     });
 
 
