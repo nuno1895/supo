@@ -33,16 +33,21 @@ $(document).ready(function() {
             budgetSelect.append($("<option></option>", {
                 value: budgetData[i].id,
                 text: budgetData[i].name
-            }))
+            }));
+            // $("#foodBudget").html(budgetData[i].foodTotal);
         }
         $("#currentBudgetName").append(budgetSelect);
     });
     $(document).on('change', '.budgetCompareSelector', function() {
         //use value below (budget id) - to store all of the data from that budget into currentBudget variable;
         console.log($('.budgetCompareSelector').val());
-    })
+        $.get("/expensedata", function(budgetData) {
+            console.log(budgetData);
+            var budgetId = $('.budgetCompareSelector').val();
+            console.log("BUDGETID: ", budgetId);
 
-
+        });
+    });
 });
 
 
@@ -62,4 +67,12 @@ $("#expenseSubmit").on("click", function() {
     $.post("/expenseData", expenseData).then(function(response) {
         console.log("POSTED");
     });
+    window.location.reload(false);
+
+
+    $.get("/allexpenseresults", function(expenseResults) {
+        console.log(expenseResults);
+    });
+
+
 });
