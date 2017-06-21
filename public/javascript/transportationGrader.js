@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $('#collapseAdvice').collapse("hide");
+
+
 	var budgetForm = JSON.parse(localStorage.getItem("budgetForm"));
 	console.log("budgetForm",budgetForm);
 
@@ -58,7 +61,15 @@ $(document).ready(function() {
 	$("#budgetTotal").append(totalTransportationBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(transportationGrade);
-	$("#advice").append(transportationAdvice);
+
+    if(grade == 'A+'){
+        $("#advice").hide();
+        $("#aplus").append(transportationAdvice);
+    } else{
+        for(var i = 0; i < transportationAdvice.length; i++){
+            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+        }
+    }
 });
 
 $("#transportationGraderBack").on("click", function() {

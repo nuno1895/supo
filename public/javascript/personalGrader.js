@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $('#collapseAdvice').collapse("hide");
+
+
 	var budgetForm = JSON.parse(localStorage.getItem("budgetForm"));
 	console.log("budgetForm",budgetForm);
 
@@ -58,7 +61,15 @@ $(document).ready(function() {
 	$("#budgetTotal").append(totalPersonalBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(personalGrade);
-	$("#advice").append(personalAdvice);
+
+    if(grade == 'A+'){
+        $("#advice").hide();
+        $("#aplus").append(personalAdvice);
+    } else{
+        for(var i = 0; i < personalAdvice.length; i++){
+            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+        }
+    }
 });
 
 $("#personalGraderBack").on("click", function() {

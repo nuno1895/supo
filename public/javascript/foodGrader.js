@@ -65,9 +65,14 @@ $(document).ready(function() {
     $("#budgetTotal").append(totalFoodBudget);
     $("#budgetPercent").append(percentOfBudget);
     $("#budgetGrade").append(foodGrade);
-
-    for(var i = 0; i < foodAdvice.length; i++){
-        $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+    
+    if(grade == 'A+'){
+        $("#advice").hide();
+        $("#aplus").append(foodAdvice);
+    } else{
+        for(var i = 0; i < foodAdvice.length; i++){
+            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+        }
     }
 });
 
