@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$('#collapseAdvice').collapse("hide");
+
+	
 	var budgetForm7 = JSON.parse(localStorage.getItem("budgetForm7"));
 	console.log("budgetForm7", budgetForm7);
 	
@@ -79,7 +82,15 @@ $(document).ready(function() {
 	$("#budgetTotal").append(totalMedicalBudget);
 	$("#budgetPercent").append(percentOfBudget);
 	$("#budgetGrade").append(medicalGrade);
-	$("#advice").append(medicalAdvice);
+
+	if(grade == 'A+'){
+	    $("#advice").hide();
+	    $("#aplus").append(medicalAdvice);
+	} else{
+	    for(var i = 0; i < medicalAdvice.length; i++){
+	        $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+	    }
+	}
 });
 
 $("#medicalGraderBack").on("click", function() {
