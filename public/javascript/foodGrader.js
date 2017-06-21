@@ -32,7 +32,7 @@ $(document).ready(function() {
 
     // localStorage.setItem("foodGrade", grade);
     localStorage.setItem("foodGrade", JSON.stringify(grade));
-    console.log(localStorage.getItem("foodGrade", JSON.stringify(grade)))
+
 
 
     if (grade === "A+") {
@@ -59,8 +59,13 @@ $(document).ready(function() {
     $("#budgetPercent").append(percentOfBudget);
     $("#budgetGrade").append(foodGrade);
 
-    for (var i = 0; i < foodAdvice.length; i++) {
-        $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+    if (grade == 'A+') {
+        $("#advice").hide();
+        $("#aplus").append(foodAdvice);
+    } else {
+        for (var i = 0; i < foodAdvice.length; i++) {
+            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+        }
     }
 });
 

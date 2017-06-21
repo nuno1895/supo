@@ -9,8 +9,26 @@
 		<div id="budgetTotal"></div>
 		<div id="budgetPercent"></div>
 		<div id="budgetGrade"></div>
-		<div id="advice"></div>
+        <div id="aplus"></div>
+        <div id="advice">
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdvice">
+                  Here Is Some Advice You Should Probably Take.</a>
+                </h4>
+              </div>
+              <div id="collapseAdvice" aria-expanded="false" class="panel-collapse collapse collapse in">
+                <ul class="list-group">
+        
+                </ul>
+                <div class="panel-footer"></div>
+              </div>
 
+            </div> {{!-- closes panel --}}
+          </div>
+        </div>  <!-- {{!closes advice div }} -->
 		<button id="insuranceGraderBack" type="button" class="btn btn-default bgtBtn">Back</button>
 		<button id="insuranceGraderNext" type="button" class="btn btn-default bgtBtn nextBtn">Next</button>
 	</div>
