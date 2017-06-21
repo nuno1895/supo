@@ -24,7 +24,8 @@ $(document).ready(function() {
     $('#monthToday').html(month);
 
     $.get("/allexpenseresults", function(expenseResults) {
-        expenses = JSON.stringify(expenseResults);
+        expenses = expenseResults;
+        console.log("HERE: " + expenses[0]);
     });
 
 
@@ -55,7 +56,20 @@ $(document).ready(function() {
                     console.log(budgetData[i]);
                     currentBudget = budgetData[i];
                     $("#foodBudget").html(currentBudget.foodTotal);
+                    $("#clothingBudget").html(currentBudget.clothingTotal);
+                    $("#utilitiesBudget").html(currentBudget.utilitiesTotal);
+                    $("#housingBudget").html(currentBudget.housingTotal);
+                    $("#savingsBudget").html(currentBudget.savingsTotal);
+                    $("#medicalBudget").html(currentBudget.medicalTotal);
+                    $("#insuranceBudget").html(currentBudget.InsuranceTotal);
+                    $("#transportationBudget").html(currentBudget.transportationTotal);
+                    $("#personalBudget").html(currentBudget.personalTotal);
+                    $("#entertainmentBudget").html(currentBudget.entertainmentTotal);
+                    $("#debtBudget").html(currentBudget.debtTotal);
                 }
+            }
+            for (var i = 0; i < expenses.length; i++) {
+                console.log("Expense Loop: " + expenses);
             }
         });
     });
