@@ -1,54 +1,70 @@
-{{> nav/navbar}}
+{{> nav/navbarBudget}}
 
 <div id="budget-wrapper">
-  <h1 class="budgetHead">BUDGET FORM: PERSONAL</h1>
-  <div class="container">
-    <div class="form-group">
-      <label for="educationTuition">Education Tuition:</label>
-      <input type="text" class="form-control" id="educationTuition">
+{{> loggedInAs/logginAs}}
+
+  <h2 class="budgetHead"><i>BUDGET FORM</i></h2>
+  <div class="container text-center bdgtBodyContainer">
+  <h1>PERSONAL</h1>
+    <div class="bdgtForm">
+      <div class="form-group">
+        <label for="educationTuition">Education Tuition:</label>
+        <input type="text" class="form-control" id="educationTuition">
+      </div>
+      <div class="form-group">
+        <label for="childCare">Child Care:</label>
+        <input type="text" class="form-control" id="childCare">
+      </div>
+      <div class="form-group">
+        <label for="hairCareCosmetics">Hair Care and Cosmetics:</label>
+        <input type="text" class="form-control" id="hairCareCosmetics">
+      </div>
+      <div class="form-group">
+        <label for="bookSupplies">Book Supplies:</label>
+        <input type="text" class="form-control" id="bookSupplies">
+      </div>
+      <div class="form-group">
+        <label for="childSupport">Child Support:</label>
+        <input type="text" class="form-control" id="childSupport">
+      </div>
+      <div class="form-group">
+        <label for="alimony">Alimony:</label>
+        <input type="text" class="form-control" id="alimony">
+      </div>
+      <div class="form-group">
+        <label for="pocketMoney">Pocket Money:</label>
+        <input type="text" class="form-control" id="pocketMoney">
+      </div>
+      <div class="form-group">
+        <label for="subscriptions">Subscriptions:</label>
+        <input type="text" class="form-control" id="subscriptions">
+      </div>
+      <div class="form-group">
+        <label for="babySupplies">Baby Supplies:</label>
+        <input type="text" class="form-control" id="babySupplies">
+      </div>
+      <div class="form-group">
+        <label for="petSupplies">Pet Supplies:</label>
+        <input type="text" class="form-control" id="petSupplies">
+      </div>
+      <div id="otherPersonalDiv">
+        <h3>Other Personal Expenses?<span><button id="addPersonalExpense">+</button></span></h3>
+      </div>
+      <button id="budgetBtn10Back" type="button" class="btn btn-default bgtBtn">Back</button>
+      <button id="budgetBtn10" type="button" class="btn btn-default bgtBtn nextBtn">Next</button>
     </div>
-    <div class="form-group">
-      <label for="childCare">Child Care:</label>
-      <input type="text" class="form-control" id="childCare">
-    </div>
-    <div class="form-group">
-      <label for="hairCareCosmetics">Hair Care and Cosmetics:</label>
-      <input type="text" class="form-control" id="hairCareCosmetics">
-    </div>
-    <div class="form-group">
-      <label for="bookSupplies">Book Supplies:</label>
-      <input type="text" class="form-control" id="bookSupplies">
-    </div>
-    <div class="form-group">
-      <label for="childSupport">Child Support:</label>
-      <input type="text" class="form-control" id="childSupport">
-    </div>
-    <div class="form-group">
-      <label for="alimony">Alimony:</label>
-      <input type="text" class="form-control" id="alimony">
-    </div>
-    <div class="form-group">
-      <label for="pocketMoney">Pocket Money:</label>
-      <input type="text" class="form-control" id="pocketMoney">
-    </div>
-    <div class="form-group">
-      <label for="subscriptions">Subscriptions:</label>
-      <input type="text" class="form-control" id="subscriptions">
-    </div>
-    <div class="form-group">
-      <label for="babySupplies">Baby Supplies:</label>
-      <input type="text" class="form-control" id="babySupplies">
-    </div>
-    <div class="form-group">
-      <label for="petSupplies">Pet Supplies:</label>
-      <input type="text" class="form-control" id="petSupplies">
-    </div>
-    <div id="otherPersonalDiv">
-      <h3>Other Personal Expenses?<span><button id="addPersonalExpense">+</button></span></h3>
-    </div>
-    <button id="budgetBtn10Back" type="button" class="btn btn-default bgtBtn">Back</button>
-    <button id="budgetBtn10" type="button" class="btn btn-default bgtBtn">Next</button>
   </div>
 </div>
 <script type="text/javascript" src="/javascript/form10.js"></script>
 {{> nav/budgetFooter}}
+
+
+
+
+
+
+
+
+
+
+

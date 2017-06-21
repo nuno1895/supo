@@ -391,12 +391,30 @@ input:-webkit-autofill {
 
 
 /*============================== dashboard page ==========================================*/
+.greeting{
+/*    margin-top: 6em;
+*/}
 .dashboard-Wrapper{
     margin-top: 6em;
     margin-bottom: 6em;
 }
+#dashHeadH1 span{
+    color: #33526e;
+}
+.dashHead h1{
+    color: #20c254;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 2em;
+}
+.doToday{
+    font-size: 25px;
+}
 
-/*EXPENSES*/
+
+
+
+/*================================= EXPENSES ================================= */
 #expense-wrapper{
     margin-top: 6em;
     margin-bottom: 3em;
@@ -412,7 +430,8 @@ input:-webkit-autofill {
     margin-bottom: 6em;
 }
 
-/*GRADER*/
+
+/*======================================== GRADER ====================================*/
 
 .grader-Wrapper{
     margin-top: 6em;
@@ -420,10 +439,51 @@ input:-webkit-autofill {
 }
 
 
-/*BUDGET FORMs*/
+
+
+
+
+/*======================================== budget pages ====================================*/
+.payBtn{
+    font-weight: 100;
+    color: white;
+    border: none;
+    background: #20c254;
+    margin-top: 2em;
+    padding: 1em 7em !important;
+    box-shadow: 1px 1px rgb(89,87,87);
+}
+.bdgtContainer{
+    background-color: rgba(8, 99, 145, 0.3);
+}
+.bdgtNavmenuDrop{
+    color: #20c254 !important;
+}
+.budgetHead{
+    font-weight: 100;
+    margin-bottom: -1em;
+    margin-top: 0;
+    float: right;
+    padding-right: 5em;
+}
+
 #budget-wrapper{
     margin-bottom: 6em;
-    margin-top: 6em;
+    margin-top: 10em;
+}
+.bdgtForm{
+    padding: 0 4em;
+}
+.bdgtBodyContainer h1{
+    margin-bottom: 2em;
+    padding: 1em;
+    margin-top: 2em;
+    background: #20c254;
+}
+.bdgtBodyContainer{
+    background: rgba(158, 225, 194, 0.3);
+    padding-left: 8em;
+    padding-right: 8em;
 }
 label{
     display: block;
@@ -438,6 +498,9 @@ label{
 
 
 .bgtBtn{
+    float: left;
+    font-weight: 100;
+    margin-left: 5em;
     color: white;
     border: none;
     background: #20c254;
@@ -449,18 +512,10 @@ label{
     background-color: #23ab4f;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.nextBtn{
+    margin-right: 5em;
+    float: right;
+}
 
 #foodPanel{
     background: #24ca24;
@@ -479,7 +534,7 @@ label{
 
 
 
-/*FOOTER*/
+/*===================================== FOOTER =============================================*/
 .phantom {
   display: block;
   padding: 20px;

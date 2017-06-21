@@ -1,23 +1,36 @@
-{{> nav/navbar}}
+{{> nav/navbarBudget}}
 
 <div id="budget-wrapper">
-  <h1 class="budgetHead">BUDGET FORM: DEBT</h1>
-  <div class="container">
-    <div id="carPaymentsDiv">
-      <h3>Car Bills?  Add them Here <span><button id="addCarBill">+</button></span></h3>
+{{> loggedInAs/logginAs}}
+
+  <h2 class="budgetHead"><i>BUDGET FORM</i></h2>
+  <div class="container text-center bdgtBodyContainer">
+  <h1>DEBT</h1>
+
+    <div class="bdgtForm">
+      <div id="carPaymentsDiv">
+        <h3>Car Bills?  Add them Here <span><button id="addCarBill">+</button></span></h3>
+      </div>
+      <div id="creditCardsDiv">
+        <h3>Credit Card Bills?  Add them Here <span><button id="addCreditCardBill">+</button></span></h3>
+      </div>
+      <div id="studentLoansDiv">
+        <h3>Student Loans?  Add them Here <span><button id="addStudentLoanBill">+</button></span></h3>
+      </div>
+      <div id="debtDiv">
+        <h3>Other debt?  Add them Here <span><button id="addDebt">+</button></span></h3>
+      </div>
+      <button id="budgetBtn12Back" type="button" class="btn btn-default bgtBtn">Back</button>
+      <button id="budgetBtn12" type="button" class="btn btn-default bgtBtn nextBtn">Submit(FINAL FORM)</button>
     </div>
-    <div id="creditCardsDiv">
-      <h3>Credit Card Bills?  Add them Here <span><button id="addCreditCardBill">+</button></span></h3>
-    </div>
-    <div id="studentLoansDiv">
-      <h3>Student Loans?  Add them Here <span><button id="addStudentLoanBill">+</button></span></h3>
-    </div>
-    <div id="debtDiv">
-      <h3>Other debt?  Add them Here <span><button id="addDebt">+</button></span></h3>
-    </div>
-    <button id="budgetBtn12Back" type="button" class="btn btn-default bgtBtn">Back</button>
-    <button id="budgetBtn12" type="button" class="btn btn-default bgtBtn">Submit(FINAL FORM)</button>
   </div>
 </div>
 <script type="text/javascript" src="/javascript/form12.js"></script>
 {{> nav/budgetFooter}}
+
+
+
+
+
+
+

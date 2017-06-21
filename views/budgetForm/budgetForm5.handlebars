@@ -1,31 +1,43 @@
-{{> nav/navbar}}
+{{> nav/navbarBudget}}
 
 <div id="budget-wrapper">
-  <h1 class="budgetHead">BUDGET FORM: HOUSING</h1>
-  <div class="container">
-    <div class="form-group">
-      <label for="mortgageRent">Mortgage Rent:</label>
-      <input type="text" class="form-control" id="mortgageRent">
+{{> loggedInAs/logginAs}}
+
+  <h2 class="budgetHead"><i>BUDGET FORM</i></h2>
+  <div class="container text-center bdgtBodyContainer">
+  <h1>HOUSING</h1>
+    <div class="bdgtForm">
+      <div class="form-group">
+        <label for="mortgageRent">Mortgage Rent:</label>
+        <input type="text" class="form-control" id="mortgageRent">
+      </div>
+      <div class="form-group">
+        <label for="secondMortgage">Second Mortgage:</label>
+        <input type="text" class="form-control" id="secondMortgage">
+      </div>
+      <div class="form-group">
+        <label for="taxes">Taxes:</label>
+        <input type="text" class="form-control" id="taxes">
+      </div>
+      <div class="form-group">
+        <label for="repairsMaint">Repairs and Maintenance:</label>
+        <input type="text" class="form-control" id="repairsMaint">
+      </div>
+      <div class="form-group">
+        <label for="dues">Dues:</label>
+        <input type="text" class="form-control" id="dues">
+      </div>
+      <button id="budgetBtn5Back" type="button" class="btn btn-default bgtBtn">Back</button>
+      <button id="budgetBtn5" type="button" class="btn btn-default bgtBtn nextBtn">Next</button>
     </div>
-    <div class="form-group">
-      <label for="secondMortgage">Second Mortgage:</label>
-      <input type="text" class="form-control" id="secondMortgage">
-    </div>
-    <div class="form-group">
-      <label for="taxes">Taxes:</label>
-      <input type="text" class="form-control" id="taxes">
-    </div>
-    <div class="form-group">
-      <label for="repairsMaint">Repairs and Maintenance:</label>
-      <input type="text" class="form-control" id="repairsMaint">
-    </div>
-    <div class="form-group">
-      <label for="dues">Dues:</label>
-      <input type="text" class="form-control" id="dues">
-    </div>
-    <button id="budgetBtn5Back" type="button" class="btn btn-default bgtBtn">Back</button>
-    <button id="budgetBtn5" type="button" class="btn btn-default bgtBtn">Next</button>
   </div>
 </div>
 <script type="text/javascript" src="/javascript/form5.js"></script>
 {{> nav/budgetFooter}}
+
+
+
+
+
+
+

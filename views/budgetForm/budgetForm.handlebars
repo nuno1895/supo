@@ -1,38 +1,47 @@
-{{> nav/navbar}}
+{{> nav/navbarBudget}}
 
 <div id="budget-wrapper">
-  <h1 class="budgetHead">BUDGET FORM</h1>
-  <div class="container">
+{{> loggedInAs/logginAs}}
+
+  <h2 class="budgetHead"><i>BUDGET FORM</i></h2>
+  <div class="container text-center bdgtBodyContainer">
   <h1> Your Pay </h1>
-  	<div class="form-group form-groupMonth">
-  	  <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name">
-      <label for="month">Month:</label>
-  	  <select id='month' class='form-control'>
-        <option value="january">January</option>
-        <option value="february">February</option>
-        <option value="march">March</option>
-        <option value="april">April</option>
-        <option value="june">June</option>
-        <option value="july">July</option>
-        <option value="august">August</option>
-        <option value="september">September</option>
-        <option value="october">October</option>
-        <option value="november">November</option>
-        <option value="december">December</option>
-      </select>
-  	</div>
-  	<div class="form-group">
-  	  <label for="takehome">Weekly Take Home:</label>
-  	  <input type="number" class="form-control" id="takehome">
-  	</div>
-    <div class="form-group">
-      <label for="frequency">How Often do you get payed every Month:</label>
-      <input type="number" class="form-control" id="frequency">
+    <div class="bdgtForm">
+    	<div class="form-group form-groupMonth">
+    	  <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name">
+        <label for="month">Month:</label>
+    	  <select id='month' class='form-control'>
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+    	</div>
+    	<div class="form-group">
+    	  <label for="takehome">Weekly Take Home:</label>
+    	  <input type="number" class="form-control" id="takehome">
+    	</div>
+      <div class="form-group">
+        <label for="frequency">How Often do you get payed every Month:</label>
+        <input type="number" class="form-control" id="frequency">
+      </div>
+      <button id="budgetBtn" type="button" class="btn btn-default payBtn">Next</button>
     </div>
-    <button id="budgetBtn" type="button" class="btn btn-default bgtBtn">Next</button>
   </div>
 </div>
 {{> nav/budgetFooter}}
 
 <script type="text/javascript" src="/javascript/form.js"></script>
+
+
+
+
+
