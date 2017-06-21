@@ -62,8 +62,8 @@ ul a{
     font-size: 14px !important;
 }
 .navbar-container{
-    transition: 0.8s;
-    -webkit-transition:  0.8s;
+    transition: 1s;
+    -webkit-transition:  1s;
 }
 
 
