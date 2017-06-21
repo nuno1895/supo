@@ -21,6 +21,7 @@ $(document).ready(function() {
 	var grade = getGrade(savingsBudgetPercent, "savings");
 	console.log(grade);
 	var savingsGrade = $("<h5>Your grade is: " + grade + "</h5>");
+  localStorage.setItem("savingsGrade", grade);
 
 	let savingsAdvice;
 

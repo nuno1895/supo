@@ -109,6 +109,39 @@ $("#budgetBtn12").on("click", function() {
     console.log("budgetObject form 12", budgetObject);
     localStorage.setItem("budgetForm12", JSON.stringify(budgetObject));
     
+
+    // var pullForGrades = {
+    //     foodGrade: JSON.parse(localStorage.getItem("foodGrade")),
+    //     clothingGrade: JSON.parse(localStorage.getItem("clothingGrade")),
+    //     housingGrade: JSON.parse(localStorage.getItem("housingGrade")),
+    //     medicalGrade: JSON.parse(localStorage.getItem("medicalGrade")),
+    //     insuranceGrade: JSON.parse(localStorage.getItem("insuranceGrade")),
+    //     personalGrade: JSON.parse(localStorage.getItem("personalGrade")),
+    //     savingsGrade: JSON.parse(localStorage.getItem("savingsGrade")),
+    //     utilitesGrade: JSON.parse(localStorage.getItem("utilitesGrade")),
+    //     transportationGrade: JSON.parse(localStorage.getItem("transportationGrade")),
+    //     entertainmentGrade: JSON.parse(localStorage.getItem("entertainmentGrade")),
+    //     debtGrade: JSON.parse(localStorage.getItem("debtGrade")),
+    //     totalGrade: JSON.parse(localStorage.getItem("totalGrade")),
+    // };
+
+    // var dataToPost = {
+    //     budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
+    //     budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
+    //     budgetForm3: JSON.parse(localStorage.getItem("budgetForm3")),
+    //     budgetForm4: JSON.parse(localStorage.getItem("budgetForm4")),
+    //     budgetForm5: JSON.parse(localStorage.getItem("budgetForm5")),
+    //     budgetForm6: JSON.parse(localStorage.getItem("budgetForm6")),
+    //     budgetForm7: JSON.parse(localStorage.getItem("budgetForm7")),
+    //     budgetForm8: JSON.parse(localStorage.getItem("budgetForm8")),
+    //     budgetForm9: JSON.parse(localStorage.getItem("budgetForm9")),
+    //     budgetForm10: JSON.parse(localStorage.getItem("budgetForm10")),
+    //     budgetForm11: JSON.parse(localStorage.getItem("budgetForm11")),
+    //     budgetForm12: JSON.parse(localStorage.getItem("budgetForm12")),
+    // };
+
+    // console.log("dataToPost", dataToPost);
+
     var dataToPost = {
         budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
         budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
@@ -126,13 +159,14 @@ $("#budgetBtn12").on("click", function() {
 
     console.log("dataToPost", dataToPost);
 
-    $.post("/budgetdata", dataToPost).then(function(response) {
-        console.log("POSTED");
 
-        window.location.href = "/grader/debt"
+    // $.post("/budgetdata", dataToPost).then(function(response) {
+    //     console.log("POSTED");
+
+        window.location.href = "/grader/debt";
         // window.location.href = "/budgetresults";
     });
-});
+
 
 var carBillCount = 1;
 

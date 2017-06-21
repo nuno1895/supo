@@ -25,6 +25,11 @@ $(document).ready(function() {
 	console.log(grade);
 	var clothingGrade = $("<h4>Your grade is: " + grade + "</h4>");
 
+  localStorage.setItem("clothingGrade", grade);
+
+  var food = JSON.parse(localStorage.getItem("foodGrade"));
+    console.log("foodGrade",food);
+
 	let clothingAdvice;
 
      if (grade === "A+") {

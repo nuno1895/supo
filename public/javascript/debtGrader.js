@@ -25,6 +25,8 @@ $(document).ready(function() {
     console.log(grade);
     var debtGrade = $("<h5>Your grade is: " + grade + "</h5>");
 
+    localStorage.setItem("debtGrade", grade);
+
     let debtAdvice;
 
     if (grade === "A+") {
@@ -86,6 +88,8 @@ $(document).ready(function() {
     console.log(pullForTotals);
     console.log(budgetTotals);
 
+   
+
     var totalsForDisplay = (parseInt(budgetTotals.totalPay) - (parseInt(budgetTotals.foodTotal) + parseInt(budgetTotals.clothingTotal) + parseInt(budgetTotals.utilitiesTotal) + parseInt(budgetTotals.housingTotal) + parseInt(budgetTotals.savingsTotal) + parseInt(budgetTotals.medicalTotal) + parseInt(budgetTotals.insuranceTotal) + parseInt(budgetTotals.transportationTotal) + parseInt(budgetTotals.personalTotal) + parseInt(budgetTotals.entertainmentTotal) + parseInt(budgetTotals.debtTotal)));
 
     var totalPay = $("<h2>Your Total Pay is: " + budgetTotals.totalPay + "</h2>");
@@ -101,5 +105,56 @@ $("#debtGraderBack").on("click", function() {
 });
 
 $("#debtGraderNext").on("click", function() {
+
+    //     var pullForGrades = {
+    //     foodGrade: JSON.parse(localStorage.getItem("foodGrade")),
+    //     clothingGrade: JSON.parse(localStorage.getItem("clothingGrade")),
+    //     housingGrade: JSON.parse(localStorage.getItem("housingGrade")),
+    //     medicalGrade: JSON.parse(localStorage.getItem("medicalGrade")),
+    //     insuranceGrade: JSON.parse(localStorage.getItem("insuranceGrade")),
+    //     personalGrade: JSON.parse(localStorage.getItem("personalGrade")),
+    //     savingsGrade: JSON.parse(localStorage.getItem("savingsGrade")),
+    //     utilitesGrade: JSON.parse(localStorage.getItem("utilitesGrade")),
+    //     transportationGrade: JSON.parse(localStorage.getItem("transportationGrade")),
+    //     entertainmentGrade: JSON.parse(localStorage.getItem("entertainmentGrade")),
+    //     debtGrade: JSON.parse(localStorage.getItem("debtGrade")),
+        
+    // };
+
+    var dataToPost = {
+        foodGrade: localStorage.getItem("foodGrade"),
+        clothingGrade: localStorage.getItem("clothingGrade"),
+        housingGrade: localStorage.getItem("housingGrade"),
+        medicalGrade: localStorage.getItem("medicalGrade"),
+        insuranceGrade: localStorage.getItem("insuranceGrade"),
+        personalGrade: localStorage.getItem("personalGrade"),
+        savingsGrade: localStorage.getItem("savingsGrade"),
+        utilitiesGrade: localStorage.getItem("utilitiesGrade"),
+        transportationGrade: localStorage.getItem("transportationGrade"),
+        entertainmentGrade: localStorage.getItem("entertainmentGrade"),
+        debtGrade: localStorage.getItem("debtGrade"),
+        budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
+        budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
+        budgetForm3: JSON.parse(localStorage.getItem("budgetForm3")),
+        budgetForm4: JSON.parse(localStorage.getItem("budgetForm4")),
+        budgetForm5: JSON.parse(localStorage.getItem("budgetForm5")),
+        budgetForm6: JSON.parse(localStorage.getItem("budgetForm6")),
+        budgetForm7: JSON.parse(localStorage.getItem("budgetForm7")),
+        budgetForm8: JSON.parse(localStorage.getItem("budgetForm8")),
+        budgetForm9: JSON.parse(localStorage.getItem("budgetForm9")),
+        budgetForm10: JSON.parse(localStorage.getItem("budgetForm10")),
+        budgetForm11: JSON.parse(localStorage.getItem("budgetForm11")),
+        budgetForm12: JSON.parse(localStorage.getItem("budgetForm12")),
+    };
+
+
+    console.log("dataToPost", dataToPost);
+
+    $.post("/budgetdata", dataToPost).then(function(response) {
+        debugger;
+        console.log("POSTED");
+
     window.location.href = "/budgetresults";
+ });
+
 });
