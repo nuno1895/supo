@@ -1,14 +1,23 @@
 {{> nav/navbar}}
 
   <div class="dashboard-Wrapper">
-        <div class="container">
 
-		    <h1>Supo Dashboard</h1>
-		    <h2>Hurray! you are logged in. Your id is: {{userData.firstname}}</h2>
-			    <div class="btn-group">
-			        <a href="/budgetForm" class="btn btn-default">Create a Budget</a>
-			        <a href="/expenses" class="btn btn-default">Track Your Expenses</a>
-			    </div>
+        <div class="container">
+        	<div class="dashHead text-center">
+		    	<h1 id="dashHeadH1">Welcome to Your <span><i>SUPO</i></span> Dashboard, {{userData.firstname}}.</h1>
+		    </div>
+		    <div class="col-xs-6">
+	    	    <h3><i>What Would You Like To Do Today?</i></h3>
+    		    <div class="btn-group">
+    		        <a href="/budgetForm" class="doToday">Create a Budget</a>
+    		        <br>
+    		        <a href="/expenses" class="doToday">Track Your Expenses</a>
+    		    </div>	
+		    </div>
+		    <div class="col-xs-6">
+		    	
+		    </div>
+		    
 		</div>
 	</div>	
  

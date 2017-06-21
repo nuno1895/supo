@@ -1,32 +1,24 @@
-{{> nav/navbar}}
+{{> nav/navbarBudget}}
 
 <div id="budget-wrapper">
-  <h1 class="budgetHead">BUDGET FORM: FOOD</h1>
-  <div class="container">
-<!--     <form method="POST" action="/budgetdata"> -->
-    <h1> Food </h1>
-  	<div class="form-group">
-  	  <label for="groceries">Groceries:</label>
-  	  <input type="text" class="form-control" id="groceries">
-  	</div>
-  	<div class="form-group">
-  	  <label for="eatingOut">Eating Out:</label>
-  	  <input type="text" class="form-control" id="eatingout">
-  	</div>
-<!--     <ul class="list-group" id="budgetAdd">
-      <li class="list-group-item">
-        <label for="extra">Extra:</label>
-        <input type="text" class="form-control" id="name">
-        <label for="amount">Amount:</label>
-        <input type="number" class="form-control" id="amount"> -->
-<!-- 11111111111111111111111111111 -->
-<!--         <button id="finalSubmit" type="button" class="btn btn-default">Final Submit</button>
- --><!--111111111111111111111111111111111111 -->
-<!--       </li>
-    </ul> -->
-   <button id="budgetBtn2Back" type="button" class="btn btn-default bgtBtn">Back</button>
-   <button id="budgetBtn2" type="button" class="btn btn-default bgtBtn">Next</button>
-    <!-- </form> -->
+{{> loggedInAs/logginAs}}
+
+  <h2 class="budgetHead"><i>BUDGET FORM</i></h2>
+  <div class="container text-center bdgtBodyContainer">
+  <h1> Food </h1>
+    <div class="bdgtForm">
+    	<div class="form-group">
+    	  <label for="groceries">Groceries:</label>
+    	  <input type="text" class="form-control" id="groceries">
+    	</div>
+    	<div class="form-group">
+    	  <label for="eatingOut">Eating Out:</label>
+    	  <input type="text" class="form-control" id="eatingout">
+    	</div>
+
+     <button id="budgetBtn2Back" type="button" class="btn btn-default bgtBtn">Back</button>
+     <button id="budgetBtn2" type="button" class="btn btn-default bgtBtn nextBtn">Next</button>
+    </div>
   </div>
 </div>
 <script type="text/javascript" src="/javascript/form2.js"></script>

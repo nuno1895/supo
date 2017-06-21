@@ -1,23 +1,35 @@
-{{> nav/navbar}}
+{{> nav/navbarBudget}}
 
 <div id="budget-wrapper">
-  <h1 class="budgetHead">BUDGET FORM: SAVINGS</h1>
-  <div class="container">
-    <div class="form-group">
-      <label for="emergencyFund">Emergency Fund:</label>
-      <input type="text" class="form-control" id="emergencyFund">
+{{> loggedInAs/logginAs}}
+
+  <h2 class="budgetHead"><i>BUDGET FORM</i></h2>
+  <div class="container text-center bdgtBodyContainer">
+  <h1>SAVINGS</h1>
+    <div class="bdgtForm">
+      <div class="form-group">
+        <label for="emergencyFund">Emergency Fund:</label>
+        <input type="text" class="form-control" id="emergencyFund">
+      </div>
+      <div class="form-group">
+        <label for="retirementFund">Retirement Fund:</label>
+        <input type="text" class="form-control" id="retirementFund">
+      </div>
+      <div class="form-group">
+        <label for="collegeFund">College Fund:</label>
+        <input type="text" class="form-control" id="collegeFund">
+      </div>
+      <button id="budgetBtn6Back" type="button" class="btn btn-default bgtBtn">Back</button>
+      <button id="budgetBtn6" type="button" class="btn btn-default bgtBtn nextBtn">Next</button>
     </div>
-    <div class="form-group">
-      <label for="retirementFund">Retirement Fund:</label>
-      <input type="text" class="form-control" id="retirementFund">
-    </div>
-    <div class="form-group">
-      <label for="collegeFund">College Fund:</label>
-      <input type="text" class="form-control" id="collegeFund">
-    </div>
-    <button id="budgetBtn6Back" type="button" class="btn btn-default bgtBtn">Back</button>
-    <button id="budgetBtn6" type="button" class="btn btn-default bgtBtn">Next</button>
   </div>
 </div>
 <script type="text/javascript" src="/javascript/form6.js"></script>
 {{> nav/budgetFooter}}
+
+
+
+
+
+
+
