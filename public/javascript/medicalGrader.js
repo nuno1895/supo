@@ -18,7 +18,6 @@ $(document).ready(function() {
 		otherMedical3 = 0;
 	} else otherMedical3 = parseInt(budgetForm7.otherMedical3);
 
-
 	var budgetForm = JSON.parse(localStorage.getItem("budgetForm"));
 	console.log("budgetForm",budgetForm);
 
@@ -27,8 +26,6 @@ $(document).ready(function() {
 
 	var budgetForm7 = JSON.parse(localStorage.getItem("budgetForm7"));
 	console.log("budgetForm7", budgetForm7);
-
-
 
 	var medicalBudget = parseInt(budgetForm7.medications) + parseInt(budgetForm7.doctorBills) + parseInt(budgetForm7.hospitalBills) + otherMedical1 + otherMedical2 + otherMedical3;
 
