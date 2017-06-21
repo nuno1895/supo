@@ -23,12 +23,12 @@ module.exports = function(app) {
             groceries: req.body.budgetForm2.groceries,
             eatingout: req.body.budgetForm2.eatingout,
             foodTotal: req.body.budgetForm2.foodTotal,
-            foodGrade: req.body.foodGrader.foodGrade,
+            foodGrade: req.body.foodGrade,
             clothingAdult: req.body.budgetForm3.clothingAdult,
             clothingKids: req.body.budgetForm3.clothingKids,
             dryCleaning: req.body.budgetForm3.dryCleaning,
             clothingTotal: req.body.budgetForm3.clothingTotal,
-            clothingGrade: req.body.clothingGrader.clothingGrade,
+            clothingGrade: req.body.clothingGrade,
             electricity: req.body.budgetForm4.electricity,
             mobilePhone: req.body.budgetForm4.mobilePhone,
             gas: req.body.budgetForm4.gas,
@@ -37,14 +37,14 @@ module.exports = function(app) {
             internet: req.body.budgetForm4.internet,
             cable: req.body.budgetForm4.cable,
             utilitiesTotal: req.body.budgetForm4.utilitiesTotal,
-            utilitiesGrade: req.body.utilitiesGrader.utilitiesGrade,
+            utilitiesGrade: req.body.utilitiesGrade,
             mortgageRent: req.body.budgetForm5.mortgageRent,
             secondMortgage: req.body.budgetForm5.secondMortgage,
             taxes: req.body.budgetForm5.taxes,
             repairsMaint: req.body.budgetForm5.repairsMaint,
             dues: req.body.budgetForm5.dues,
             housingTotal: req.body.budgetForm5.housingTotal,
-            housingGrade: req.body.housingGrader.housingGrade,
+            housingGrade: req.body.housingGrade,
             emergencyFund: req.body.budgetForm6.emergencyFund,
             retirementFund: req.body.budgetForm6.retirementFund,
             collegeFund: req.body.budgetForm6.collegeFund,
@@ -56,7 +56,7 @@ module.exports = function(app) {
             otherMedical2: req.body.budgetForm7.otherMedical2,
             otherMedical3: req.body.budgetForm7.otherMedical3,
             medicalTotal: req.body.budgetForm7.medicalTotal,
-            medicalGrade: req.body.medicalGrader.medicalGrade,
+            medicalGrade: req.body.medicalGrade,
             lifeInsurance: req.body.budgetForm8.lifeInsurance,
             healthInsurance: req.body.budgetForm8.healthInsurance,
             autoInsurance: req.body.budgetForm8.autoInsurance,
@@ -64,7 +64,7 @@ module.exports = function(app) {
             disabilityInsurance: req.body.budgetForm8.disabilityInsurance,
             longTermInsurance: req.body.budgetForm8.longTermInsurance,
             InsuranceTotal: req.body.budgetForm8.insuranceTotal,
-            InsuranceGrade: req.body.insuranceGrader.insuranceGrade,
+            InsuranceGrade: req.body.insuranceGrade,
             carFuel: req.body.budgetForm9.carFuel,
             carRepairs: req.body.budgetForm9.carRepairs,
             bus: req.body.budgetForm9.bus,
@@ -72,7 +72,7 @@ module.exports = function(app) {
             newCarFund: req.body.budgetForm9.newCarFund,
             otherTransportation: req.body.budgetForm9.otherTransportation,
             transportationTotal: req.body.budgetForm9.transportationTotal,
-            transportationGrade: req.body.transportationGrader.transportationGrade,
+            transportationGrade: req.body.transportationGrade,
             educationTuition: req.body.budgetForm10.educationTuition,
             childCare: req.body.budgetForm10.childCare,
             hairCareCosmetics: req.body.budgetForm10.hairCareCosmetics,
@@ -87,11 +87,11 @@ module.exports = function(app) {
             otherPersonal2: req.body.budgetForm10.otherPersonal2,
             otherPersonal3: req.body.budgetForm10.otherPersonal3,
             personalTotal: req.body.budgetForm10.personalTotal,
-            personalGrade: req.body.personalGrader.personalGrade,
+            personalGrade: req.body.personalGrade,
             entertainment: req.body.budgetForm11.entertainment,
             vacation: req.body.budgetForm11.vacation,
             entertainmentTotal: req.body.budgetForm11.entertainmentTotal,
-            entertainmentGrade: req.body.entertainmentGrader.entertainmentGrade,
+            entertainmentGrade: req.body.entertainmentGrade,
             carPayment1: req.body.budgetForm12.carPayment1,
             carPayment2: req.body.budgetForm12.carPayment2,
             creditCard1: req.body.budgetForm12.creditCard1,
@@ -109,7 +109,7 @@ module.exports = function(app) {
             debt3: req.body.budgetForm12.debt3,
             debt4: req.body.budgetForm12.debt4,
             debtTotal: req.body.budgetForm12.debtTotal,
-            debtGrade: req.body.debtGrader.debtGrade,
+            debtGrade: req.body.debtGrade,
             finalGrade: req.body.budgetForm12.finalGrade,
             totalBudget: req.body.budgetForm12.totalBudget
         }).then(function(budget) {
@@ -163,7 +163,7 @@ module.exports = function(app) {
             }
         }).then(function(budgetResults) {
             // res.send(budgetResults);
-            res.json(budgetResults);
+            res.send(budgetResults);
         });
     });
 
@@ -173,32 +173,9 @@ module.exports = function(app) {
                 UserId: req.session.passport.user
             }
         }).then(function(allExpenses) {
-            res.json(allExpenses);
+            res.send(allExpenses);
         });
     });
-
-
-
-
-
-
-    app.get("/allbudgetresults", function(req, res) {
-        console.log(req.session)
-        models.Budget.findAll({
-            where: {
-                UserId: req.session.passport.user
-            }
-        }).then(function(budgetResults) {
-            // res.send(budgetResults);
-            res.render("expenses/dailyTracker", {
-                budgetResults
-            });
-        });
-    });
-
-
-
-
 
     app.get("/budgetresults", function(req, res) {
         console.log(req.session)

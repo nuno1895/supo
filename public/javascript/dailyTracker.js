@@ -23,9 +23,8 @@ $(document).ready(function() {
 
     $('#monthToday').html(month);
 
-    $.get("/allexpenseresults", function(expenseResults) {
-        expenses = expenseResults;
-        console.log("HERE: " + expenses[0]);
+    $.get("/allexpenseresults", function(expenseTest) {
+        console.log("HERE: " + expenseTest);
     });
 
 
@@ -96,7 +95,7 @@ $("#expenseSubmit").on("click", function() {
 
 
     $.get("/allexpenseresults", function(expenseResults) {
-        expenseResults = expenses;
+        console.log(expenseResults);
     });
 
 

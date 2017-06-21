@@ -1,6 +1,6 @@
 $("#budgetBtn12").on("click", function() {
     // var debtTotal = parseInt($("#carPayment1").val()) + parseInt($("#carPayment2").val()) + parseInt($("#creditCard1").val()) + parseInt($("#creditCard2").val()) + parseInt($("#creditCard3").val()) + parseInt($("#creditCard4").val()) + parseInt($("#creditCard5").val()) + parseInt($("#creditCard6").val()) + parseInt($("#studentLoan1").val()) + parseInt($("#studentLoan2").val()) + parseInt($("#studentLoan3").val()) + parseInt($("#studentLoan4").val()) + parseInt($("#debt1").val()) + parseInt($("#debt2").val()) + parseInt($("#debt3").val()) + parseInt($("#debt4").val());
-  
+
     var budgetObject = {
         carPayment1: $("#carPayment1").val(),
         carPayment2: $("#carPayment2").val(),
@@ -37,78 +37,78 @@ $("#budgetBtn12").on("click", function() {
     var debt3;
     var debt4;
 
-    if(budgetObject.carPayment1 === undefined) {
+    if (budgetObject.carPayment1 === undefined) {
         carPayment1 = 0;
     } else carPayment1 = parseInt(budgetObject.carPayment1);
 
-    if(budgetObject.carPayment2 === undefined) {
+    if (budgetObject.carPayment2 === undefined) {
         carPayment2 = 0;
     } else carPayment2 = parseInt(budgetObject.carPayment2);
 
-    if(budgetObject.creditCard1 === undefined) {
+    if (budgetObject.creditCard1 === undefined) {
         creditCard1 = 0;
     } else creditCard1 = parseInt(budgetObject.creditCard1);
 
-    if(budgetObject.creditCard2 === undefined) {
+    if (budgetObject.creditCard2 === undefined) {
         creditCard2 = 0;
     } else creditCard2 = parseInt(budgetObject.creditCard2);
 
-    if(budgetObject.creditCard3 === undefined) {
+    if (budgetObject.creditCard3 === undefined) {
         creditCard3 = 0;
     } else creditCard3 = parseInt(budgetObject.creditCard3);
 
-    if(budgetObject.creditCard4 === undefined) {
+    if (budgetObject.creditCard4 === undefined) {
         creditCard4 = 0;
     } else creditCard4 = parseInt(budgetObject.creditCard4);
 
-    if(budgetObject.creditCard5 === undefined) {
+    if (budgetObject.creditCard5 === undefined) {
         creditCard5 = 0;
     } else creditCard5 = parseInt(budgetObject.creditCard5);
 
-    if(budgetObject.creditCard6 === undefined) {
+    if (budgetObject.creditCard6 === undefined) {
         creditCard6 = 0;
     } else creditCard6 = parseInt(budgetObject.creditCard6);
 
-    if(budgetObject.studentLoan1 === undefined) {
+    if (budgetObject.studentLoan1 === undefined) {
         studentLoan1 = 0;
     } else studentLoan1 = parseInt(budgetObject.studentLoan1);
 
-    if(budgetObject.studentLoan2 === undefined) {
+    if (budgetObject.studentLoan2 === undefined) {
         studentLoan2 = 0;
     } else studentLoan2 = parseInt(budgetObject.studentLoan2);
 
-    if(budgetObject.studentLoan3 === undefined) {
+    if (budgetObject.studentLoan3 === undefined) {
         studentLoan3 = 0;
     } else studentLoan3 = parseInt(budgetObject.studentLoan3);
 
-    if(budgetObject.studentLoan4 === undefined) {
+    if (budgetObject.studentLoan4 === undefined) {
         studentLoan4 = 0;
     } else studentLoan4 = parseInt(budgetObject.studentLoan4);
 
-    if(budgetObject.debt1 === undefined) {
+    if (budgetObject.debt1 === undefined) {
         debt1 = 0;
     } else debt1 = parseInt(budgetObject.debt1);
 
-    if(budgetObject.debt2 === undefined) {
+    if (budgetObject.debt2 === undefined) {
         debt2 = 0;
     } else debt2 = parseInt(budgetObject.debt2);
 
-    if(budgetObject.debt3 === undefined) {
+    if (budgetObject.debt3 === undefined) {
         debt3 = 0;
     } else debt3 = parseInt(budgetObject.debt3);
 
-    if(budgetObject.debt4 === undefined) {
+    if (budgetObject.debt4 === undefined) {
         debt4 = 0;
     } else debt4 = parseInt(budgetObject.debt4);
 
-    var debtTotal = carPayment1 + carPayment2 + creditCard1 + creditCard2 + creditCard3 + 
-    creditCard4 + creditCard5 + creditCard6 + studentLoan1 + studentLoan2 + studentLoan3 + studentLoan4 + debt1 + debt2 + debt3 + debt4;
+    var debtTotal = carPayment1 + carPayment2 + creditCard1 + creditCard2 + creditCard3 +
+        creditCard4 + creditCard5 + creditCard6 + studentLoan1 + studentLoan2 + studentLoan3 + studentLoan4 + debt1 + debt2 + debt3 + debt4;
 
     budgetObject.debtTotal = debtTotal;
 
     console.log("budgetObject form 12", budgetObject);
     localStorage.setItem("budgetForm12", JSON.stringify(budgetObject));
-    
+
 
     // var pullForGrades = {
     //     foodGrade: JSON.parse(localStorage.getItem("foodGrade")),
@@ -141,7 +141,7 @@ $("#budgetBtn12").on("click", function() {
     // };
 
     // console.log("dataToPost", dataToPost);
-
+    console.log("HERE: " + localStorage.getItem("foodGrade"));
     var dataToPost = {
         budgetForm: JSON.parse(localStorage.getItem("budgetForm")),
         budgetForm2: JSON.parse(localStorage.getItem("budgetForm2")),
@@ -163,14 +163,14 @@ $("#budgetBtn12").on("click", function() {
     // $.post("/budgetdata", dataToPost).then(function(response) {
     //     console.log("POSTED");
 
-        window.location.href = "/grader/debt";
-        // window.location.href = "/budgetresults";
-    });
+    window.location.href = "/grader/debt";
+    // window.location.href = "/budgetresults";
+});
 
 
 var carBillCount = 1;
 
-$("#addCarBill").on("click", function(){
+$("#addCarBill").on("click", function() {
 
     var carBillDiv = $("<div class='form-group'>");
     var carBillLabel = $("<label for='carPayment" + carBillCount + "'>Car Payment " + carBillCount + ":</label>");
@@ -180,14 +180,14 @@ $("#addCarBill").on("click", function(){
 
     $('#carPaymentsDiv').append(carBillDiv);
 
-    if(carBillCount === 2) {
+    if (carBillCount === 2) {
         document.getElementById("addCarBill").disabled = true;
     } else carBillCount++;
 });
 
 var creditCardBillCount = 1;
 
-$("#addCreditCardBill").on("click", function(){
+$("#addCreditCardBill").on("click", function() {
 
     var creditCardBillDiv = $("<div class='form-group'>");
     var creditCardBillLabel = $("<label for='creditCard" + creditCardBillCount + "'>Credit Card " + creditCardBillCount + ":</label>");
@@ -197,14 +197,14 @@ $("#addCreditCardBill").on("click", function(){
 
     $('#creditCardsDiv').append(creditCardBillDiv);
 
-    if(creditCardBillCount === 6) {
+    if (creditCardBillCount === 6) {
         document.getElementById("addCreditCardBill").disabled = true;
     } else creditCardBillCount++;
 });
 
 var studentLoansCount = 1;
 
-$("#addStudentLoanBill").on("click", function(){
+$("#addStudentLoanBill").on("click", function() {
 
     var studentLoanBillDiv = $("<div class='form-group'>");
     var studentLoanBillLabel = $("<label for='studentLoan" + studentLoansCount + "'>Student Loan " + studentLoansCount + ":</label>");
@@ -214,14 +214,14 @@ $("#addStudentLoanBill").on("click", function(){
 
     $('#studentLoansDiv').append(studentLoanBillDiv);
 
-    if(studentLoansCount === 4) {
+    if (studentLoansCount === 4) {
         document.getElementById("addStudentLoanBill").disabled = true;
     } else studentLoansCount++;
 });
 
 var debtCount = 1;
 
-$("#addDebt").on("click", function(){
+$("#addDebt").on("click", function() {
 
     var debtDiv = $("<div class='form-group'>");
     var debtLabel = $("<label for='debt" + debtCount + "'>Debt " + debtCount + ":</label>");
@@ -231,7 +231,7 @@ $("#addDebt").on("click", function(){
 
     $('#debtDiv').append(debtDiv);
 
-    if(debtCount === 4) {
+    if (debtCount === 4) {
         document.getElementById("addDebt").disabled = true;
     } else debtCount++;
 });
