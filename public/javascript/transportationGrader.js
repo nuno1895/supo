@@ -24,6 +24,7 @@ $(document).ready(function() {
 	var grade = getGrade(percentDiff);
 	console.log(grade);
 	var transportationGrade = $("<h5>Your grade is: " + grade + "</h5>");
+    localStorage.setItem("transportationGrade", grade);
 
 	let transportationAdvice;
 

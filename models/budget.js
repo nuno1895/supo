@@ -43,6 +43,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        foodGrade: {
+            type: Sequelize.STRING
+        },
+
         clothingAdult: {
             type: Sequelize.INTEGER
         },
@@ -57,6 +61,10 @@ module.exports = function(sequelize, Sequelize) {
 
         clothingTotal: {
             type: Sequelize.INTEGER
+        },
+
+        clothingGrade: {
+            type: Sequelize.STRING
         },
 
         electricity: {
@@ -91,6 +99,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        utilitiesGrade: {
+            type: Sequelize.STRING
+        },
+
         mortgageRent: {
             type: Sequelize.INTEGER
         },
@@ -115,6 +127,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        housingGrade: {
+            type: Sequelize.STRING
+        },
+
         emergencyFund: {
             type: Sequelize.INTEGER
         },
@@ -129,6 +145,10 @@ module.exports = function(sequelize, Sequelize) {
 
         savingsTotal: {
             type: Sequelize.INTEGER
+        },
+
+        savingsGrade: {
+            type: Sequelize.STRING
         },
 
         medications: {
@@ -159,6 +179,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        medicalGrade: {
+            type: Sequelize.STRING
+        },
+
         lifeInsurance: {
             type: Sequelize.INTEGER
         },
@@ -187,6 +211,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        InsuranceGrade: {
+            type: Sequelize.STRING
+        },
+
         carFuel: {
             type: Sequelize.INTEGER
         },
@@ -213,6 +241,10 @@ module.exports = function(sequelize, Sequelize) {
 
         transportationTotal: {
             type: Sequelize.INTEGER
+        },
+
+        transportationGrade: {
+            type: Sequelize.STRING
         },
 
         educationTuition: {
@@ -271,6 +303,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        personalGrade: {
+            type: Sequelize.STRING
+        },
+
         entertainment: {
             type: Sequelize.INTEGER
         },
@@ -280,6 +316,10 @@ module.exports = function(sequelize, Sequelize) {
         },
 
         entertainmentTotal: {
+            type: Sequelize.INTEGER
+        },
+
+        entertainmentGrade: {
             type: Sequelize.INTEGER
         },
 
@@ -348,8 +388,16 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        debtGrade: {
+            type: Sequelize.STRING
+        },
+
         totalBudget: {
             type: Sequelize.INTEGER
+        },
+
+        finalGrade: {
+            type: Sequelize.STRING
         }
     }, {
 

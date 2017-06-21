@@ -44,6 +44,7 @@ $(document).ready(function() {
 	var grade = getGrade(percentDiff);
 	console.log(grade);
 	var medicalGrade = $("<h5>Your grade is: " + grade + "</h5>");
+	localStorage.setItem("medicalGrade", grade);
 
 	let medicalAdvice;
 
