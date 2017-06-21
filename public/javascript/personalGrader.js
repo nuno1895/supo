@@ -8,7 +8,7 @@ $(document).ready(function() {
 	var budgetForm10 = JSON.parse(localStorage.getItem("budgetForm10"));
 	console.log("budgetForm10", budgetForm10);
 
-	var personalBudget = parseInt(budgetForm10.educationTuition) + parseInt(budgetForm10.childCare) + parseInt(budgetForm10.hairCareCosmetics) + parseInt(budgetForm10.bookSupplies) + parseInt(budgetForm10.childSupport) + parseInt(budgetForm10.alimony) + parseInt(budgetForm10.pocketMoney) + parseInt(budgetForm10.subscriptions) + parseInt(budgetForm10.babySupplies) + parseInt(budgetForm10.petSupplies) + parseInt(budgetForm10.otherPersonal1) + parseInt(budgetForm10.otherPersonal2) + parseInt(budgetForm10.otherPersonal3);
+	var personalBudget = parseInt(budgetForm10.personalTotal);
 	console.log("personalBudget", personalBudget);
 
 	var personalBudgetPercent = (personalBudget*100)/totalPay;

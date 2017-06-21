@@ -8,7 +8,7 @@ $(document).ready(function() {
     var budgetForm12 = JSON.parse(localStorage.getItem("budgetForm12"));
     console.log("budgetForm12", budgetForm12);
 
-    var debtBudget = parseInt(budgetForm12.carPayment1) + parseInt(budgetForm12.carPayment2) + parseInt(budgetForm12.creditCard1) + parseInt(budgetForm12.creditCard2) + parseInt(budgetForm12.creditCard3) + parseInt(budgetForm12.creditCard4) + parseInt(budgetForm12.creditCard5) + parseInt(budgetForm12.creditCard6) + parseInt(budgetForm12.studentLoan1) + parseInt(budgetForm12.studentLoan2) + parseInt(budgetForm12.studentLoan3) + parseInt(budgetForm12.studentLoan4) + parseInt(budgetForm12.debt1) + parseInt(budgetForm12.debt2) + parseInt(budgetForm12.debt3) + parseInt(budgetForm12.debt4);
+    var debtBudget = parseInt(budgetForm12.debtTotal);
     console.log("debtBudget", debtBudget);
 
     var debtBudgetPercent = (debtBudget * 100) / totalPay;
