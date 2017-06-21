@@ -45,7 +45,11 @@ $(document).ready(function() {
             console.log(budgetData);
             var budgetId = $('.budgetCompareSelector').val();
             console.log("BUDGETID: ", budgetId);
-
+            for (var i = 0; i < budgetData.length; i++) {
+                if (budgetData[i].id == budgetId) {
+                    console.log(budgetData[i]);
+                }
+            }
         });
     });
 });
