@@ -391,9 +391,16 @@ input:-webkit-autofill {
 
 
 /*============================== dashboard page ==========================================*/
-.greeting{
-/*    margin-top: 6em;
-*/}
+.greeting {
+    color: #33526E;
+    font-weight: bolder;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 1em;
+}
+
+#youAreLoggedAs {
+    color: #20c254;
+}
 .dashboard-Wrapper{
     margin-top: 6em;
     margin-bottom: 6em;
@@ -430,7 +437,7 @@ input:-webkit-autofill {
     margin-bottom: 6em;
 }
 
-#panelHeading {
+#foodPanelHeading, #clothingPanelHeading, #utilitiesPanelHeading, #housingPanelHeading, #savingsPanelHeading, #medicalPanelHeading, #insurancePanelHeading, #transportationPanelHeading, #personalPanelHeading, #entertainmentPanelHeading, #debtPanelHeading {
     background-image: none;
     background-color: #23AB4F;
 }

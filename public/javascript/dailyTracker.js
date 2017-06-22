@@ -94,8 +94,8 @@ $(document).ready(function() {
                     subBudgetTotals.savingsTotal = currentBudget.savingsTotal;
                     $("#medicalBudget").html(currentBudget.medicalTotal);
                     subBudgetTotals.medicalTotal = currentBudget.medicalTotal;
-                    $("#insuranceBudget").html(currentBudget.insuranceTotal);
-                    subBudgetTotals.insuranceTotal = currentBudget.insuranceTotal;
+                    $("#insuranceBudget").html(currentBudget.InsuranceTotal);
+                    subBudgetTotals.insuranceTotal = currentBudget.InsuranceTotal;
                     $("#transportationBudget").html(currentBudget.transportationTotal);
                     subBudgetTotals.transportationTotal = currentBudget.transportationTotal;
                     $("#personalBudget").html(currentBudget.personalTotal);
@@ -217,112 +217,112 @@ $(document).ready(function() {
 
             var foodRemainder = foodBudget - foodExpenseTotal;
             $("#foodBudgetRemainder").append(foodRemainder);
-            if ((foodExpenseTotal/foodBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((foodExpenseTotal/foodBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((foodRemainder/foodBudget) >= .80) && ((foodRemainder/foodBudget) < 1))  {
+                $("#foodPanelHeading").css("background-color", "yellow");
+            }else if ((foodRemainder/foodBudget) <= .79) {
+                $("#foodPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#foodPanelHeading").css("background-color", "#23ABF");
             }
 
             var clothingRemainder = clothingBudget - clothingExpenseTotal;
             $("#clothingBudgetRemainder").append(clothingRemainder);
-            if ((clothingExpenseTotal/clothingBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((clothingExpenseTotal/clothingBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((clothingRemainder/clothingBudget) >= .80) && ((clothingRemainder/clothingBudget) < 1))  {
+                $("#clothingPanelHeading").css("background-color", "yellow");
+            }else if ((clothingRemainder/clothingBudget) <= .79) {
+                $("#clothingPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#clothingPanelHeading").css("background-color", "#23ABF");
             }
 
             var utilitiesRemainder = utilitiesBudget - utilitiesExpenseTotal;
             $("#utilitiesBudgetRemainder").append(utilitiesRemainder);
-            if ((utilitiesExpenseTotal/utilitiesBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((utilitiesExpenseTotal/utilitiesBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((utilitiesRemainder/utilitiesBudget) >= .80) && ((utilitiesRemainder/utilitiesBudget) < 1))  {
+                $("#utilitiesPanelHeading").css("background-color", "yellow");
+            }else if ((utilitiesRemainder/utilitiesBudget) <= .79) {
+                $("#utilitiesPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#utilitiesPanelHeading").css("background-color", "#23ABF");
             }
 
             var housingRemainder = housingBudget - housingExpenseTotal;
             $("#housingBudgetRemainder").append(housingRemainder);
-            if ((housingExpenseTotal/housingBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((housingExpenseTotal/housingBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+           if (((housingRemainder/housingBudget) >= .80) && ((housingRemainder/housingBudget) < 1))  {
+                $("#housingPanelHeading").css("background-color", "yellow");
+            }else if ((housingRemainder/housingBudget) <= .79) {
+                $("#housingPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#housingPanelHeading").css("background-color", "#23ABF");
             }
 
             var savingsRemainder = savingsBudget - savingsExpenseTotal;
             $("#savingsBudgetRemainder").append(savingsRemainder);
-            if ((savingsExpenseTotal/savingsBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((savingsExpenseTotal/savingsBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+           if (((savingsRemainder/savingsBudget) >= .80) && ((savingsRemainder/savingsBudget) < 1))  {
+                $("#savingsPanelHeading").css("background-color", "yellow");
+            }else if ((savingsRemainder/savingsBudget) <= .79) {
+                $("#savingsPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#savingsPanelHeading").css("background-color", "#23ABF");
             }
 
             var medicalRemainder = medicalBudget - medicalExpenseTotal;
             $("#medicalBudgetRemainder").append(medicalRemainder);
-            if ((medicalExpenseTotal/medicalBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((medicalExpenseTotal/medicalBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((medicalRemainder/medicalBudget) >= .80) && ((medicalRemainder/medicalBudget) < 1))  {
+                $("#medicalPanelHeading").css("background-color", "yellow");
+            }else if ((medicalRemainder/medicalBudget) <= .79) {
+                $("#medicalPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#medicalPanelHeading").css("background-color", "#23ABF");
             }
 
             var insuranceRemainder = insuranceBudget - insuranceExpenseTotal;
             $("#insuranceBudgetRemainder").append(insuranceRemainder);
-            if ((insuranceExpenseTotal/insuranceBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((insuranceExpenseTotal/insuranceBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((insuranceRemainder/insuranceBudget) >= .80) && ((insuranceRemainder/insuranceBudget) < 1))  {
+                $("#insurancePanelHeading").css("background-color", "yellow");
+            }else if ((insuranceRemainder/insuranceBudget) <= .79) {
+                $("#insurancePanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#insurancePanelHeading").css("background-color", "#23ABF");
             }
 
             var transportationRemainder = transportationBudget - transportationExpenseTotal;
             $("#transportationBudgetRemainder").append(transportationRemainder);
-            if ((transportationExpenseTotal/transportationBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((transportationExpenseTotal/transportationBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((transportationRemainder/transportationBudget) >= .80) && ((transportationRemainder/transportationBudget) < 1))  {
+                $("#transportationPanelHeading").css("background-color", "yellow");
+            }else if ((transportationRemainder/transportationBudget) <= .79) {
+                $("#transportationPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#transportationPanelHeading").css("background-color", "#23ABF");
             }
 
             var personalRemainder = personalBudget - personalExpenseTotal;
             $("#personalBudgetRemainder").append(personalRemainder);
-            if ((personalExpenseTotal/personalBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((personalExpenseTotal/personalBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((personalRemainder/personalBudget) >= .80) && ((personalRemainder/personalBudget) < 1))  {
+                $("#personalPanelHeading").css("background-color", "yellow");
+            }else if ((personalRemainder/personalBudget) <= .79) {
+                $("#personalPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#personalPanelHeading").css("background-color", "#23ABF");
             }
 
             var entertainmentRemainder = entertainmentBudget - entertainmentExpenseTotal;
             $("#entertainmentBudgetRemainder").append(entertainmentRemainder);
-            if ((entertainmentExpenseTotal/entertainmentBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((entertainmentExpenseTotal/entertainmentBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((entertainmentRemainder/entertainmentBudget) >= .80) && ((entertainmentRemainder/entertainmentBudget) < 1))  {
+                $("#entertainmentPanelHeading").css("background-color", "yellow");
+            }else if ((entertainmentRemainder/entertainmentBudget) <= .79) {
+                $("#entertainmentPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#entertainmentPanelHeading").css("background-color", "#23ABF");
             }
 
             var debtRemainder = debtBudget - debtExpenseTotal;
             $("#debtBudgetRemainder").append(debtRemainder);
-            if ((debtExpenseTotal/debtBudget) >= .80) {
-                $("#panelHeading").css("background-color", "yellow");
-            }else if ((debtExpenseTotal/debtBudget) > 1) {
-                $("#panelHeading").css("background-color", "red");
+            if (((debtRemainder/debtBudget) >= .80) && ((debtRemainder/debtBudget) < 1))  {
+                $("#debtPanelHeading").css("background-color", "yellow");
+            }else if ((debtRemainder/debtBudget) <= .79) {
+                $("#debtPanelHeading").css("background-color", "red");
             }else {
-                $("#panelHeading").css("background-color", "#23ABF");
+                $("#debtPanelHeading").css("background-color", "#23ABF");
             }
         });
     });
