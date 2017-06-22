@@ -49,6 +49,7 @@ module.exports = function(app) {
             retirementFund: req.body.budgetForm6.retirementFund,
             collegeFund: req.body.budgetForm6.collegeFund,
             savingsTotal: req.body.budgetForm6.savingsTotal,
+            savingsGrade: req.body.savingsGrade,
             medications: req.body.budgetForm7.medications,
             doctorBills: req.body.budgetForm7.doctorBills,
             hospitalBills: req.body.budgetForm7.hospitalBills,
@@ -109,9 +110,7 @@ module.exports = function(app) {
             debt3: req.body.budgetForm12.debt3,
             debt4: req.body.budgetForm12.debt4,
             debtTotal: req.body.budgetForm12.debtTotal,
-            debtGrade: req.body.debtGrade,
-            finalGrade: req.body.budgetForm12.finalGrade,
-            totalBudget: req.body.budgetForm12.totalBudget
+            debtGrade: req.body.debtGrade
         }).then(function(budget) {
 
             res.redirect("/budgetresults");

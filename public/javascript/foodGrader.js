@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 
     // localStorage.setItem("foodGrade", grade);
-    localStorage.setItem("foodGrade", JSON.stringify(grade));
+    localStorage.setItem("foodGrade", grade);
 
 
 

@@ -91,7 +91,7 @@ $(document).ready(function() {
 
 
     var totalsForDisplay = (parseInt(budgetTotals.totalPay) - (parseInt(budgetTotals.foodTotal) + parseInt(budgetTotals.clothingTotal) + parseInt(budgetTotals.utilitiesTotal) + parseInt(budgetTotals.housingTotal) + parseInt(budgetTotals.savingsTotal) + parseInt(budgetTotals.medicalTotal) + parseInt(budgetTotals.insuranceTotal) + parseInt(budgetTotals.transportationTotal) + parseInt(budgetTotals.personalTotal) + parseInt(budgetTotals.entertainmentTotal) + parseInt(budgetTotals.debtTotal)));
-
+    localStorage.setItem("totalsForDisplay", totalsForDisplay);
     var totalPay = $("<h2>Your Total Pay is: " + budgetTotals.totalPay + "</h2>");
     var displayBudgetTotals = $("<h2>We added all your budgets and you have: " + totalsForDisplay + "left over.</h2><h3>You should go back and put this into your debt or maybe even your saving!</h2>")
     $("#totalPay").append(totalPay);
@@ -122,6 +122,7 @@ $("#debtGraderNext").on("click", function() {
     // };
 
     var dataToPost = {
+        totalsForDisplay: localStorage.getItem("totalsForDisplay"),
         foodGrade: localStorage.getItem("foodGrade"),
         clothingGrade: localStorage.getItem("clothingGrade"),
         housingGrade: localStorage.getItem("housingGrade"),
