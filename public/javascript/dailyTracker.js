@@ -2,6 +2,7 @@ var month;
 
 $(document).ready(function() {
     var currentBudget = 0;
+    var currentDataBudget;
     var expenses;
 
     var monthArray = new Array();
@@ -22,11 +23,6 @@ $(document).ready(function() {
     month = monthArray[date.getMonth()];
 
     $('#monthToday').html(month);
-
-    $.get("/allexpenseresults", function(expenseTest) {
-        console.log("HERE: " + expenseTest);
-    });
-
 
     $.get("/expensedata", function(budgetData) {
         console.log(budgetData)
@@ -49,7 +45,8 @@ $(document).ready(function() {
         $.get("/expensedata", function(budgetData) {
             var budgetId = $('.budgetCompareSelector').val();
             console.log("BUDGETID: ", budgetId);
-            console.log("EXPENSES BITCH: " + expenses);
+            currentDataBudget = budgetId;
+            console.log("CurrentB: " + currentBudget);
             for (var i = 0; i < budgetData.length; i++) {
                 if (budgetData[i].id == budgetId) {
                     console.log(budgetData[i]);
@@ -67,11 +64,27 @@ $(document).ready(function() {
                     $("#debtBudget").html(currentBudget.debtTotal);
                 }
             }
+            // for (var i = 0; i < expenses.length; i++) {
+            //     console.log("Expense Loop: " + expenses);
+            // }
+
+        });
+        $.get("/allexpenseresults", function(expenses) {
+            console.log("Current Budget: " + currentDataBudget);
             for (var i = 0; i < expenses.length; i++) {
-                console.log("Expense Loop: " + expenses);
+                console.log("Expense Loop: " + expenses[i]);
+                console.log("EXPENSES BITCH: " + expenses[i].BudgetId);
+                console.log("Current Budget: " + currentBudget);
+
+                if (expenses[i].BudgetId == currentDataBudget && expenses[i].category == "food") {
+                    $("#foodCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                } else {
+                    console.log("FUCKYOU");
+                }
             }
         });
     });
+
 });
 
 
