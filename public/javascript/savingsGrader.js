@@ -51,15 +51,17 @@ $(document).ready(function() {
     $("#budgetTotal").append(totalSavingsBudget);
     $("#budgetPercent").append(percentOfBudget);
     $("#budgetGrade").append(savingsGrade);
+  
+  if(grade == 'A+'){
+      $("#advice").hide();
+      $("#aplus").append(savingsAdvice);
+  } else{
+      for(var i = 0; i < savingsAdvice.length; i++){
+          $(".list-group").append("<li class='list-group-item'>" + savingsAdvice[i] + "</li>");
+      }
+  }
 
-    if (grade == 'A+') {
-        $("#advice").hide();
-        $("#aplus").append(savingsAdvice);
-    } else {
-        for (var i = 0; i < savingsAdvice.length; i++) {
-            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
-        }
-    }
+
 });
 
 $("#savingsGraderBack").on("click", function() {

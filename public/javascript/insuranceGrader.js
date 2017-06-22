@@ -59,9 +59,11 @@ $(document).ready(function() {
     if (grade == 'A+') {
         $("#advice").hide();
         $("#aplus").append(insuranceAdvice);
-    } else {
-        for (var i = 0; i < insuranceAdvice.length; i++) {
-            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+
+    } else{
+        for(var i = 0; i < insuranceAdvice.length; i++){
+            $(".list-group").append("<li class='list-group-item'>" + insuranceAdvice[i] + "</li>");
+
         }
     }
 

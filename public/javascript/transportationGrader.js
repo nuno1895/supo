@@ -58,9 +58,11 @@ $(document).ready(function() {
     if (grade == 'A+') {
         $("#advice").hide();
         $("#aplus").append(transportationAdvice);
-    } else {
-        for (var i = 0; i < transportationAdvice.length; i++) {
-            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+
+    } else{
+        for(var i = 0; i < transportationAdvice.length; i++){
+            $(".list-group").append("<li class='list-group-item'>" + transportationAdvice[i] + "</li>");
+
         }
     }
 });

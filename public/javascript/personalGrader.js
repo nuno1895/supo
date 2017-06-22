@@ -58,9 +58,11 @@ $(document).ready(function() {
     if (grade == 'A+') {
         $("#advice").hide();
         $("#aplus").append(personalAdvice);
-    } else {
-        for (var i = 0; i < personalAdvice.length; i++) {
-            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+
+    } else{
+        for(var i = 0; i < personalAdvice.length; i++){
+            $(".list-group").append("<li class='list-group-item'>" + personalAdvice[i] + "</li>");
+
         }
     }
 });

@@ -31,6 +31,10 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.INTEGER
         },
 
+        totalPay: {
+            type: Sequelize.INTEGER
+        },
+
         groceries: {
             type: Sequelize.INTEGER
         },
@@ -320,7 +324,7 @@ module.exports = function(sequelize, Sequelize) {
         },
 
         entertainmentGrade: {
-            type: Sequelize.INTEGER
+            type: Sequelize.STRING
         },
 
         carPayment1: {
