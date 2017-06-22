@@ -320,7 +320,7 @@ module.exports = function(sequelize, Sequelize) {
         },
 
         entertainmentGrade: {
-            type: Sequelize.INTEGER
+            type: Sequelize.STRING
         },
 
         carPayment1: {
