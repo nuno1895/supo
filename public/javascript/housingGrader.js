@@ -67,7 +67,7 @@ $(document).ready(function() {
       $("#aplus").append(housingAdvice);
   } else{
       for(var i = 0; i < housingAdvice.length; i++){
-          $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+          $(".list-group").append("<li class='list-group-item'>" + housingAdvice[i] + "</li>");
       }
   }
 });

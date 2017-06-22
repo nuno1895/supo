@@ -29,9 +29,6 @@ $(document).ready(function() {
 
   localStorage.setItem("clothingGrade", grade);
 
-  var food = JSON.parse(localStorage.getItem("foodGrade"));
-    console.log("foodGrade",food);
-
 	let clothingAdvice;
 
      if (grade === "A+") {
@@ -69,7 +66,7 @@ $(document).ready(function() {
         $("#aplus").append(clothingAdvice);
     } else{
         for(var i = 0; i < clothingAdvice.length; i++){
-            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+            $(".list-group").append("<li class='list-group-item'>" + clothingAdvice[i] + "</li>");
         }
     }
 });

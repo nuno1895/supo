@@ -64,7 +64,7 @@ $(document).ready(function() {
       $("#aplus").append(savingsAdvice);
   } else{
       for(var i = 0; i < savingsAdvice.length; i++){
-          $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+          $(".list-group").append("<li class='list-group-item'>" + savingsAdvice[i] + "</li>");
       }
   }
 });

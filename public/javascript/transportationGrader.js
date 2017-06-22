@@ -67,7 +67,7 @@ $(document).ready(function() {
         $("#aplus").append(transportationAdvice);
     } else{
         for(var i = 0; i < transportationAdvice.length; i++){
-            $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+            $(".list-group").append("<li class='list-group-item'>" + transportationAdvice[i] + "</li>");
         }
     }
 });

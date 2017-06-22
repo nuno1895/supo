@@ -88,7 +88,7 @@ $(document).ready(function() {
 	    $("#aplus").append(medicalAdvice);
 	} else{
 	    for(var i = 0; i < medicalAdvice.length; i++){
-	        $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+	        $(".list-group").append("<li class='list-group-item'>" + medicalAdvice[i] + "</li>");
 	    }
 	}
 });

@@ -68,7 +68,7 @@ $(document).ready(function() {
 	    $("#aplus").append(entertainmentAdvice);
 	} else{
 	    for(var i = 0; i < entertainmentAdvice.length; i++){
-	        $(".list-group").append("<li class='list-group-item'>" + foodAdvice[i] + "</li>");
+	        $(".list-group").append("<li class='list-group-item'>" + entertainmentAdvice[i] + "</li>");
 	    }
 	}
 });
