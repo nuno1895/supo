@@ -430,6 +430,11 @@ input:-webkit-autofill {
     margin-bottom: 6em;
 }
 
+#panelHeading {
+    background-image: none;
+    background-color: #23AB4F;
+}
+
 
 /*======================================== GRADER ====================================*/
 
@@ -463,7 +468,6 @@ input:-webkit-autofill {
     font-weight: 100;
     margin-bottom: -1em;
     margin-top: 0;
-    float: right;
     padding-right: 5em;
 }
 
