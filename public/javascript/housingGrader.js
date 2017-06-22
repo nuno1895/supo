@@ -17,8 +17,8 @@ $(document).ready(function() {
 
 	var housingBudgetPercent = (housingBudget*100)/totalPay;
 
-	var totalHousingBudget = $("<h2>Your total housing budget is: " + housingBudget + "</h2>");
-	var percentOfBudget = $("<h2>Your housing budget is " + housingBudgetPercent + "% of your total budget.</h2>");
+	var totalHousingBudget = $("<h3 class'budgetNumPercGrade'>Your total housing budget is: <span>$" + housingBudget + "</span></h3>");
+	var percentOfBudget = $("<h3 class'budgetNumPercGrade'>Your housing budget is <span>" + housingBudgetPercent + "%</span> of your total budget.</h3>");
 
 	var suggestedBudgetPercent = 35;
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 	var grade = getGrade(percentDiff);
 	console.log(grade);
-	var housingGrade = $("<h5>Your grade is: " + grade + "</h5>");
+	var housingGrade = $("<h3 class'budgetNumPercGrade'>Your grade is: <span>" + grade + "</span></h3>");
   localStorage.setItem("housingGrade", grade);
 
 	let housingAdvice;

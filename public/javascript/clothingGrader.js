@@ -15,10 +15,9 @@ $(document).ready(function() {
 	console.log("clothingBudget", clothingBudget);
 
 	var clothingBudgetPercent = (clothingBudget*100)/totalPay;
+	var totalclothingBudget = $("<h3 class='budgetNumPercGrade'>Your total clothing budget is: <span>$"  + clothingBudget + "</span></h3>");
+	var percentOfBudget = $("<h3 class='budgetNumPercGrade'>Your clothing budget is <span>" + clothingBudgetPercent + "</span>% of your total budget.</h3>");
 
-	var totalclothingBudget = $("<h2>Your total clothing budget is: " + clothingBudget + "</h2>");
-	var percentOfBudget = $("<h2>Your clothing budget is " + clothingBudgetPercent + "% of your total budget.</h2>");
-	
 	var suggestedBudgetPercent = 7;
 
 	var percentDiff = clothingBudgetPercent - suggestedBudgetPercent;
@@ -26,7 +25,7 @@ $(document).ready(function() {
 
 	var grade = getGrade(percentDiff);
 	console.log(grade);
-	var clothingGrade = $("<h4>Your grade is: " + grade + "</h4>");
+	var clothingGrade = $("<h3 class='budgetNumPercGrade'>Your grade is: <span>" + grade + "</span></h3>");
 
   localStorage.setItem("clothingGrade", grade);
 
