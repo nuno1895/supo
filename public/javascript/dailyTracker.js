@@ -163,55 +163,55 @@ $(document).ready(function() {
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "utilities") {
                     utilitiesExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#utiltiesCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#utiltiesCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
 
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "housing") {
                     housingExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#housingCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#housingCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
 
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "savings") {
                     savingsExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#savingsCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#savingsCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
 
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "medical") {
                     medicalExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#medicalCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#medicalCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
 
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "insurance") {
                     insuranceExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#insuranceCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#insuranceCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
 
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "transportation") {
                     clothingExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#transportationCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#transportationCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
 
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "personal") {
                     personalExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#personalCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#personalCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
 
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "entertainment") {
                     entertainmentExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#entertainmentCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#entertainmentCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
 
                 if (expenses[i].BudgetId == currentDataBudgetID && expenses[i].category == "debt") {
                     debtExpenseTotal += expenses[i].expenseAmount;
 
-                    $("#debtCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": " + expenses[i].expenseAmount + " " + expenses[i].createdAt + "</li>");
+                    $("#debtCategory").append("<li class='list-group-item'>" + expenses[i].expenseName + ": $" + expenses[i].expenseAmount + ".00 " + newdate + "</li>");
                 }
             };
 
