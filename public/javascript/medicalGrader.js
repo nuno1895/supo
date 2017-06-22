@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('#collapseAdvice').collapse("hide");
 
 	
@@ -91,12 +92,13 @@ $(document).ready(function() {
 	        $(".list-group").append("<li class='list-group-item'>" + medicalAdvice[i] + "</li>");
 	    }
 	}
+
 });
 
 $("#medicalGraderBack").on("click", function() {
-	window.location.href = "/budgetForm/7";
+    window.location.href = "/budgetForm/7";
 });
 
 $("#medicalGraderNext").on("click", function() {
-	window.location.href = "/budgetForm/8";
+    window.location.href = "/budgetForm/8";
 });

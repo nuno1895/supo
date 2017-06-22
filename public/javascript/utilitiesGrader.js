@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('#collapseAdvice').collapse("hide");
 
 	
@@ -71,12 +72,13 @@ $(document).ready(function() {
 	        $(".list-group").append("<li class='list-group-item'>" + utilitiesAdvice[i] + "</li>");
 	    }
 	}
+
 });
 
 $("#utilitiesGraderBack").on("click", function() {
-	window.location.href = "/budgetForm/4";
+    window.location.href = "/budgetForm/4";
 });
 
 $("#utilitiesGraderNext").on("click", function() {
-	window.location.href = "/budgetForm/5";
+    window.location.href = "/budgetForm/5";
 });

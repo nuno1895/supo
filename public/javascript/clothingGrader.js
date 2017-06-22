@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
       $('#collapseAdvice').collapse("hide");
 
 	var budgetForm = JSON.parse(localStorage.getItem("budgetForm"));
@@ -67,14 +68,15 @@ $(document).ready(function() {
     } else{
         for(var i = 0; i < clothingAdvice.length; i++){
             $(".list-group").append("<li class='list-group-item'>" + clothingAdvice[i] + "</li>");
+
         }
     }
 });
 
 $("#clothingGraderBack").on("click", function() {
-	window.location.href = "/budgetForm/3";
+    window.location.href = "/budgetForm/3";
 });
 
 $("#clothingGraderNext").on("click", function() {
-	window.location.href = "/budgetForm/4";
+    window.location.href = "/budgetForm/4";
 });

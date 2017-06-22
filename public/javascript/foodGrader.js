@@ -16,7 +16,7 @@ $(document).ready(function() {
     var foodBudget = parseInt(budgetForm2.groceries) + parseInt(budgetForm2.eatingout);
     console.log("foodBudget", foodBudget);
 
-    var foodBudgetPercent = (foodBudget * 100) / totalPay;
+    var foodBudgetPercent = ((foodBudget * 100) / totalPay).toFixed(2);
 
     var totalFoodBudget = $("<h2>Your total food budget is: " + foodBudget + "</h2>");
     var percentOfBudget = $("<h2>Your food budget is " + foodBudgetPercent + "% of your total budget.</h2>");

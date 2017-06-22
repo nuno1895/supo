@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('#collapseAdvice').collapse("hide");
 
 
@@ -71,12 +72,13 @@ $(document).ready(function() {
 	        $(".list-group").append("<li class='list-group-item'>" + entertainmentAdvice[i] + "</li>");
 	    }
 	}
+
 });
 
 $("#entertainmentGraderBack").on("click", function() {
-	window.location.href = "/budgetForm/11";
+    window.location.href = "/budgetForm/11";
 });
 
 $("#entertainmentGraderNext").on("click", function() {
-	window.location.href = "/budgetForm/12";
+    window.location.href = "/budgetForm/12";
 });

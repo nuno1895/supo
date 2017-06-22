@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $('#collapseAdvice').collapse("hide");
 
   
@@ -70,12 +71,13 @@ $(document).ready(function() {
           $(".list-group").append("<li class='list-group-item'>" + housingAdvice[i] + "</li>");
       }
   }
+
 });
 
 $("#housingGraderBack").on("click", function() {
-	window.location.href = "/budgetForm/5";
+    window.location.href = "/budgetForm/5";
 });
 
 $("#housingGraderNext").on("click", function() {
-	window.location.href = "/budgetForm/6";
+    window.location.href = "/budgetForm/6";
 });
