@@ -166,4 +166,6 @@ $("#debtGraderNext").on("click", function() {
 
         window.location.href = "/budgetresults";
     });
+
+    localStorage.clear();
 });
