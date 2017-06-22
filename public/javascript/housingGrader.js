@@ -1,76 +1,69 @@
 $(document).ready(function() {
 
-  $('#collapseAdvice').collapse("hide");
+    $('#collapseAdvice').collapse("hide");
 
-  
-	var budgetForm = JSON.parse(localStorage.getItem("budgetForm"));
-	console.log("budgetForm",budgetForm);
 
-	var totalPay = parseInt(budgetForm.totalPay);
-	console.log("totalPay", totalPay);
+    var budgetForm = JSON.parse(localStorage.getItem("budgetForm"));
+    console.log("budgetForm", budgetForm);
 
-	var budgetForm5 = JSON.parse(localStorage.getItem("budgetForm5"));
-	console.log("budgetForm5", budgetForm5);
+    var totalPay = parseInt(budgetForm.totalPay);
+    console.log("totalPay", totalPay);
 
-	var housingBudget = parseInt(budgetForm5.mortgageRent) + parseInt(budgetForm5.secondMortgage) + parseInt(budgetForm5.taxes) + parseInt(budgetForm5.repairsMaint) + parseInt(budgetForm5.dues);
-	console.log("housingBudget", housingBudget);
+    var budgetForm5 = JSON.parse(localStorage.getItem("budgetForm5"));
+    console.log("budgetForm5", budgetForm5);
 
-	var housingBudgetPercent = (housingBudget*100)/totalPay;
+    var housingBudget = parseInt(budgetForm5.mortgageRent) + parseInt(budgetForm5.secondMortgage) + parseInt(budgetForm5.taxes) + parseInt(budgetForm5.repairsMaint) + parseInt(budgetForm5.dues);
+    console.log("housingBudget", housingBudget);
 
-	var totalHousingBudget = $("<h2>Your total housing budget is: " + housingBudget + "</h2>");
-	var percentOfBudget = $("<h2>Your housing budget is " + housingBudgetPercent + "% of your total budget.</h2>");
+    var housingBudgetPercent = ((housingBudget * 100) / totalPay).toFixed(2);
 
-	var suggestedBudgetPercent = 35;
+    var totalHousingBudget = $("<h2>Your total housing budget is: " + housingBudget + "</h2>");
+    var percentOfBudget = $("<h2>Your housing budget is " + housingBudgetPercent + "% of your total budget.</h2>");
 
-	var percentDiff = housingBudgetPercent - suggestedBudgetPercent;
-	console.log(percentDiff);
+    var suggestedBudgetPercent = 35;
 
-	var grade = getGrade(percentDiff);
-	console.log(grade);
-	var housingGrade = $("<h5>Your grade is: " + grade + "</h5>");
-  localStorage.setItem("housingGrade", grade);
+    var percentDiff = housingBudgetPercent - suggestedBudgetPercent;
+    console.log(percentDiff);
 
-	let housingAdvice;
+    var grade = getGrade(percentDiff);
+    console.log(grade);
+    var housingGrade = $("<h5>Your grade is: " + grade + "</h5>");
+    localStorage.setItem("housingGrade", grade);
 
-   if (grade === "A+") {
-       housingAdvice = advice.housing[1];
-   } else if (grade === "A-") {
-       housingAdvice = advice.housing[2].slice(0, 0);
-   }
-   else if (grade === "B+") {
-       housingAdvice = advice.housing[2].slice(0, 1);
-   }
-   else if (grade === "B-") {
-       housingAdvice = advice.housing[2].slice(0, 2);
-   }
-   else if (grade === "C+") {
-       housingAdvice = advice.housing[2].slice(0, 3);       
-   }
-   else if (grade === "C-") {
-       housingAdvice = advice.housing[2].slice(0, 4);       
-   }
-    else if (grade === "D") {
-       housingAdvice = advice.housing[2].slice(0, 5);       
-   }
-    else if (grade === "D-") {
-       housingAdvice = advice.housing[2].slice(0, 5);       
-   }
-     else {
-       housingAdvice = advice.housing[2];
-   }
+    let housingAdvice;
 
-	$("#budgetTotal").append(totalHousingBudget);
-	$("#budgetPercent").append(percentOfBudget);
-	$("#budgetGrade").append(housingGrade);
+    if (grade === "A+") {
+        housingAdvice = advice.housing[1];
+    } else if (grade === "A-") {
+        housingAdvice = advice.housing[2].slice(0, 0);
+    } else if (grade === "B+") {
+        housingAdvice = advice.housing[2].slice(0, 1);
+    } else if (grade === "B-") {
+        housingAdvice = advice.housing[2].slice(0, 2);
+    } else if (grade === "C+") {
+        housingAdvice = advice.housing[2].slice(0, 3);
+    } else if (grade === "C-") {
+        housingAdvice = advice.housing[2].slice(0, 4);
+    } else if (grade === "D") {
+        housingAdvice = advice.housing[2].slice(0, 5);
+    } else if (grade === "D-") {
+        housingAdvice = advice.housing[2].slice(0, 5);
+    } else {
+        housingAdvice = advice.housing[2];
+    }
 
-  if(grade == 'A+'){
-      $("#advice").hide();
-      $("#aplus").append(housingAdvice);
-  } else{
-      for(var i = 0; i < housingAdvice.length; i++){
-          $(".list-group").append("<li class='list-group-item'>" + housingAdvice[i] + "</li>");
-      }
-  }
+    $("#budgetTotal").append(totalHousingBudget);
+    $("#budgetPercent").append(percentOfBudget);
+    $("#budgetGrade").append(housingGrade);
+
+    if (grade == 'A+') {
+        $("#advice").hide();
+        $("#aplus").append(housingAdvice);
+    } else {
+        for (var i = 0; i < housingAdvice.length; i++) {
+            $(".list-group").append("<li class='list-group-item'>" + housingAdvice[i] + "</li>");
+        }
+    }
 
 });
 
