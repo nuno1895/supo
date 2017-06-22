@@ -17,8 +17,8 @@ $(document).ready(function() {
 
     var entertainmentBudgetPercent = ((entertainmentBudget * 100) / totalPay).toFixed(2);
 
-  	var totalEntertainmentBudget = $("<h3 class ='budgetNumPercGrade'>Your total entertainment budget is: <span>$" + entertainmentBudget + "</span></h3>");
-	  var percentOfBudget = $("<h3 class ='budgetNumPercGrade'>Your entertainment budget is <span>" + entertainmentBudgetPercent + "%</span> of your total budget.</h3>");
+    var totalEntertainmentBudget = $("<h3 class ='budgetNumPercGrade'>Your total entertainment budget is: <span>$" + entertainmentBudget + "</span></h3>");
+    var percentOfBudget = $("<h3 class ='budgetNumPercGrade'>Your entertainment budget is <span>" + entertainmentBudgetPercent + "%</span> of your total budget.</h3>");
 
 
     var suggestedBudgetPercent = 3;
@@ -28,7 +28,8 @@ $(document).ready(function() {
 
     var grade = getGrade(percentDiff);
     console.log(grade);
-	  var entertainmentGrade = $("<h3 class ='budgetNumPercGrade'>Your grade is: <span>" + grade + "</span></h3>")	localStorage.setItem("entertainmentGrade", grade));
+    var entertainmentGrade = $("<h3 class ='budgetNumPercGrade'>Your grade is: <span>" + grade + "</span></h3>");
+
     localStorage.setItem("entertainmentGrade", grade);
 
     let entertainmentAdvice;
