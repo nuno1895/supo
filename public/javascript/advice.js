@@ -8,7 +8,7 @@ Based on grade and catergory, this will give advice on that to do, grade A use n
 
 var advice = {
     food: {
-        1: ["Great Job Your a Food Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Food Budget RockStar! However...still look closely at this area to see if there are any other potential savings"],
         2: [
             "Download coupons... Couponing doesn’t require circulars and scissors anymore. Visit Coupons.com, SmartSource.com or redplum.com,  couponmom.com , the savings racks up",
             "Reduce the amount of times you are eating out by a few times a week",
@@ -39,7 +39,7 @@ var advice = {
 
     },
     clothing: {
-        1: ["Great Job Your a Clothing Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Clothing Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "Pay with cash only",
             "Time your purchases right. Buying off-season clothing will always cost you less",
@@ -66,7 +66,7 @@ var advice = {
         ]
     },
     utilities: {
-        1: ["Great Job Your a Utilities Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Utilities Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "Turning down the heat in the winter and the air conditioner in the summer is one of the fastest ways to see a significant savings on your electricity bill",
             "Keeping lights and ceiling fans turned off when not in use is one of the best habits you can develop",
@@ -92,7 +92,7 @@ var advice = {
         ]
     },
     housing: {
-        1: ["Great Job Your a Housing Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Housing Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "If you are truly struggling in this area, then you need to move and find a cheaper area, it's hard to hear but if this is a real struggle find a cheaper place to live any people leave out this option when looking at trimming their budget, but if you can find work in another area, it may be worth considering. Look around at other areas of the country where you can find employment, see what your salary would be there. Then look at the housing costs and see how they stack up. Quite often, you’ll find yourself significantly ahead by looking at rural or suburban areas vs. city options.",
             "Saving all other areas will help you in this area",
@@ -103,7 +103,7 @@ var advice = {
         ]
     },
     savings: {
-        1: ["Great Job Your a Savings Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Savings Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "The most important step in any program and one could never skip. Build an emergency fund. It can make all the difference. Low-income families with at least $500 in an emergency fund are better off financially than moderate-income families with less saved up, You don’t know what’s going to happen in life. Money magazine states that 78% of us will have a major negative financial event in any given 10-year period",
             "Create a budget, and you’ll see how much money you waste every month. You’ll get to the $500 in no time",
@@ -122,7 +122,7 @@ var advice = {
         ]
     },
     medical: {
-        1: ["Great Job Your a Medical Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Medical Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "Whatever you do, remember that it is very important to have health insurance of some kind",
             "Use in-network care providers",
@@ -148,7 +148,7 @@ var advice = {
         ]
     },
     insurance: {
-        1: ["Great Job Your a Insurance Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Insurance Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "Whatever you do, remember that it is very important to have Auto/Home/Life/Health insurance of some kind",
             "Establish a health savings account. If you have a high-deductible health plan, you should consider opening a health savings account to save for items your health plan won't cover.",
@@ -165,7 +165,7 @@ var advice = {
         ]
     },
     transportation: {
-        1: ["Great Job Your a Transportation Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Transportation Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "Remove excess weight from your vehicle,” said Karen Hoxmeier, owner of MyBargainBuddy.com. “An excess 100 pounds in the trunk can reduce your fuel economy by 1 to 2 percen",
             "Getting a tune-up can improve gas mileage by up to 4 percent, according to Hoxmeier. Inflating your tires to the proper pressure can boost gas mileage by more than 3.3 percent, according to FuelEconomy.gov, and using the manufacturer’s recommended grade of motor oil can maximize mileage by 1 to 2 percent",
@@ -182,7 +182,7 @@ var advice = {
         ]
     },
     personal: {
-        1: ["Great Job Your a Personal Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Personal Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "Cancel newspaper and magazine subscriptions",
             "Cancel club memberships",
@@ -192,7 +192,7 @@ var advice = {
         ]
     },
     entertainment: {
-        1: ["Great Job Your a Entertainment Budget RockStar, However still look at this area, to see if there are any other potential savings"],
+        1: ["Great Job! You're a Entertainment Budget RockStar! However...still look closely at this area, to see if there are any other potential savings"],
         2: [
             "Don't do it unless your completely out of debt and have 3-6 moths worth of emergency savings",
             " Swap books, music, and DVDs on the Internet or at the library",

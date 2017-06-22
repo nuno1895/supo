@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     $('#collapseAdvice').collapse("hide");
 
 
@@ -37,8 +38,9 @@ $(document).ready(function() {
 
     var medicalBudgetPercent = ((medicalBudget * 100) / totalPay).toFixed(2);
 
-    var totalMedicalBudget = $("<h2>Your total medical budget is: " + medicalBudget + "</h2>");
-    var percentOfBudget = $("<h2>Your medical budget is " + medicalBudgetPercent + "% of your total budget.</h2>");
+	var totalMedicalBudget = $("<h3 class='budgetNumPercGrade'>Your total medical budget is: <span>$" + medicalBudget + "</span></h3>");
+	var percentOfBudget = $("<h3 class='budgetNumPercGrade'>Your medical budget is <span>" + medicalBudgetPercent + "%</span> of your total budget.</h3>");
+
 
     var suggestedBudgetPercent = 10;
 
@@ -47,7 +49,7 @@ $(document).ready(function() {
 
     var grade = getGrade(percentDiff);
     console.log(grade);
-    var medicalGrade = $("<h5>Your grade is: " + grade + "</h5>");
+	var medicalGrade = $("<h3 class='budgetNumPercGrade'>Your grade is: <span>" + grade + "</span></h3>");
     localStorage.setItem("medicalGrade", grade);
 
     let medicalAdvice;

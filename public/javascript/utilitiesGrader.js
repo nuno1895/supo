@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     $('#collapseAdvice').collapse("hide");
 
 
@@ -17,8 +18,9 @@ $(document).ready(function() {
 
     var utilitiesBudgetPercent = ((utilitiesBudget * 100) / totalPay).toFixed(2);
 
-    var totalUtilitiesBudget = $("<h2>Your total utilities budget is: " + utilitiesBudget + "</h2>");
-    var percentOfBudget = $("<h2>Your utilities budget is " + utilitiesBudgetPercent + "% of your total budget.</h2>");
+	var totalUtilitiesBudget = $("<h3 class='budgetNumPercGrade'>Your total utilities budget is: <span>$" + utilitiesBudget + "</span></h3>");
+	var percentOfBudget = $("<h3 class='budgetNumPercGrade'>Your utilities budget is <span>" + utilitiesBudgetPercent + "%</span> of your total budget.</h3>");
+
 
     var suggestedBudgetPercent = 10;
 
@@ -27,7 +29,7 @@ $(document).ready(function() {
 
     var grade = getGrade(percentDiff);
     console.log(grade);
-    var utilitiesGrade = $("<h4>Your grade is: " + grade + "</h4>");
+	var utilitiesGrade = $("<h3 class='budgetNumPercGrade'>Your grade is: <span>" + grade + "</span></h3>");
     localStorage.setItem("utilitiesGrade", grade);
 
     let utilitiesAdvice;
