@@ -11,7 +11,7 @@ $(document).ready(function() {
     var debtBudget = parseInt(budgetForm12.debtTotal);
     console.log("debtBudget", debtBudget);
 
-    var debtBudgetPercent = (debtBudget * 100) / totalPay;
+    var debtBudgetPercent = ((debtBudget * 100) / totalPay).toFixed(2);
 
     var totalDebtBudget = $("<h2>Your total debt budget is: " + debtBudget + "</h2>");
     var percentOfBudget = $("<h2>Your debt budget is " + debtBudgetPercent + "% of your total budget.</h2>");
@@ -147,12 +147,9 @@ $("#debtGraderNext").on("click", function() {
         budgetForm11: JSON.parse(localStorage.getItem("budgetForm11")),
         budgetForm12: JSON.parse(localStorage.getItem("budgetForm12")),
     };
-
-    debugger;
     console.log("dataToPost", dataToPost);
 
     $.post("/budgetdata", dataToPost).then(function(response) {
-        debugger;
         console.log("POSTED");
 
         window.location.href = "/budgetresults";
