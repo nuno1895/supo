@@ -124,9 +124,11 @@ module.exports = function(app) {
         models.Budget.findAll({
             where: {
                 UserId: req.session.passport.user,
+                id: req.body.expenseId
             }
         }).then(function(budgetResults) {
-            // res.send(budgetResults[0]);
+            // res.send(budgetResults);
+            console.log(budgetResults);
             models.Expense.create({
                 UserId: req.session.passport.user,
                 BudgetId: budgetResults[0].id,
