@@ -219,6 +219,8 @@ $(document).ready(function() {
 
             var foodRemainder = foodBudget - foodExpenseTotal;
             $("#foodBudgetRemainder").append(foodRemainder);
+            console.log(foodRemainder/foodBudget);
+
             if (((foodRemainder / foodBudget) >= .80) && ((foodRemainder / foodBudget) < 1)) {
                 $("#foodPanelHeading").css("background-color", "yellow");
             } else if ((foodRemainder / foodBudget) <= .79) {
